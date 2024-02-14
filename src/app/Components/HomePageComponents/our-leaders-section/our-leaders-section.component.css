@@ -1,7 +1,5 @@
 .main-container{
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: var(--black);
+  background-color: #191919;
 }
 #common-h1{
   color: var(--dark-gray);
@@ -11,7 +9,6 @@
 }
 .card-container{
   padding: 50px 0;
-  background-color: #191919;
   overflow: hidden;
 }
 .card {
