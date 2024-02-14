@@ -5,33 +5,30 @@
         <h1 class="common-h1" id="common-h1">OUR SERVICES</h1>
       </div>
       <div class="row">
-        <div class=" col-md 12 services-section">
-          <button class="btn btn-dark active-btn">Automotive</button>
-          <button class="btn btn-dark">Medical</button>
-          <button class="btn btn-dark">IOT</button>
-          <button class="btn btn-dark">IIOT</button>
+        <div class="col-md-12 services-section">
+          <button class="btn btn-dark" [class.active-btn]="selectedService === 'Automotive'" (click)="updateService('Automotive')">Automotive</button>
+          <button class="btn btn-dark" [class.active-btn]="selectedService === 'Medical'" (click)="updateService('Medical')">Medical</button>
+          <button class="btn btn-dark" [class.active-btn]="selectedService === 'IOT'" (click)="updateService('IOT')">IOT</button>
+          <button class="btn btn-dark" [class.active-btn]="selectedService === 'IIOT'" (click)="updateService('IIOT')">IIOT</button>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">
-        <div class="system-engineering-section " appScrollAnimation>
+        <div class="system-engineering-section" appScrollAnimation>
           <div class="sys-heading">
-            <h1 class="system-txt" id="common-h1">System Engineering</h1>
+            <h1 class="system-txt" id="common-h1">{{ getServiceContent()?.heading }}</h1>
           </div>
           <div class="sys-explore-btn">
             <button class="btn explore-btn">Explore <i class="fa-solid fa-arrow-right"></i></button>
           </div>
           <div class="sys-paragraph">
-            <p class="system-paragraph" id="common-p">Systems engineering is an interdisciplinary field of engineering and
-              engineering management that focuses on how to design, integrate, and manage complex systems over their
-              life cycles. At its core, systems engineering utilizes systems thinking principles to organize this body
-              of knowledge.</p>
+            <p class="system-paragraph" id="common-p">{{ getServiceContent()?.paragraph }}</p>
           </div>
         </div>
       </div>
       <div class="col-md-8">
-        <img src="../../../../assets/images/system-engineering-img.png" alt="system-engineering-img" class="img-fluid">
+        <img [src]="getServiceContent()?.imagePath" alt="{{ selectedService }}-img" class="img-fluid">
       </div>
     </div>
   </div>
