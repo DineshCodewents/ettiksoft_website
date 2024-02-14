@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-intro-section',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./intro-section.component.css']
 })
 export class IntroSectionComponent {
+  showNavBar = false;
 
+  @HostListener('document:scroll')
+  onWindowScroll() {
+    this.showNavBar = window.scrollY > 50;
+  }
+
+  ngOnInit() {
+  }
 }
