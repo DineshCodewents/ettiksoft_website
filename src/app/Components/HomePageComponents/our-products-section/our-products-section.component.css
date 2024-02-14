@@ -1,0 +1,212 @@
+.main-container{
+  width: 100%;
+  padding: 80px 0px;
+  background: url(../../../../assets/images/products-page-back.jpg) center/cover no-repeat;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.main-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  background-size: cover;
+}
+.product-txt{
+  color: var(--dark-gray);
+  font-family: 'Adamin','serif';
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.our-team-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.our-team-col{
+  display:flex;
+  align-self: center;
+  z-index: 2;
+}
+.our-team-txt{
+  color: var(--dark-gray);
+  font-family: 'Adamin','serif';
+  font-weight: 400;
+  line-height: 0.7;
+}
+.product-para{
+  color: var(--dark-gray);
+  font-family: 'Assistant', serif;
+  font-weight: 600;
+}
+.explore-btn{
+  color: var(--white);
+  font-family: 'Assistant', serif;
+  font-weight: 400;
+  display: flex;
+  gap: 10px;
+  border-radius: 15px;
+  border:1px solid var(--dark-gray) ;
+  padding: 5px 40px;
+  align-items: baseline;
+}
+.our-team-txt,.product-para, .explore-btn{
+  margin-bottom: 30px;
+}
+.load-box-section,.breakout-box-section{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+  padding: 30px;
+  border-radius: 20px;
+  height: 100%;
+  justify-content: space-between;
+}
+.break-out-icon-section, .load-box-icon-section{
+  align-self: flex-end;
+  color:#00D8D6A6;
+  rotate:-45deg;
+  font-size:24px;
+}
+.card{
+  border: none;
+  height:100%;
+  border-radius: 20px;
+}
+.card-body{
+  padding:0;
+  border-radius: 20px;
+  color: var(--black);
+}
+.load-box-section {
+  box-shadow: 0px 3px 9.6px 0px rgba(170, 170, 170, 0.5); 
+  transition: box-shadow 0.3s ease-in; /* Add transition for smooth effect */
+}
+
+.load-box-section:hover {
+  box-shadow: 0px 3px 9.6px 0px rgba(0, 216, 214, 0.8); /* Adjust shadow color and size */
+}
+
+.breakout-box-section {
+  box-shadow: 0px 3px 9.6px 0px rgba(170, 170, 170, 0.5); 
+  transition: box-shadow 0.3s ease-in; /* Add transition for smooth effect */
+}
+
+.breakout-box-section:hover {
+  box-shadow: 0px 3px 9.6px 0px rgba(0, 216, 214, 0.8); /* Adjust shadow color and size */
+}
+
+
+.load-box-txt{
+  color: var(--dark-gray);
+  font-family: 'Adamina', serif;
+  font-weight: 400;
+  display: flex;
+  gap: 10px;
+  transition: 0.3s all ease-in-out;
+}
+.load-box-txt span{
+  display: block;
+  content: '';
+  height: 30px;
+  width: 5px;
+  background-color: #FF1F47;
+}
+
+.load-box-para{
+  color: var(--dark-gray);
+  font-family: 'Assistant', serif;
+  font-weight: 400;
+  transition: 0.3s all ease-in-out;
+}
+.load-box-section:hover .load-box-txt,
+.load-box-section:hover .load-box-para{
+  color: white;
+}
+.breakout-box-txt{
+  color: var(--dark-gray);
+  font-family: 'Adamina', serif;
+  font-weight: 400;
+  display: flex;
+  gap:10px;
+  transition: 0.3s all ease-in-out;
+}
+.breakout-box-txt span{
+  display: block;
+  content: '';
+  height: 30px;
+  width: 5px;
+  background-color:var(--dark-gray);
+}
+.breakout-box-para{
+  color: var(--dark-gray);
+  font-family: 'Assistant', serif;
+  font-weight: 400;
+  transition: 0.3s all ease-in-out;
+}
+
+.breakout-box-section:hover .breakout-box-txt,
+.breakout-box-section:hover .breakout-box-para{
+  color: white;
+}
+.breakout-box-img,.load-box-img{
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.breakout-box-img, .load-box-img{
+  height: 100%;
+}
+.breakout-box-img img, .load-box-img img{
+  width: 100%;
+  border-radius: 20px;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+.breakout-box-img img:hover, .load-box-img img:hover{
+ 
+  transform: scale(1.1);
+} 
+.col-md-4{
+  gap:20px;
+}
+.row-load-box-section{
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width:991px){
+  .our-team-col{
+    width: 100%;
+  }
+  .col-md-8{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .col-md-6{
+    width:50%;
+  }
+}
+@media (max-width:767px){
+  .col-md-6{
+    width:100%;
+    padding: 0;
+  }
+  .row{
+    gap:30px;
+  }
+  .secound-row{
+    flex-direction: column-reverse;
+  }
+}

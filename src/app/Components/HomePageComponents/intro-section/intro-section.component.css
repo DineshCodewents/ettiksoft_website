@@ -1,0 +1,35 @@
+.main-container {
+  width: 100%;
+  height: 100vh; /* 100% of the viewport height */
+  
+  padding-top: 30px;
+}
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Set z-index to ensure the video is behind other content */
+}
+.nav-bar {
+  width: 100%;
+  height: 100px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand img {
+  height: 120px;
+  width: 200px;
+}
+
+.hamburger-menu i {
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+}

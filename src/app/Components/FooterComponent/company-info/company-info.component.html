@@ -1,0 +1,8 @@
+<div class="text-center">
+  <img src="../../../../assets/images/ettiksoft-logo.png" alt="Company Logo" class="img-fluid mb-2">
+</div>
+<div class="text-center social-icon">
+  <a *ngFor="let socialLink of socialLinks" [href]="socialLink.link" class="text-light ml-2">
+    <i [class]="socialLink.iconClass"></i>
+  </a>
+</div>

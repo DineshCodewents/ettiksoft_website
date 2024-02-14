@@ -1,0 +1,52 @@
+<h3 class="h3" id="common-h3">Contact Us</h3>
+<ul class="list-unstyled phone-list" id="phone-list">
+  <h3 class="contact-txt" id="common-h3">Phone</h3>
+  <li *ngFor="let phoneNumber of phoneNumbers">
+    <h4 class="h4" id="common-h4">{{ phoneNumber }}</h4>
+  </li>
+</ul>
+<ul class="list-unstyled email-list" id="email-list">
+  <h3 class="contact-txt"id="common-h3">Email</h3>
+  <li *ngFor="let email of emails">
+    <h4 class="h4" id="common-h4">{{ emails }}</h4>
+  </li>
+</ul>
+<ul class="list-unstyled addres-list" id="addres-list">
+  <h3 class="contact-txt"id="common-h3">Head Office</h3>
+  <li *ngFor="let addres of address">
+    <h4 class="h4" id="common-h4">{{ address }}</h4>
+  </li>
+</ul>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item custom-accordian">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed custom-accordian-btn" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        <h3 id="common-h3">Contact Us</h3>
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse " aria-labelledby="headingFour"
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body custom-accordian-body">
+        <ul>
+          <h3 id="common-h3">Phone</h3>
+          <li *ngFor="let phoneNumber of phoneNumbers">
+            <p id="common-h4">{{ phoneNumber}}</p>
+          </li>
+        </ul>
+        <ul>
+          <h3 id="common-h3">Email</h3>
+          <li *ngFor="let email of emails">
+            <p id="common-h4">{{ emails }}</p>
+          </li>
+        </ul>
+        <ul>
+          <h3 id="common-h3">Head Office</h3>
+          <li *ngFor="let addres of address">
+            <p id="common-h4">{{ address }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+.phone-list, .email-list {
+  list-style: none;
+  padding: 0;
+}
+.h3 {
+  color: var(--black);
+  font-weight: 400;
+  font-family: 'Adamina', sans-serif;
+}
+.contact-txt{
+  color: #04152A;
+  font-weight: 600;
+  font-family: 'poppins', sans-serif;
+}
+.phone-list li, .email-list  li {
+  margin-bottom: 8px;
+}
+
+.phone-list  h4, .email-list  h4 {
+  color: var(--black);
+  font-weight: 400;
+  font-family: 'Assistent', sans-serif;
+  text-decoration: none;
+}
+.custom-accordian {
+  display: none;
+}
+
+.accordion-button::after{
+  background-image: url('../../../../assets/images/down-arrow.svg');
+  height: 1em;
+  width: 1em;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url('../../../../assets/images/dwon-arrow-blue.svg');
+}
+.accordion-button:not(.collapsed) {
+    color: var(--ocean-blue);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+.accordion-button:focus {
+  z-index: 0;
+  border-color: #FEFEFE;
+  outline: 0;
+  box-shadow: none;
+}
+li h4 {
+  color: var(--black);
+  font-weight: 400;
+  font-family: 'Assistent', sans-serif;
+  text-decoration: none;
+}
+.accordion-collapse {
+  transition: height 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 767px) {
+  .company-list,.phone-list, .email-list, .addres-list {
+    display: none;
+  }
+
+  .h3 {
+    display: none;
+  }
+
+  .custom-accordian {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    border: none;
+    border-top: 2px solid #E5E9EC;
+  }
+
+  .accordion-header {
+    margin: 0;
+    line-height: 0;
+    background-color: #f5f5f5;
+  }
+
+  .accordion-button {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 400;
+    font-family: 'Adamina', sans-serif;
+    background-color: white;
+  }
+
+
+  .custom-accordian-body ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .custom-accordian-body li {
+    margin-bottom: 20px;
+    margin-left: 15px;
+  }
+
+  .custom-accordian-body a {
+    color: var(--black);
+    font-weight: 400;
+    font-family: 'Assistent', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+}

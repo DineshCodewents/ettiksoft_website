@@ -1,0 +1,23 @@
+<h3 class="h3" id="common-h3">Products</h3>
+<ul class="list-unstyled product-list" id="productMenu">
+  <li *ngFor="let menuItem of menuItems">
+    <a (click)="goToTop()" [routerLink]="menuItem.path" id="common-h4">{{ menuItem.label }}</a>
+  </li>
+</ul>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item  custom-accordian">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed custom-accordian-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <h3 id="common-h3">Products</h3>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body custom-accordian-body">
+      <ul>
+        <li *ngFor="let menuItem of menuItems" (click)="goToTop()" [routerLink]="menuItem.path">
+          <a class="h4" id="common-h4" >{{ menuItem.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
