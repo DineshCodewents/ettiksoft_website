@@ -185,14 +185,14 @@ footer .footer_section1{
 
 .column ul h3 {
   color: var(--black);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   font-family: 'Adamina', sans-serif;
 }
 
 .column li {
   list-style: none;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   font-size: 20px;
   font-family: 'Assistent', sans-serif;
   font-weight: 600;
@@ -210,7 +210,7 @@ footer .footer_section1{
 .column .heading {
   font-family: 'Adamina', sans-serif;
   font-size: 20px;
-  font-weight:600;
+  font-weight:500;
 
 }
 .column .address{
@@ -225,7 +225,7 @@ footer .footer_section1{
 
 .section3{
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 300px);
 }
 
 
