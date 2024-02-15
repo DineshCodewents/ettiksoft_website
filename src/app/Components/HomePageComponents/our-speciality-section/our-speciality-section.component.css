@@ -274,6 +274,13 @@ p {
   margin-right: 10px;
   transition: background-color 0.3s ease;
 }
+@media(max-width:2000px){
+  .center-column .title{
+    color:var(--dark-gray);
+    font-size:48px;
+  }
+}
+
 @media (max-width: 991px) {
   h1{
     text-align: center;
