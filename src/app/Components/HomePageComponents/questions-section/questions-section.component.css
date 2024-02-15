@@ -84,8 +84,18 @@ box-shadow: none;
   background-color: var(--black);
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  transition: all 0.3s ease;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 400px; /* Adjust this value to match the maximum height of your footer */
+  z-index: 1;
 }
-
+.fixed-title {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
 .company-txt {
   font-size: 6vw; /* Use viewport width unit for responsive font size */
   font-weight: 400;
@@ -123,13 +133,18 @@ box-shadow: none;
 
 
 footer{
+  width: 100%;
   display: flex;
+  background-color: white;
+  height: auto;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   justify-content: center;
-  margin-top:80px;
+  position: fixed;
+  bottom: 0;
+  z-index:-100;
  
 }
 .footer-row .logo img{
@@ -201,14 +216,13 @@ footer .footer_section1{
 
 .copy_rights {
     margin-top: 20px;
-    margin-bottom: 100px;
+   
 }
 
-
-
-
-
-
+.section3{
+  width: 100%;
+  height: calc(100vh - 100px);
+}
 
 
 
@@ -222,5 +236,3 @@ footer .footer_section1{
     flex: 0 0 100%; /* Full width on smaller screens */
   }
 }
-
-

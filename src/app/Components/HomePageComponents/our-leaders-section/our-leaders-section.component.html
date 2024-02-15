@@ -1,33 +1,32 @@
 <!-- our-leaders-section.component.html -->
 
-<div class="main-container"id="main-container">
+<div class="main-container" id="main-container">
   <div class="our-leader-heading">
     <h1 id="common-h1">Our Leaders</h1>
   </div>
-</div>
-
-<div class="card-container">
-  <h2 class="leaders-card-heading" id="common-h2">Embodying exceptional leadership qualities.</h2>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4" *ngFor="let card of cards">
-        <div class="card" (mouseenter)="flipCard(card)" (mouseleave)="flipCard(card)">
-          <div class="card-inner" [ngClass]="{'flipped': card.flipped}">
-            <div class="front">
-              <div class="leader-img">
-                <img src="../../../../assets/images/leader_img.png" alt="leader-profile-img" class="">
+  <div class="card-container">
+    <h2 class="leaders-card-heading" id="common-h2">Embodying exceptional leadership qualities.</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let card of cards">
+          <div class="card" (mouseenter)="flipCard(card)" (mouseleave)="flipCard(card)">
+            <div class="card-inner" [ngClass]="{'flipped': card.flipped}">
+              <div class="front">
+                <div class="leader-img">
+                  <img src="../../../../assets/images/leader_img.png" alt="leader-profile-img" class="">
+                </div>
+                <h3 class="name" id="common-h3">{{ card.name }}</h3>
+                <p class="position">{{ card.position }}</p>
+                <h3 class="company" id="common-h3">{{ card.company }}</h3>
               </div>
-              <h3 class="name" id="common-h3">{{ card.name }}</h3>
-              <p class="position">{{ card.position }}</p>
-              <h3 class="company" id="common-h3">{{ card.company }}</h3>
-            </div>
-            <div class="back">
-              <div class="leader-img-back">
-                <img src="../../../../assets/images/leader_img_back.png" alt="leader-profile-img" class="">
+              <div class="back">
+                <div class="leader-img-back">
+                  <img src="../../../../assets/images/leader_img_back.png" alt="leader-profile-img" class="">
+                </div>
+                <h3 class="name" id="common-h3">{{ card.name }}</h3>
+                <p class="back-icon"><i class="{{ card.backContent.quoteIcon }}"></i></p>
+                <p class="company-para" id="common-p">{{ card.backContent.description }}</p>
               </div>
-              <h3 class="name" id="common-h3">{{ card.name }}</h3>
-              <p class="back-icon"><i class="{{ card.backContent.quoteIcon }}"></i></p>
-              <p class="company-para" id="common-p">{{ card.backContent.description }}</p>
             </div>
           </div>
         </div>

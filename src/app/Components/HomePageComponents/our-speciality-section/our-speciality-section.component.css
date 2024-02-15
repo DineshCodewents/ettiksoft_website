@@ -2,6 +2,9 @@
   width: 100%;
   background: url('../../../../assets/images/section-2-back-img.jpg') center/cover no-repeat;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .main-container::before {
@@ -16,7 +19,13 @@
   z-index: 1;
   background-size: cover;
 }
-
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  gap:80px;
+}
 .custom-card {
   height: 100%;
   display: flex;
@@ -26,17 +35,37 @@
   position: relative;
   z-index: 2;
   border-radius: 20px;
+  overflow: hidden;
 }
 
-
+.col-md-3, .center-column{
+  display: flex;
+  align-self: flex-end;
+}
+.row-2 .col-md-12 .card-6,.row-2 .col-md-12 .card-7{
+  margin-bottom:30px;
+}
+.row-2 .col-md-6 .card-4,.row-2 .col-md-6 .card-5
+{
+  margin:0px 30px;
+}
 .card-1, .card-3{
   box-shadow: 8px 9px 28.799999237060547px 0px #CECECE40;
+  margin: 0 30px;
 }
 .card-body{
   padding:0;
 }
 .custom-card .card-body {
   color: white;
+}
+.card-2-body .card-2-content,.card-2-body .card-2-img-section{
+width: 50%;
+}
+.card-1-body .card-1-content,.card-1-body .card-1-img-section,
+.card-3-body .card-3-content,.card-3-body .card-3-img-section{
+  height: 50%;
+  overflow: hidden;
 }
 .card-2-body{
   height: 0%;
@@ -53,8 +82,6 @@
 .card-3-body,
 .card-4-body,
 .card-5-body {
-  display: flex;
-  flex-direction: column;
   padding: 0;
   overflow: hidden;
 }
@@ -113,42 +140,18 @@
   background-size: 150%; /* Adjust the scale factor as needed */
   transition: background-size 0.3s ease; /* Smooth transition effect */
 }
-
-/* Add this CSS for zoom effect on hover */
-
 .card img:hover {
-  transform: scale(1.1); /* Adjust the scale factor as needed */
-  transition: transform 0.3s ease; /* Smooth transition effect */
+  transform: scale(1.1); 
+  transition: transform 0.3s ease;
 }
-
 .card img {
   max-width: 100%;
   height: 100%;
 }
-.card3-background-img {
-  position: relative; /* Ensure the positioning context is set */
-}
-
-.card3-background-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Black with 50% opacity */
-  z-index: -1; /* Place the overlay behind other content */
-}
-
 .card-3-body {
-  position: relative; /* Ensure the text is positioned relative to the card */
-  z-index: 1; /* Place the text above the overlay */
+  position: relative;
+  z-index: 1; 
 }
-
-.card-3-background-img {
-  background: url('../../../../assets/images/section-2-card-3.jpg') center/cover no-repeat;
-  height: 100%;
-}
-
 
 .equal-height-card img {
   height: 100%;
@@ -158,7 +161,7 @@
 h1 {
   font-size: 64px;
   font-weight: 400;
-  font-family: 'Adamina', sans-serif;
+  font-family: 'assistent', sans-serif;
   line-height: 1.5;
   color: #E7E7E7;
   z-index: 3;
@@ -172,15 +175,16 @@ h2 {
   font-family: 'Assistent', sans-serif;
   line-height: 1;
   color: #ADADAD;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
 }
 
 p {
-  font-size: 16px;
-  font-weight: 400;
   font-family: 'Assistent', sans-serif;
-  text-align: justify;
   line-height: 1.5;
   color: #ADADAD;
+  padding: 0 35px 0px 35px;
+  transition: background-color 0.3s ease;
 }
 
 .card-2-content {
@@ -201,39 +205,14 @@ p {
 }
 .center-column {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: column;
 }
 
 .center-column .title{
-  color:var(--dark-gray)
+  color:var(--dark-gray);
+  font-size:95px;
 }
-
-.card-3-content {
-  height: 45%;
-}
-
-.card-3-img-section {
-  height: 55%;
-}
-
-.card-3-content p,
-.card-4-content p,
-.card-5-content p,
-.card-6-content p,
-.card-7-content p,
-.card-body p{
-  padding: 0 15px 10px 15px;
-}
-.card-3-content h2,
-.card-4-content h2,
-.card-5-content h2,
-.card-6-content h2,
-.card-7-content h2,
-.card-body h2 {
-  padding: 10px 15px;
-}
-
 .card-3-img-section img {
   border-radius: 0 0 20px 20px;
 }
@@ -254,34 +233,33 @@ p {
   border-radius: 20px 20px 0 0;
 }
 
-.card-4-img-section img {
+.card-4-img-section img , .card-1-img-section img{
   width: 100%;
   transition: 0.5s all ease-in-out;
   border-radius: 0 0 20px 20px;
+  overflow: hidden;
 }
 
 
 .card-6-content,
 .card-7-content {
-  width: 65%;
+  width: 50%;
 }
 .card-7-img-section,
 .card-6-img-section{
-  width: 35%;
+  width: 50%;
   overflow: hidden;
 }
 .row-2{
   margin-top:50px;
 }
-.card-1-body h2 span{
-  content: "";
-  display: inline-block;
-  width:5px;
-  color: white;
-  height: 30px;
+.card:hover h2,.card:hover p{
+  color:var(--lite-gray)
+} 
+.card:hover h2 span {
   background-color: #FF1F47;
-  margin-right: 10px;
 }
+.card-1-body h2 span,
 .card-2-body h2 span,
 .card-3-body h2 span,
 .card-4-body h2 span,
@@ -294,6 +272,7 @@ p {
   height: 30px;
   background-color:#565656;
   margin-right: 10px;
+  transition: background-color 0.3s ease;
 }
 @media (max-width: 991px) {
   h1{

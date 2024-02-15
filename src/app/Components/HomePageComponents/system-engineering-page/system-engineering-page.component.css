@@ -47,9 +47,10 @@
 .system-engineering-section{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
+  padding-right: 30px;
 }
-.system-paragraph{
+.sys-paragraph .system-paragraph{
   color: var(--lite-gray);
   font-family: 'Assistant', serif;
   font-weight: 600;
@@ -64,6 +65,12 @@
   border:1px solid var(--dark-gray) ;
   padding: 5px 40px;
   align-items: baseline;
+}
+.explore-btn:hover{
+  background-color: var(--lite-gray);
+  color: var(--black);
+  border: 1px solid var(--lite-gray);
+  font-weight: 600;
 }
 .col-md-8{
   align-self: center;

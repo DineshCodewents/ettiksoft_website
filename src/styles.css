@@ -41,13 +41,19 @@ html, body {
   text-align: justify;
 }
 #main-container{
-  padding-top:50px;
+  padding:80px 0px;
 }
 /* font-family: 'Adamina', serif;
 font-family: 'Assistant', sans-serif; */
 @media(min-width:1400px){
   #container{
     max-width: 95%;
+  }
+  #common-p{
+    font-size:20px;
+  }
+  #common-h4{
+    font-size: 24px;
   }
 }
 @media(min-width:1200px){
