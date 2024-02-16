@@ -87,8 +87,7 @@ box-shadow: none;
   transition: all 0.3s ease;
   position: sticky;
   bottom: 0;
-  width: 100%;
-  margin-bottom: 400px; /* Adjust this value to match the maximum height of your footer */
+  margin-bottom: 495px; /* Adjust this value to match the maximum height of your footer */
   z-index: 1;
 }
 .fixed-title {
@@ -129,9 +128,6 @@ box-shadow: none;
 }
 
 
-
-
-
 footer{
   width: 100%;
   display: flex;
@@ -159,8 +155,10 @@ max-width: 250px;
 }
 footer .footer_section1{
   display: flex;
+  padding-top: 30px;
   flex-direction: row;
   gap: 100px;
+  top:20px;
   
 }
 
@@ -186,14 +184,14 @@ footer .footer_section1{
 .column ul h3 {
   color: var(--black);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   font-family: 'Adamina', sans-serif;
 }
 
 .column li {
   list-style: none;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Assistent', sans-serif;
   font-weight: 600;
   color:var(--dark-gray)
@@ -225,7 +223,7 @@ footer .footer_section1{
 
 .section3{
   width: 100%;
-  height: calc(100vh - 300px);
+
 }
 
 

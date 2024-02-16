@@ -31,11 +31,10 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 30px ;
-  gap: 30px;
 }
 .our-team-col{
   display:flex;
-  align-self: center;
+  align-self: baseline;
   z-index: 2;
 }
 .our-team-txt{
@@ -70,7 +69,7 @@
   font-weight: 600;
 }
 .our-team-txt,.product-para, .explore-btn{
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .cards-column,.our-team-column{
   display: flex;
@@ -206,6 +205,51 @@
 .row-load-box-section{
   display: flex;
   flex-direction: row;
+}
+@media (max-width:1440px){
+  #common-h1{
+    font-size:30px;
+    line-height: 1.3;
+  }
+  #common-h4{
+    font-size:18px;
+    padding-right: 10px;
+    text-align: left;
+  }
+  .our-team-column{
+    gap:50px;
+  }
+  .our-team-col{
+    align-self: baseline;
+  }
+  .explore-btn,.product-para{
+    margin-bottom: 0;
+  }
+  .our-team-txt{
+    margin-bottom: 10px;
+  }
+  .our-team-card{
+    margin: 0 15px;
+  }
+  .breakout-box-txt,.load-box-txt{
+    padding: 0 15px 0px 15px;
+  }
+  .load-box-para,.breakout-box-para{
+    padding: 0 15px 0px 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .load-box-txt-section,.break-out-txt-section{
+    gap: 10px;
+  }
+  .our-team-section{
+    gap:5px;
+  }
+  .card{
+    margin: 0 ;
+  }
 }
 @media (max-width:991px){
   .our-team-col{

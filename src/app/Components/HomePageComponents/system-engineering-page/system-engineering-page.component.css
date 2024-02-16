@@ -5,7 +5,7 @@
 .our-servive-section{
   margin-bottom: 80px;
 }
-.common-h1{
+.heading-txt{
   color:var(--dark-gray);
   text-align: center;
   font-weight: 400;
@@ -43,6 +43,8 @@
   color: var(--lite-gray);
   font-family: 'Assistant', serif;
   font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5;
 }
 .system-engineering-section{
   display: flex;
@@ -74,6 +76,12 @@
 }
 .col-md-8{
   align-self: center;
+}
+@media(max-width:1440px){
+  #common-h1,.system-txt{
+    font-size: 35px;
+    
+  }
 }
 @media(max-width:767px){
   .row{
