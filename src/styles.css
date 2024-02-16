@@ -73,6 +73,11 @@ font-family: 'Assistant', sans-serif; */
 }
 @media(min-width:575px){
   #container{
-    max-width: 95%;
+    max-width: 90%;
+  }
+}
+@media(min-width:300px){
+  #container{
+    max-width: 90%;
   }
 }

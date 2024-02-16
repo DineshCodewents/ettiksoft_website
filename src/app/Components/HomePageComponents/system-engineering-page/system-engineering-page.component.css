@@ -43,8 +43,6 @@
   color: var(--lite-gray);
   font-family: 'Assistant', serif;
   font-weight: 600;
-  font-size: 48px;
-  line-height: 1.5;
 }
 .system-engineering-section{
   display: flex;
@@ -78,13 +76,21 @@
   align-self: center;
 }
 @media(max-width:1440px){
-  #common-h1,.system-txt{
+  #common-h1{
     font-size: 35px;
     
   }
+}
+@media(max-width:991px){
+ .col-md-8,.col-md-4{
+  width: 50%;
+ }
 }
 @media(max-width:767px){
   .row{
     gap: 30px;
   }
+  .col-md-8,.col-md-4{
+    width: 100%;
+   }
 }

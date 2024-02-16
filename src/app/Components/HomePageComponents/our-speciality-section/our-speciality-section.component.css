@@ -308,9 +308,9 @@ p {
     -webkit-line-clamp: 7; /* number of lines to show */
     -webkit-box-orient: vertical;
   }
-.card-3-img-section img{
+/* .card-3-img-section img{
   height:60%
-}
+} */
 .card-4-img-section,
 .card-4-content,
 .card-5-img-section,
@@ -364,7 +364,7 @@ p {
 
 @media (max-width: 991px) {
   h1{
-    text-align: center;
+    text-align: left;
     padding-bottom: 30px;
   }
   .main-container{
@@ -374,7 +374,22 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
+  .card-3-img-section img{
+    height: 100%;
+  }
+  .card-3-content p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 0; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .card-1-content p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 0; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  
   .row-1 .col-md-6 {
     width: 100%;
     order: -1;
@@ -397,11 +412,13 @@ p {
 }
 @media (max-width: 767px) {
   h1{
-    text-align: center;
     padding-bottom: 30px;
   }
   .main-container{
     padding: 50px 0;
+  }
+  .row{
+    gap:30px
   }
   .row-1 {
     flex-direction: column;
@@ -414,7 +431,7 @@ p {
     margin-bottom: 30px;
   }
   .card-2-body{
-    flex-direction: column;
+    flex-direction: row;
   }
   .card-2-img-section,.card-2-content{
     width: 100%;
@@ -430,8 +447,15 @@ p {
   .row-2 {
     flex-direction: column;
   }
-  .card-6-body, .card-7-body{
+  .card-5-body{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .card-6-body{
     flex-direction: column;
+  }
+  .card-7-body{
+    flex-direction: column-reverse;
   }
   .card-6-img-section img{
     width: 100%;
@@ -448,4 +472,11 @@ p {
     margin-bottom: 30px; 
   }
 }
-
+@media(max-width:575px){
+  .card-2-body{
+    flex-direction: column;
+  }
+  .card-2-body .card-2-img-section,.card-2-body .card-2-content{
+    width: 100%;
+  }
+}

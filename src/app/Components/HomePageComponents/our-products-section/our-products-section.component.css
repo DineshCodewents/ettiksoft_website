@@ -98,6 +98,9 @@
   margin: 0 30px;
   cursor: pointer;
 }
+.our-card{
+  margin: 0 0px;
+}
 .our-team-card{
   margin: 0 30px ;
 }
@@ -252,8 +255,22 @@
   }
 }
 @media (max-width:991px){
+  .product-row{
+    gap:50px
+  }
   .our-team-col{
     width: 100%;
+  }
+  .our-team-column{
+    flex-direction: row;
+    gap: 0px;
+  }
+  .our-team-column .col-md-12{
+    width: 50%;
+  }
+  .our-team-section{
+    margin: 0;
+    gap: 15px;
   }
   .col-md-8{
     width: 100%;
@@ -275,5 +292,22 @@
   }
   .secound-row{
     flex-direction: column-reverse;
+  }
+  .our-team-column{
+    flex-direction: column;
+    gap: 0px;
+  }
+  .our-team-column .col-md-12{
+    width: 100%;
+  }
+  .our-team-card,.breakout-box-img,.load-box-img{
+    display: none;
+  }
+  .load-box-para,.breakout-box-para{
+    padding: 0 15px 0px 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 0; /* number of lines to show */
+    -webkit-box-orient: vertical;
   }
 }
