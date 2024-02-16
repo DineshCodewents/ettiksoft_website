@@ -24,4 +24,5 @@ export class IntroSectionComponent {
 
   ngOnInit() {
   }
+  video = '../../../../assets/images/intro_video.mp4'
 }

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./ettiksoft-map-section.component.css']
 })
 export class EttiksoftMapSectionComponent {
-
+  video = '../../../../assets/images/map1.mp4'
 }

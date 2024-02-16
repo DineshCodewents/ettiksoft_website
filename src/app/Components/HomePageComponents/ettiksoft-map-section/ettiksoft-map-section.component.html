@@ -1,6 +1,9 @@
 <div class="main-container">
-  <video autoplay muted loop id="background-video">
+  <!-- <video autoplay muted loop id="background-video">
     <source src="../../../../assets/images/map1.mp4" type="video/mp4">
     Your browser does not support the video tag.
+  </video> -->
+  <video autoplay muted loop playsinline preload="auto" onloadedmetadata="this.muted = true" id="background-video">
+    <source [src]="video" type="video/mp4" />
   </video>
 </div>
