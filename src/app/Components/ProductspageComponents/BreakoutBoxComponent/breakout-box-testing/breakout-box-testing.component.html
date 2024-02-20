@@ -1,0 +1,37 @@
+<div class="main-container" appProductPage>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="../../../../../assets/images/products-page/breakout-box/web-images-04.jpg" class="img-fluid"
+                    alt="load-box-img"(load)="onImageLoad()"
+                    [hidden]="isLoading && !isImageLoaded">
+                    <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+            </div>
+            <div class="col-md-7">
+                <div class="heading-section">
+                    <h1 class="slide-left"style="animation-delay: 0.5s;">Breakout Box 
+                    </h1>
+                    <button type="button" class="btn btn-outline "
+                    (mouseenter)="changeIcon()" (mouseleave)="resetIcon()" (click)="openEnquirePopup()">
+                        Enquire<i [class]="iconClass" aria-hidden="true"></i></button>
+                </div>
+                <div class="subject-section">
+                    <h3 class="unlock-text slide-left"style="animation-delay: 0.8s;">Explore the precision testing with our Breakout Box.</h3>
+                    <h2 class="slide-left" style="animation-delay: 1s;">Versatile Testing Solutions</h2>
+                    <p class="slide-left" style="animation-delay: 1.2s;">Explore the precision testing with our Breakout Box – a unit with optimized design for maximum pinout, customized wiring harnesses, and effortless connectivity. Elevate your diagnostic capabilities and testing efficiency to unprecedented levels with a solution tailored to meet the unique demands of automotive testing.
+                        Transform your testing experience – choose our Breakout Box and redefine precision, customization, and ease of connectivity in automotive diagnostics.
+                        
+                    </p>
+                    <h3 class="key-text slide-left" style="animation-delay: 1.3s;">Key Features:</h3>
+                    <ul>
+                        <li class="animate-on-scroll" style="animation-delay: 0.5s;">Maximum Pinout</li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.6s;">Customized Wiring Harnesses</li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.7s;">Easy Connect Technology</li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.8s;">Versatile Applications</li>
+                        <li class="animate-on-scroll" style="animation-delay: 1s;">Durable Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

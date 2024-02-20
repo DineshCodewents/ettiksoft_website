@@ -1,0 +1,32 @@
+<div class="main-container" appEttiksoftServiceScroll>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="../../../../../assets/images/service/iot-solutions/businessman-pointing-his-business-presentation-high-technology-digital-screen 1 1.png"
+                    alt="tecnology-img" class="img-fluid" (load)="onImageLoad()" [hidden]="isLoading && !isImageLoaded">
+                <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+            </div>
+            <div class="col-md-8 heading-column">
+                <h1 class="slide-left" style="animation-delay: 0.2s;">We excel in versatile</h1>
+                <h1 class="iot-text slide-left " style="animation-delay: 0.4s;">IoT solutions <span>.</span></h1>
+                <p class="slide-left" style="animation-delay: 0.6s;">Ettiksoft's IIoT solutions guarantee a secure, safe,
+                    and intelligent ecosystem, evolving alongside
+                    user experiences.</p>
+                <div class="commen-button slide-left" style="animation-delay: 0.8s; display: none;">
+                    <button (mouseenter)="changeIcon()" (mouseleave)="resetIcon()"  >
+                        Enquire<i [class]="iconClass" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 our-clients">
+                <ng-container *ngFor="let client of clients; let i = index">
+                    <img *ngIf="!isLoading || isImageLoaded" [src]="client.src" class="client-img" [alt]="client.alt"
+                        (load)="onImageLoad()" [hidden]="isLoading && !isImageLoaded" />
+                    <div class="skeleton-rectangle" *ngIf="isLoading && !isImageLoaded && i < clients.length"></div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

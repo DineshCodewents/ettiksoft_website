@@ -1,0 +1,24 @@
+<div class="main-container">
+  <div class="text-center">
+    <h1>Our <strong>Customer says</strong></h1>
+  </div>
+  <div class="container mt-4">
+    <div class="row d-flex align-items-stretch">
+      <div *ngFor="let card of cards" class="col-md-6 mb-4">
+        <div class="card flex-column h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ card.heading }}</h5>
+            <p class="card-text">{{ card.content }}</p>
+          </div>
+          <div class="footer-card">
+            <div class="auther-img"></div>
+            <div class="card-left">
+              <span class="author-name">{{ card.authorName }}</span>
+              <span class="author-position">{{ card.authorPosition }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

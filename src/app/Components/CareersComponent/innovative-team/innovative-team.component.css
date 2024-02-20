@@ -1,0 +1,161 @@
+.main-container {
+  max-width: 100%;
+  padding-top: 10%;
+}
+
+.background-img {
+  background-image: url('../../../../assets/images/careers.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.skeleton-rect {
+  content: '';
+  width: 100%;
+  height: 500px;
+  background:linear-gradient(90deg, #ddd, #f4f4f4, #ddd);
+  background-size: 200%;
+  animation: skeleton 10s linear infinite;
+}
+@keyframes skeleton{
+  0%{
+    background-position: -100% 0;
+  }
+  100%{
+    background-position: 100% 0;
+  }
+}
+.row{
+  width: 50%;
+  height: 100%;
+}
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  gap: 10px;
+}
+
+.heading-txt h1 {
+  font-size: 45px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+}
+
+.paragraph-txt p {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.stright-line {
+  height: 3px;
+  width: 60%;
+  background-color: #FFFFFF;
+}
+
+.slide-left {
+  opacity: 0;
+  animation: slideleft 1s linear forwards;
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:1300px) {
+  .main-container {
+    padding-top: 13%;
+  }
+  .text-container {
+    margin: 100px 100px 100px 50px;
+    gap: 20px;
+  }
+}
+@media screen and (min-width:1300px) {
+  .heading-txt h1 {
+    font-size: 45px;
+  }
+
+  .paragraph-txt p {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .text-container {
+    max-width: 50%;
+    margin: 100px 100px 100px 50px;
+    gap: 30px;
+  }
+  
+}
+@media screen and (max-width:991px) {
+  .text-container {
+    gap: 10px;
+  }
+  .main-container {
+    padding-top: 12%;
+  }
+  .row{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .main-container {
+    padding-top: 18%;
+  }
+  .text-container {
+    
+    margin: 150px 0px 100px 30px;
+    gap: 10px;
+  }
+
+}
+
+@media screen and (max-width:575px) {
+  .heading-txt h1 {
+    font-size: 35px;
+  }
+
+  .paragraph-txt p {
+    font-size: 14px;
+  }
+  .row{
+    width: 70%;
+  }
+  .main-container {
+    padding-top: 22%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .main-container {
+    padding-top: 25%;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .main-container {
+    padding-top: 29%;
+  }
+}

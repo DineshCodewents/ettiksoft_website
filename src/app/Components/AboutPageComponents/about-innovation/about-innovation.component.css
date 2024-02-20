@@ -1,0 +1,119 @@
+.main-container {
+  max-width: 100%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color:var(--black);
+}
+.etticksoft-heading{
+  background-color:var(--black);
+}
+#common-h1 {
+  text-align: center;
+  color: var(--dark-gray);
+  font-family: 'Adamina', sans-serif;
+  font-weight: 600;
+}
+
+h1 span {
+  color: var(--lite-gray);
+  /* background-image: var(--linear); */
+  -webkit-background-clip: text;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+}
+.skeleton-rect {
+  content: '';
+  width: 100%; 
+  height: 700px; 
+  background-color: var(--black);
+  margin: 0 10px;
+  border-radius: 15px;
+  background-size: 200%;
+}
+.innovation-heading {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: var(--black);
+}
+
+.heading {
+  justify-content: center;
+  max-width: 65%;
+}
+.slide-left {
+  animation: slideleft 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.slide-left h1 {
+  animation-delay: 0.5s;
+}
+.slide-left h2 {
+  animation-delay: 0.8s;
+}
+
+.slide-left p {
+  animation-delay: 1s;
+}
+
+#common-h4 {
+  text-align: center;
+  color: var(--lite-gray);
+  font-family: 'Assistent', sans-serif;
+  font-weight: 400;
+  margin: 10px 30px;
+}
+@media screen and (max-width: 1300px) {
+  .etticksoft-heading{
+    padding-top: 15%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .heading {
+    max-width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+  .heading {
+    max-width: 100%;
+  }
+  .etticksoft-heading{
+    padding-top: 22%;
+  }
+  .skeleton-rect{
+    height: 160px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .etticksoft-heading{
+    padding-top: 28%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .etticksoft-heading{
+    padding-top: 32%;
+  }
+}

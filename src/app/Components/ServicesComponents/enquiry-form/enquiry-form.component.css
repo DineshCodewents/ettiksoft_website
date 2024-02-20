@@ -1,0 +1,219 @@
+.centered-card {
+    display: flex;
+    justify-content: center;
+}
+
+.animate {
+    opacity: 1;
+    transition: opacity 0.15s linear;
+}
+.modal {
+    position: fixed;
+    z-index: 1050;
+    display: block;
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+.modal-dialog {
+    height: 100%;
+    max-width: 80%;
+}
+
+.modal-content {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body {
+    padding: 0;
+    background-color: #FFFFFF;
+}
+.pop-up-header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo-img img {
+    height: 60px;
+    padding: 10px 0;
+}
+
+form {
+    margin: 10px 50px 0;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding: 5px;
+}
+
+.form-footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.new-user {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 5px;
+    cursor: pointer;
+}
+
+.new-user span {
+    color: red;
+}
+
+.col-md-12,
+.row {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    width:600px;
+    display: flex;
+}
+
+.stright-line {
+    height: 1.5px;
+    width: 100%;
+    background-color: #C0C0C0;
+}
+.submit-button{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.submit-btn {
+    background-color: #00BCBB;
+    color: #ffffff;
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #008080;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.name-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+    border-radius: 0.376rem;
+}
+
+label {
+    color: #071B33F5;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #505766;
+}
+
+.form-control:focus {
+    border-color: white;
+    box-shadow: 0 0 0 0.1rem #6B6E80;
+}
+.modal-dialog {
+    max-width: 100%;
+}
+
+span i {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark-gray);
+    cursor: pointer;
+    margin-left: 20px;
+    align-self: baseline;
+}
+
+span i:hover {
+    color: red;
+}
+
+.last-name {
+    display: none;
+}
+@media(max-width:575px) {
+    .inline-lastName {
+        display: none;
+    }
+
+    .last-name {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .card-body {
+        padding: 0;
+        width: auto;
+    }
+
+    .inline-lastName {
+        display: block;
+    }
+
+    .last-name {
+        display: none;
+    }
+}
+
+
+@media (min-width:991px) {
+    .form-footer {
+        gap: 10px;
+        padding: 5px;
+    }
+
+
+    .inline-lastName {
+        display: block;
+    }
+
+    .last-name {
+        display: none;
+    }
+}
+
+@media (max-width:480px) {
+    form {
+    margin: 10px 20px 0;
+    }
+}

@@ -1,0 +1,35 @@
+<div class="main-container" id="main-container" appLifeAtEttiksoftScroll>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 d-flex mx-auto">
+          <div class="img-section">
+            <img src="../../../../assets/images/life-at-ettiksoft/SECTION3 -LAE.svg" alt="img-1" class="img-fluid"
+            alt="Image 1" (load)="onImageLoad()"
+            [hidden]="isLoading && !isImageLoaded">
+            <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+          </div>
+      </div>
+      <div class="col-lg-8 d-flex mx-auto">
+          <div class="section-txt">
+            <div class="heading-section">
+              <div class="innovative-txt animate-on-scroll">
+                <h1 id="common-h2">Innovative, Supportive, Dynamic.</h1>
+              </div>
+            </div>
+            <div class="content-scroll">
+              <div class="icon-section">
+                <p><i class="fa fa-quote-left animate-on-scroll" style="font-size:36px"></i></p>
+                <div class="topic-heading animate-on-scroll">
+                  <h3 class="topic" id="common-h3">Work environment</h3>
+                  <p class="discription" id="common-p">Surrounded by state-of-the-art facilities and advanced technology, EttikSoft's
+                    infrastructure empowers me to excel and contribute to cutting-edge projects.</p>
+                  <h3 class="author-name" id="common-h3">Arun prasad</h3>
+                  <p class="position" id="common-p">Software Developer, ETTIKSOFT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

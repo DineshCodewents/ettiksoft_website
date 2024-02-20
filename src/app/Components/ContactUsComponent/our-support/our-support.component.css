@@ -1,0 +1,86 @@
+.container{
+  margin-top:100px;
+}
+.row{
+  padding-top: 20px;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  margin: 0;
+}
+.card{
+  border: none;
+}
+.with-border {
+  position: relative;
+}
+
+.with-border::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 10%;
+  width: 1px;
+  background-color: #78839A61;
+}
+.card img{
+  width:79px;
+  height:65px;
+}
+.skeleton-rect {
+  content: '';
+  width: 25%; 
+  height: 50px; 
+  background:linear-gradient(90deg, #ddd, #f4f4f4, #ddd);
+  margin: 0 10px;
+  background-size: 200%;
+  animation: skeleton 10s linear infinite;
+}
+@keyframes skeleton{
+  0%{
+    background-position: -100% 0;
+  }
+  100%{
+    background-position: 100% 0;
+  }
+}
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: var(--bard-blue);
+  margin-bottom: 10px;
+}
+p{
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  color: var(--dark-gray);
+}
+.card-body a{
+  font-size: 18px;
+  color: #00A8A7;
+  margin: 0;
+  padding: 0;
+}
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll.visible {
+  animation: fadeInUp 0.8s ease forwards;
+}

@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ettiksoft-chronicles',
@@ -6,9 +7,16 @@ import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
   styleUrls: ['./ettiksoft-chronicles.component.css']
 })
 export class EttiksoftChroniclesComponent {
+ 
+  constructor(private el: ElementRef, private renderer: Renderer2,private router: Router) {}
+  navigateToAboutPage() {
+    this.router.navigate(['/life-at-ettiksoft']);
+  }
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
-
+  scrollToTop() {
+    window.scrollTo(0, 0);
+    this.navigateToAboutPage();
+  }
   @HostListener('window:scroll', [])
   onScroll(): void {
     const element = this.el.nativeElement.querySelector('.custom-image');

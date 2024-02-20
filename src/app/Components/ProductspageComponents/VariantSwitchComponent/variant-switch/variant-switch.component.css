@@ -1,0 +1,161 @@
+.main-container {
+  max-width: 100%;
+  padding-top: 10%;
+  background-color: var(--bard-blue);
+}
+
+.background-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.background-img  {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../../../assets/images/products-page/Group-29.svg'); 
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.skeleton-rect {
+  content: '';
+  width: 100%; 
+  height: 400px; 
+  background:linear-gradient(91.54deg, #04152A, #0e151b);
+  margin: 0 10px;
+  background-size: 200%;
+}
+.text-content {
+  margin: 10% 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.text-content h1 {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.stright-line {
+  height: 5px;
+  width: 300px;
+  background-color: #FFFFFF;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.commen-button {
+  display: inline-block;
+  margin: 10px;
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 35px;
+  font-size: 14px;
+  background-color: var(--red);
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #D20C2E;
+}
+
+button i {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+button:hover i {
+  font-size: 14px;
+}
+
+button i {
+  transition: transform 0.3s ease;
+}
+
+button:hover i {
+  transform: translateX(5px);
+}
+.slide-left {
+  opacity: 0;
+  animation: slideleft 1s linear forwards;
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media(min-width:1400px) {
+  .main-container {
+    padding-top: 6%;
+  }
+}
+
+@media(max-width:1380px) {
+  .main-container {
+    padding-top: 10%;
+  }
+}
+
+@media(max-width:991px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media(max-width:768px) {
+  .main-container {
+    padding-top: 11%;
+  }
+  .text-content h1 {
+    font-size: 30px;
+  }
+
+}
+
+@media(max-width:575px) {
+  .main-container {
+    padding-top: 14%;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .text-content h1 {
+    font-size: 25px;
+  }
+
+}
+
+@media(max-width:480px) {
+  .main-container {
+    padding-top: 18%;
+  }
+}

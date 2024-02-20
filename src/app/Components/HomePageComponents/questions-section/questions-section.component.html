@@ -90,7 +90,7 @@
     </div>
   </div>
 </section>
-<footer>
+<footer  [style.z-index]="footerZIndex">
   <div class="container" id="container">
     <div class="row footer-row">
       <div class="col-md-3">
@@ -106,31 +106,27 @@
       <div class="col-md-2">
         <h5 id="common-h4">Company</h5>
         <ul>
-          <li><a href="" id="common-p">About us</a></li>
-          <li><a href="" id="common-p">Life at Ettiksoft</a></li>
-          <li><a href="" id="common-p">Our Customers</a></li>
-          <li><a href="" id="common-p">Our Team</a></li>
-          <li><a href="" id="common-p">Gallery</a></li>
-          <li><a href="" id="common-p">Collaboration</a></li>
-          <li><a href="" id="common-p">Careers</a></li>
+          <li><a  [routerLink]="'/about-page'" (click)="scrollToTop()" id="common-p">About us</a></li>
+          <li><a [routerLink]="'/life-at-ettiksoft'" (click)="scrollToTop()" id="common-p">Life at Ettiksoft</a></li>
+          <li><a [routerLink]="'/contact-us'" (click)="scrollToTop()" id="common-p">Contact Us</a></li>
+          <li><a [routerLink]="'/careers-page'" (click)="scrollToTop()" id="common-p">Careers</a></li>
         </ul>
       </div>
       <div class="col-md-2">
         <h5 id="common-h4">Products</h5>
         <ul>
-          <li><a href="" id="common-p">Load Box</a></li>
-          <li><a href="" id="common-p">Break out Box</a></li>
-          <li><a href="" id="common-p">Lab Car</a></li>
-          <li><a href="" id="common-p">EQL Test System</a></li>
-          <li><a href="" id="common-p">Variant Switch</a></li>
-          <li><a href="" id="common-p">Smart Gate System</a></li>
+          <li><a [routerLink]="'/load-box'" (click)="scrollToTop()" id="common-p">Load Box</a></li>
+          <li><a [routerLink]="'/break-out-box'" (click)="scrollToTop()" id="common-p">Break out Box</a></li>
+          <li><a [routerLink]="'/emi-wiring'" (click)="scrollToTop()" id="common-p">EMI Wiring</a></li>
+          <li><a [routerLink]="'/ev-page'" (click)="scrollToTop()" id="common-p">EV Components Test System</a></li>
+          <li><a [routerLink]="'/variant-switch'" (click)="scrollToTop()" id="common-p">Smart Gate System</a></li>
         </ul>
       </div>
       <div class="col-md-2">
         <h5 id="common-h4">Services</h5>
         <ul>
-          <li><a href="" id="common-p">Mobility Engineering Services</a></li>
-          <li><a href="" id="common-p">IOT Solutions</a></li>
+          <li><a [routerLink]="'/mobility-engineering-page'" (click)="scrollToTop()"  id="common-p">Mobility Engineering Services</a></li>
+          <li><a [routerLink]="'/iot-solution-page'" (click)="scrollToTop()"  id="common-p">IOT Solutions</a></li>
         </ul>
       </div>
       <div class="col-md-2">
@@ -173,13 +169,10 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <ul>
-                <li><a href="" id="common-p">About us</a></li>
-                <li><a href="" id="common-p">Life at Ettiksoft</a></li>
-                <li><a href="" id="common-p">Our Customers</a></li>
-                <li><a href="" id="common-p">Our Team</a></li>
-                <li><a href="" id="common-p">Gallery</a></li>
-                <li><a href="" id="common-p">Collaboration</a></li>
-                <li><a href="" id="common-p">Careers</a></li>
+                <li><a  [routerLink]="'/about-page'" (click)="scrollToTop()" id="common-p">About us</a></li>
+                <li><a [routerLink]="'/life-at-ettiksoft'" (click)="scrollToTop()" id="common-p">Life at Ettiksoft</a></li>
+                <li><a [routerLink]="'/contact-us'" (click)="scrollToTop()" id="common-p">Contact Us</a></li>
+                <li><a [routerLink]="'/careers-page'" (click)="scrollToTop()" id="common-p">Careers</a></li>
               </ul>
             </div>
           </div>
@@ -195,12 +188,11 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <ul>
-                <li><a href="" id="common-p">Load Box</a></li>
-                <li><a href="" id="common-p">Break out Box</a></li>
-                <li><a href="" id="common-p">Lab Car</a></li>
-                <li><a href="" id="common-p">EQL Test System</a></li>
-                <li><a href="" id="common-p">Variant Switch</a></li>
-                <li><a href="" id="common-p">Smart Gate System</a></li>
+                <li><a [routerLink]="'/load-box'" (click)="scrollToTop()" id="common-p">Load Box</a></li>
+                <li><a [routerLink]="'/break-out-box'" (click)="scrollToTop()" id="common-p">Break out Box</a></li>
+                <li><a [routerLink]="'/emi-wiring'" (click)="scrollToTop()" id="common-p">EMI Wiring</a></li>
+                <li><a [routerLink]="'/ev-page'" (click)="scrollToTop()" id="common-p">EV Components Test System</a></li>
+                <li><a [routerLink]="'/variant-switch'" (click)="scrollToTop()" id="common-p">Smart Gate System</a></li>
               </ul>
             </div>
           </div>
@@ -216,8 +208,8 @@
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <ul>
-                <li><a href="" id="common-p">Mobility Engineering Services</a></li>
-                <li><a href="" id="common-p">IOT Solutions</a></li>
+                <li><a [routerLink]="'/mobility-engineering-page'" (click)="scrollToTop()"  id="common-p">Mobility Engineering Services</a></li>
+                <li><a [routerLink]="'/iot-solution-page'" (click)="scrollToTop()"  id="common-p">IOT Solutions</a></li>
               </ul>
             </div>
           </div>

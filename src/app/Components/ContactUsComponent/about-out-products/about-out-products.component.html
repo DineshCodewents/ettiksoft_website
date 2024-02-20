@@ -1,0 +1,75 @@
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 first-column">
+        <h1>Contact us</h1>
+        <div class="stright-line " style="animation-delay: 0.1s;"></div>
+        <p >
+          Having any questions about our products and services or looking for sales support. Our team is happy to
+          answer your questions. Fill out the form, and we’ll be in touch as soon as possible.
+        </p>
+        <img
+          src="../../../../assets/images/contact-us/contact_section1.svg"
+          alt="Small Image" class="img-fluid slide-left" style="animation-delay: 0.2s;" (load)="onImageLoad()"
+          [hidden]="isLoading && !isImageLoaded">
+        <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+      </div>
+
+      <div class="col-md-6 form-column">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="name-form">
+            <div class="form-group">
+              <label for="contact_firstname">First name</label>
+              <input type="text" class="form-control" id="contact_firstname" formControlName="contact_firstname" required>
+            </div>
+            <div class="form-group inline-lastName">
+              <label for="contact_lastname">Last name</label>
+              <input type="text" class="form-control" id="contact_lastname" formControlName="contact_lastname" required>
+            </div>
+          </div>
+          <div class="form-group last-name">
+            <label for="last-name">Last name</label>
+            <input type="text" class="form-control" id="contact_lastname" formControlName="contact_lastname" required>
+          </div>
+          <div class="form-group">
+            <label for="business_email">Business email</label>
+            <input type="email" class="form-control" id="contact_email" formControlName="contact_email" required>
+          </div>
+          <div class="form-group">
+            <label for="business_name">Business name</label>
+            <input type="email" class="form-control" id="contact_businessname" formControlName="contact_businessname" required>
+          </div>
+          <div class="form-group">
+            <label for="contact_phone">Contact number</label>
+            <div class="contact-form">
+              <select class="custom-select" aria-label="Default select example" style="width: 70px;">
+                <option value="IND">IN +91</option>
+                <option value="DE">DE +49</option>
+                <option value="VN">VN +84</option>
+              </select>
+              <input type="tel" class="form-control" id="contact_phone" formControlName="contact_phone" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact_query">Type of query</label>
+            <select class="form-select" aria-label="Default select example" formControlName="contact_query" id="contact_query" required>
+              <option value="Technical Support">SUPPORT</option>
+              <option value="Sales Info">SALES</option>
+              <option value="Other query">OTHERS</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact_message">Your message</label>
+            <textarea class="form-control" id="contact_message" formControlName="contact_message" rows="4"
+              style="width: 300px.72px; height: 200px;" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-block submit-btn">Submit</button>
+        </form>
+        <div class="privacy-text">
+          <p>By clicking Submit, I accept the Freshworks <a href="#">Terms of Service</a> and <a href="#">Privacy
+              </a>Notice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

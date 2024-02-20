@@ -1,0 +1,39 @@
+<div class="main-container" appProductPage>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="../../../../../assets/images/products-page/emi-wiring/web-02.jpg" class="img-fluid"
+                    alt="load-box-img"(load)="onImageLoad()"
+                    [hidden]="isLoading && !isImageLoaded">
+                    <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+            </div>
+            <div class="col-md-7">
+                <div class="heading-section">
+                    <h1 class="slide-left"style="animation-delay: 0.5s;">EMI/EMC Wiring Harness
+                    </h1>
+                    <button type="button" class="btn btn-outline"
+                    (mouseenter)="changeIcon()" (mouseleave)="resetIcon()" (click)="openEnquirePopup()">
+                        Enquire<i [class]="iconClass" aria-hidden="true"></i></button>
+                </div>
+                <div class="subject-section">
+                    <h3 class="unlock-text slide-left"style="animation-delay: 0.8s;">Elevate Your Automotive ECU/VCU Testing with Our EMI/EMC Wiring Harness</h3>
+                    <h2 class="slide-left" style="animation-delay: 1s;">Versatile Testing Solutions</h2>
+                    <p class="slide-left" style="animation-delay: 1.2s;">Elevate Your Automotive ECU/VCU Testing with Our EMI/EMC Wiring Harness. Our EMI/EMC Wiring Harness is meticulously crafted to deliver optimal performance in the most demanding automotive environment testing. Step into a future where cutting-edge technology meets robust design, ensuring the electronic systems signal transfer without loss and ensuring the actual output of the system. 
+
+                    </p>
+                    <h3 class="key-text slide-left" style="animation-delay: 1.4s;">Key Features:</h3>
+                    <ul>
+                        <li class="animate-on-scroll" style="animation-delay: 0.5s;">EMI/EMC Complied 
+                        </li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.6s;">Maximum Heat Protection up to 120°C*
+                        </li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.7s;">Maximum Heat Protection up to 120°C*
+                        </li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.8s;">Robust Durability
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

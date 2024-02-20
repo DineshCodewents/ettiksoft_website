@@ -1,0 +1,43 @@
+<div class="main-container" appProductPage>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="../../../../../assets/images/products-page/ev-component-test/web-images-12.jpg" class="img-fluid"
+                    alt="load-box-img"(load)="onImageLoad()"
+                    [hidden]="isLoading && !isImageLoaded">
+                    <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+            </div>
+            <div class="col-md-7">
+                <div class="heading-section">
+                    <h1 class="slide-left"style="animation-delay: 0.5s;">EV Components Test System</h1>
+                    <button type="button" class="btn btn-outline "(mouseenter)="changeIcon()" 
+                    (mouseleave)="resetIcon()" (click)="openEnquirePopup()">
+                        Enquire<i [class]="iconClass" aria-hidden="true"></i></button>
+                </div>
+                <div class="subject-section">
+                    <h3 class="unlock-text slide-left"style="animation-delay: 0.8s;">We make custom Q test systems for vehicle production lines.
+                    </h3>
+                    <h2 class="slide-left" style="animation-delay: 1s;">Versatile Testing Solutions</h2>
+                    <p class="slide-left" style="animation-delay: 1.2s;">EV Components tester is used in EV production line to test if the received components from the supplier are as per the specification. It does the following test automatically.
+                    </p>
+                    <h3 class="key-text slide-left" style="animation-delay: 1.2s;">Key Features:</h3>
+                    <ul>
+                        <li class="animate-on-scroll" style="animation-delay: 0.5s;">Battery charging and discharging current</li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.6s;">Battery load and no load test</li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.7s;">Electric Motor RPM and Current Test</li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.8s;">Throttle control test</li>
+                        <li class="animate-on-scroll" style="animation-delay: 0.9s;">Charger voltage and current test</li>
+                        <li class="animate-on-scroll" style="animation-delay: 1s;">MCU test </li>
+                        <li class="animate-on-scroll" style="animation-delay: 1.2s;">Pedal test </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

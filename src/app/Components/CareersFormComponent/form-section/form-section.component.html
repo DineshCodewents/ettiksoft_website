@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="form-section">
+    <div class="form-heading">
+      <h1>Apply for the Job</h1>
+    </div>
+    <div class="stright-line"></div>
+    <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+      <div class="form-feild row">
+        <ng-container *ngFor="let column of formColumns; let columnIndex = index">
+          <div class="col-md-6">
+            <div class="mb-3" *ngFor="let field of column.fields">
+              <label [for]="field.id" class="form-label lable-name">
+                <ng-container *ngIf="field.iconClass">
+                  <i [ngClass]="field.iconClass" aria-hidden="true"></i>
+                </ng-container>
+                {{ field.label }}
+                <span class="required" *ngIf="field.required">*</span>
+              </label>
+              <input [type]="field.type" class="form-control custom-width" [id]="field.id" [formControlName]="field.name" [placeholder]="field.placeholder ? field.placeholder : ''"(change)="onFileChange($event)">
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="submit-btn">
+        <button class="btn btn-primary sigin-btn">Sign in</button>
+      </div>
+    </form>
+  </div>
+</div>

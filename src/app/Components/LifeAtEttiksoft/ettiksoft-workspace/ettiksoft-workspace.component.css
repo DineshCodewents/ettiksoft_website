@@ -1,0 +1,105 @@
+.main-container {
+  overflow: hidden;
+}
+.content{
+  background-image: url('../../../../assets/images/life-at-ettiksoft/section1-LAE.jpg'); 
+  background-size: cover;
+  background-position: top;
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.skeleton-rect {
+  content: '';
+  width: 100%;
+  height: 500px;
+  background:linear-gradient(90deg, #ddd, #777, #ddd);
+  background-size: 200%;
+  animation: skeleton 10s linear infinite;
+}
+@keyframes skeleton{
+  0%{
+    background-position: -100% 0;
+  }
+  50%{
+    background-position: 50% 0;
+  }
+  100%{
+    background-position: 100% 0;
+  }
+}
+.heading-section{
+  display:flex;
+  flex-direction: column;
+  width: 25%;
+   background: var(--black);
+  border-radius:  15px 15px 0 0;
+  color: var(--white);
+  margin-left: 5%;
+  margin-top:15%;
+  animation: slideInBottomToTop 1s ease-out;
+}
+.heading{
+  margin:20px;
+}
+#common-h3{
+  font-family: 'Adamina', sans-serif;
+  font-weight:600;
+  color: var(--dark-gray);
+}
+#common-p{
+  font-family:'Assistent', sans-serif;
+  animation: slideInBottomToTop 1s ease-out 0.5s;
+  color:var(--lite-gray)
+}
+@keyframes slideInBottomToTop {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width:1300px){
+  .heading-section{
+    width:25%;
+  }
+}
+@media screen and (max-width:991px){
+  .heading-section{
+    width:25%;
+  }
+}
+@media screen and (max-width:767px){
+  .heading-section{
+    width:30%;
+    margin-top:18%;
+  }
+  .heading{
+    margin:10px;
+  }
+  p{
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width:575px){
+  .heading-section{
+    width:40%;
+    margin-top:22%;
+  }
+}
+@media screen and (max-width:475px){
+  .heading-section{
+    width:40%;
+    margin-top:28%;
+  }
+  #common-h3{
+    font-size: 18px;
+  }
+  #common-p{
+    font-size: 14px;
+  }
+}

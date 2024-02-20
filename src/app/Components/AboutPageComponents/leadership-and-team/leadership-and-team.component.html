@@ -1,0 +1,28 @@
+<div class="main-container" appAboutScroll>
+  <div class="leader-section-heading ">
+    <h1>Our <span>Leadership</span></h1>
+  </div>
+  <div class=" container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let leader of leaders; let i = index">
+        <div class="leaders-img" [class]="getLeaderClass(i)">
+          <img [src]="leader.image" alt="{{ leader.name }}" (load)="onImageLoad()"
+            [hidden]="isLoading && !isImageLoaded">
+          <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+        </div>
+        <div class="leaders-name-position">
+          <h4>{{ leader.name }}</h4>
+          <p>{{ leader.position }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="employees-section">
+    <div class="employees-section-text container">
+      <h3 class="animate-on-scroll" [ngClass]="{'visible': isVisible}"style="animation-delay: 0.5s;">100+</h3>
+      <h3 class="animate-on-scroll" [ngClass]="{'visible': isVisible}" style="animation-delay: 0.5s;">Employees</h3>
+      <div class="stright-line animate-on-scroll" [ngClass]="{'visible': isVisible}"style="animation-delay: 0.8s;"></div>
+      <p class="employees-section-paragraph animate-on-scroll" [ngClass]="{'visible': isVisible}" style="animation-delay: 1s;">We take pride in our cohesive team, blending the wisdom of industry veterans with the enthusiasm of emerging talent. Our collaborative spirit fosters innovation, allowing us to navigate the complexities of automotive solutions with agility and expertise. Each team member contributes a unique skill set, creating a dynamic synergy that fuels our success in delivering cutting-edge solutions to the automotive landscape.</p>
+    </div>
+  </div>
+</div>
