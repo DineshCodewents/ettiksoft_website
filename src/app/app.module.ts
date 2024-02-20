@@ -15,6 +15,8 @@ import { ProductsListComponent } from './Components/FooterComponent/products-lis
 import { ServicesComponent } from './Components/FooterComponent/services/services.component';
 import { EttiksoftMapSectionComponent } from './Components/HomePageComponents/ettiksoft-map-section/ettiksoft-map-section.component';
 import { OurSpecialitySectionComponent } from './Components/HomePageComponents/our-speciality-section/our-speciality-section.component';
+import { EttiksoftChroniclesComponent } from './Components/HomePageComponents/ettiksoft-chronicles/ettiksoft-chronicles.component';
+import { AboutPageComponent } from './Components/AboutPageComponents/about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { OurSpecialitySectionComponent } from './Components/HomePageComponents/o
     ServicesComponent,
     EttiksoftMapSectionComponent,
     OurSpecialitySectionComponent,
+    EttiksoftChroniclesComponent,
+    AboutPageComponent,
   ],
   imports: [
     BrowserModule,

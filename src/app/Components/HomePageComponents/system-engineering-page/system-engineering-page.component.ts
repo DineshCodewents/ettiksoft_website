@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-system-engineering-page',
@@ -37,7 +37,32 @@ export class SystemEngineeringPageComponent {
       imagePath: '../../../../assets/images/iiot-img.jpg'
     },
   ];
+  
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+      const element = this.el.nativeElement.querySelector('.col-md-4');
+      const imgElement = this.el.nativeElement.querySelector('.col-md-8');
+      if (this.isElementHalfInViewport(element)) {
+        this.renderer.addClass(element, 'slideInLeft');
+      }
+      if (this.isElementHalfInViewport(imgElement)) {
+        this.renderer.addClass(imgElement, 'slideInRight');
+      }
+  }
 
+  private isElementHalfInViewport(el: HTMLElement): boolean {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    return (
+      rect.top >= -rect.height / 2 &&
+      rect.left >= -rect.width / 2 &&
+      rect.bottom <= windowHeight + rect.height / 2 &&
+      rect.right <= windowWidth + rect.width / 2
+    );
+  }
   updateService(service: string): void {
     this.selectedService = service;
   }

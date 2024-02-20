@@ -1,4 +1,4 @@
-<div class="main-container"id="main-container">
+<div class="main-container" id="main-container">
   <div class="container" id="container">
     <div class="our-servive-section">
       <div class="our-service-txt">
@@ -15,17 +15,16 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-        <div class="system-engineering-section" appScrollAnimation>
+        <div class="system-engineering-section">
           <div class="sys-heading">
-            <h1 class="system-txt"id="common-h1">{{ getServiceContent()?.heading }}</h1>
+            <h1 class="system-txt" id="common-h1">{{ getServiceContent()?.heading }}</h1>
           </div>
           <div class="sys-explore-btn">
             <button class="btn explore-btn">Explore <i class="fa-solid fa-arrow-right"></i></button>
           </div>
-          <div *ngFor="let paragraph of getServiceContent()?.paragraph" class="sys-paragraph" >
-            <p class="system-paragraph"id="common-p">{{ paragraph }}</p>
+          <div *ngFor="let paragraph of getServiceContent()?.paragraph" class="sys-paragraph">
+            <p class="system-paragraph" id="common-p">{{ paragraph }}</p>
           </div>
-          
         </div>
       </div>
       <div class="col-md-8">
