@@ -1,4 +1,3 @@
-
 <section class="section1">
   <div class="product-container">
     <div class="main-container">
@@ -24,7 +23,7 @@
               </div>
             </div>
           </div>
-  
+
           <!-- Second Accordion Item -->
           <div class="accordion-item custom-accordian">
             <h2 class="accordion-header" id="headingTwo">
@@ -44,7 +43,7 @@
               </div>
             </div>
           </div>
-  
+
           <!-- Third Accordion Item -->
           <div class="accordion-item custom-accordian">
             <h2 class="accordion-header" id="headingThree">
@@ -96,69 +95,173 @@
   </div>
 </section>
 <footer>
-  <div class="footer_section1">
-    <div class="footer-row">
-      <div class="logo">
-        <img src="../../../../assets/images/ettiksoft-logo.png" alt="logo">
+  <div class="container" id="container">
+    <div class="row footer-row">
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="../../../../assets/images/ettiksoft-logo.png" alt="Company Logo" class="img-fluid mb-2">
+        </div>
+        <div class="text-center social-icon">
+          <a *ngFor="let socialLink of socialLinks" [href]="socialLink.link" class="text-light ml-2">
+            <i [class]="socialLink.iconClass"></i>
+          </a>
+        </div>
       </div>
-      <div class="social-media-icons">
-        <!-- Add your social media icons here -->
-        <!-- Example: -->
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="col-md-2">
+        <h5 id="common-h4">Company</h5>
+        <ul>
+          <li><a href="" id="common-p">About us</a></li>
+          <li><a href="" id="common-p">Life at Ettiksoft</a></li>
+          <li><a href="" id="common-p">Our Customers</a></li>
+          <li><a href="" id="common-p">Our Team</a></li>
+          <li><a href="" id="common-p">Gallery</a></li>
+          <li><a href="" id="common-p">Collaboration</a></li>
+          <li><a href="" id="common-p">Careers</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h5 id="common-h4">Products</h5>
+        <ul>
+          <li><a href="" id="common-p">Load Box</a></li>
+          <li><a href="" id="common-p">Break out Box</a></li>
+          <li><a href="" id="common-p">Lab Car</a></li>
+          <li><a href="" id="common-p">EQL Test System</a></li>
+          <li><a href="" id="common-p">Variant Switch</a></li>
+          <li><a href="" id="common-p">Smart Gate System</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h5 id="common-h4">Services</h5>
+        <ul>
+          <li><a href="" id="common-p">Mobility Engineering Services</a></li>
+          <li><a href="" id="common-p">IOT Solutions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h5 id="common-h4">Contact us</h5>
+        <h4 id="common-h4">Phone</h4>
+        <ul>
+          <li id="common-p">+91 7373689304</li>
+          <li id="common-p">+91 9789881190</li>
+        </ul>
+        <h4 id="common-h4">Email</h4>
+        <ul>
+          <li id="common-p">info@ettiksoft.com</li>
+        </ul>
+        <h4 id="common-h4">Address</h4>
+        <ul>
+          <li id="common-p">No:6/1116-1/3, Paramathi Road, C E B Colony, Namakkal, Tamil Nadu 637001.</li>
+        </ul>
       </div>
     </div>
-    <div class="column company">
-      
-      <ul>
-        <h3>Company</h3>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Life at Ettiksoft</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact us</a></li>
-      </ul>
-    </div>
-    <div class="column products">
-      <ul>
-        <h3>Products</h3>
-        <li><a href="#">Load Box</a></li>
-        <li><a href="#">Break Out Box</a></li>
-        <li><a href="#">EMI Wiring</a></li>
-        <li><a href="#">EV Components</a></li>
-        <li><a href="#">Variant Switch</a></li>
-      </ul>
-    </div>
-    <div class="column services">
-      
-      <ul>
-        <h3>Services</h3>
-        <li><a href="#">IOT Solutions</a></li>
-        <li><a href="#">Mobility Engineering</a></li>
-      </ul>
+    <div class="footer-accordion">
+      <div class="logo-section">
+        <div class="text-center">
+          <img src="../../../../assets/images/ettiksoft-logo.png" alt="Company Logo" class="img-fluid mb-2">
+        </div>
+        <div class="text-center social-icon">
+          <a *ngFor="let socialLink of socialLinks" [href]="socialLink.link" class="text-light ml-2">
+            <i [class]="socialLink.iconClass"></i>
+          </a>
+        </div>
+      </div>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item custom-accordion">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed " id="common-h4" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Company
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li><a href="" id="common-p">About us</a></li>
+                <li><a href="" id="common-p">Life at Ettiksoft</a></li>
+                <li><a href="" id="common-p">Our Customers</a></li>
+                <li><a href="" id="common-p">Our Team</a></li>
+                <li><a href="" id="common-p">Gallery</a></li>
+                <li><a href="" id="common-p">Collaboration</a></li>
+                <li><a href="" id="common-p">Careers</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item custom-accordion">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" id="common-h4" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Products
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li><a href="" id="common-p">Load Box</a></li>
+                <li><a href="" id="common-p">Break out Box</a></li>
+                <li><a href="" id="common-p">Lab Car</a></li>
+                <li><a href="" id="common-p">EQL Test System</a></li>
+                <li><a href="" id="common-p">Variant Switch</a></li>
+                <li><a href="" id="common-p">Smart Gate System</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item custom-accordion">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" id="common-h4" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Services
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li><a href="" id="common-p">Mobility Engineering Services</a></li>
+                <li><a href="" id="common-p">IOT Solutions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item custom-accordion">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" id="common-h4" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Contact Us
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <h4 id="common-h4">Phone</h4>
+              <ul>
+                <li id="common-p">+91 7373689304</li>
+                <li id="common-p">+91 9789881190</li>
+              </ul>
+              <h4 id="common-h4">Email</h4>
+              <ul>
+                <li id="common-p">info@ettiksoft.com</li>
+              </ul>
+              <h4 id="common-h4">Address</h4>
+              <ul>
+                <li id="common-p">No:6/1116-1/3, Paramathi Road, C E B Colony, Namakkal, Tamil Nadu 637001.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="column services">
-      
-      <ul>
-        <h3>Contact </h3>
-        <li><a href="#" class="heading">Phone</a></li>
-        <li><a href="#">+91 73736 89304</a></li>
-        <li><a href="#">+91 97898 81190</a></li>
-        <li><a href="#" class="heading">Email</a></li>
-        <li><a href="#">info@ettiksoft.com</a></li>
-        <li><a href="#" class="heading">Head Office</a></li>
-        <li><a href="#" class="address">No:6/1116-1/3, Paramathi Road, C E B Colony, Namakkal, Tamil Nadu 637001.</a></li>
-      </ul>
-    </div>
   </div>
-  <!-- First Row: Logo and Social Media Icons -->
 
-   
+
+
   <div class="column copy_rights">
     <p>&copy; 2024 Ettiksoft Technologies. All rights reserved.</p>
   </div>
 </footer>
 <!-- <section class="section3"></section> -->
-
-

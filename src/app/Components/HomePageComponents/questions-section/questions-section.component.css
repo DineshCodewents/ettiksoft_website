@@ -143,98 +143,156 @@ footer{
   z-index:-100;
  
 }
-.footer-row .logo img{
-max-width: 250px;
+
+.social-icon a i{
+  color: var(--dark-gray);
+  cursor: pointer;
 }
-.social-media-icons{
+.social-icon {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-footer .footer_section1{
-  display: flex;
-  padding-top: 30px;
-  flex-direction: row;
-  gap: 100px;
-  top:20px;
-  
-}
-
-.logo img {
-  max-width: 100px; /* Adjust as needed */
-}
-
-.social-media-icons {
-  display: flex;
+  font-size: 24px;
   gap: 30px;
 }
-
-.social-media-icons a {
-  color: black;
-  font-size:24px; /* Adjust icon color as needed */
+.social-icon a{
+  cursor: pointer;
 }
 
-.column {
+ul {
   list-style: none;
   padding: 0;
 }
 
-.column ul h3 {
+ul li {
+  margin-bottom: 8px;
+}
+.col-md-2 ul li a{
   color: var(--black);
-  font-weight: 500;
-  font-size: 20px;
-  font-family: 'Adamina', sans-serif;
-}
-
-.column li {
-  list-style: none;
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-family: 'Assistent', sans-serif;
-  font-weight: 600;
-  color:var(--dark-gray)
-}
-
-.column a {
   text-decoration: none;
-  font-family: 'Assistent', sans-serif;
-  color: var(--black);
-  font-weight: 400;
   cursor: pointer;
 }
-
-.column .heading {
-  font-family: 'Adamina', sans-serif;
-  font-size: 20px;
-  font-weight:500;
-
-}
-.column .address{
-    display: block;
-    width:200px;
-}
-
 .copy_rights {
-    margin-top: 20px;
-   
+  text-align: center;
+  padding: 20px 0;
 }
 
-.section3{
-  width: 100%;
-
+.copy_rights p {
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Assistent', serif;
+  color: var(--dark-gray); /* White color for copy rights text */
+}
+ .footer-row #common-h4{
+  font-family: 'Adamina', serif;
+  font-weight: 500;
+  color: var(--black);
+}
+#common-p{
+  font-family: 'Assistent', serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  color: var(--black);
+  text-decoration: none;
+}
+.footer-row{
+  gap: 10px;
+}
+.text-center img{
+  width:200px
+}
+.footer-accordion {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .footer-row{
+    gap: 30px;
+  }
+  .text-center img{
+    width:300px
+  }
+}
+@media (max-width: 767px){
+  .footer-row{
+    display: none;
+  }
+  .text-center img{
+    max-width: 100%;
+  }
+  .footer-accordion{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    z-index: -1;
+    gap: 30px;
+  }
+  .footer-accordion .accordion-header {
+    margin: 0;
+    line-height: 0;
+    border-radius: 10px;
+    border-top: 0;
+    border-right:0;
+    border-left: 0;
+    border-bottom: none
+  }
+  .footer-accordion .accordion-button::after{
+  background-image: url('../../../../assets/images/down-arrow.svg');
+  height: 1em;
+  width: 1em;
+}
+.footer-accordion .accordion-button:not(.collapsed)::after {
+  background-image: url('../../../../assets/images/down-arrow.svg');
+}
+.footer-accordion .accordion-button:not(.collapsed) {
+    color: var(--ocean-blue);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+.footer-accordion .accordion-button:focus {
+  z-index: 0;
+  border-color: #FEFEFE;
+  outline: 0;
+  box-shadow: none;
+}
+.footer-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+.footer-accordion .custom-accordion {
+  margin-top: 20px;
+  display: block;
+  border: none;
+  border-bottom: 0;
 }
 
+.custom-accordion-body ul {
+  list-style-type: none;
+  padding: 0;
+}
 
+.custom-accordion-body li {
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  footer {
-    flex-direction: column; /* Stack sections vertically on smaller screens */
-  }
-
-  .footer-row {
-    flex: 0 0 100%; /* Full width on smaller screens */
-  }
+.custom-accordion-body ul li a {
+  text-decoration: none;
+font-family: 'Assistent', sans-serif;
+color: var(--black);
+font-weight: 400;
+  cursor: pointer;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-collapse {
+  transition: height 0.3s ease-in-out;
+}
+.custom-accordion #common-h4{
+  font-size: 20px;
+  font-weight: 500;
+}
+.custom-accordion #common-p{
+  font-size: 18px;
+  font-weight: 400;
+}
 }
