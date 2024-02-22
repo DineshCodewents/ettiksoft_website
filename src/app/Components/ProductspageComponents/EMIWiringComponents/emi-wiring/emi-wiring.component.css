@@ -1,7 +1,8 @@
-.main-container {
+#main-container {
   max-width: 100%;
-  padding-top: 10%;
-  background-color: var(--bard-blue);
+  background-color: var(--black);
+  padding: 0;
+  padding-top: 80px;
 }
 
 .background-img {
@@ -32,29 +33,28 @@
   margin: 10% 20px;
   text-align: center;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.text-content h1 {
-  font-size: 45px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 10px;
+#common-h1 {
+  font-weight: 600;
+  font-family: 'Adamina', sans-serif;
+  color: var(--white);
 }
 
-p {
-  font-size: 1.5rem;
+#common-h4 {
   font-weight: 400;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.5;
-  color: #FFFFFF;
-  margin-bottom: 30px;
+  font-family: 'Assistent', sans-serif;
+  color:var(--lite-gray);
 }
 
 .stright-line {
   height: 5px;
   width: 300px;
   background-color: #FFFFFF;
-  margin: 20px auto;
+  margin: 0px auto;
   text-align: center;
 }
 
@@ -67,18 +67,20 @@ button {
   position: relative;
   overflow: hidden;
   padding: 12px 35px;
-  font-size: 14px;
-  background-color: var(--red);
-  color: #ffffff;
+  background-color: var(--black);
+  font-family: 'Assistent', sans-serif;
+  color: var(--white);
   font-size: 18px;
-  border: none;
+  border: 1px solid var(--white);
   border-radius: 10px;
   cursor: pointer;
   outline: none;
 }
 
 button:hover {
-  background-color: #D20C2E;
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--black);
 }
 
 button i {
@@ -126,17 +128,25 @@ button:hover i {
 }
 
 @media(max-width:991px) {
-  p {
-    font-size: 1rem;
+  #common-h4  {
+    font-size: 18px;
   }
+  button {
+    padding: 9px 30px
+  }
+  .text-content {
+    gap:15px
+  }
+
 }
 
 @media(max-width:768px) {
   .main-container {
     padding-top: 11%;
   }
-  .text-content h1 {
-    font-size: 30px;
+  #common-h1 {
+    font-size: 36px;
+    margin: 0;
   }
 
 }
@@ -145,11 +155,14 @@ button:hover i {
   .main-container {
     padding-top: 14%;
   }
-  p {
-    font-size: 1rem;
+  #common-h4  {
+    font-size: 16px;
   }
-  .text-content h1 {
-    font-size: 25px;
+  #common-h1  {
+    font-size: 30px;
+  }
+  .text-content {
+    gap:10px
   }
 
 }

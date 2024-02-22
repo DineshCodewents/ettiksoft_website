@@ -1,21 +1,24 @@
 .main-container {
   max-width: 100%;
+  background-color: var(--medium-black);
 }
 
 .container {
-  background-color: #FFFFFF;
+  background-color:var(--medium-black);
   margin-top: 20px;
 }
 
 .client-img {
   max-width: 12%;
 }
-
+.col-md-6 img{
+  width:100%
+}
 .skeleton-rect {
   content: '';
   width: 100%;
   height: 400px;
-  background: linear-gradient(90deg, #ddd, #f4f4f4, #ddd);
+  background:var(--black);
   margin: 0 10px;
   background-size: 200%;
   animation: skeleton 10s linear infinite;
@@ -46,12 +49,12 @@
   justify-content: center;
 }
 
-h1 {
-  font-size: 45px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+#common-h1 {
+  font-weight: 600;
+  font-family: 'Adamina', sans-serif;
   margin-bottom: 5px;
-  line-height: 1.5;
+  color:var(--dark-gray);
+  text-align: left;
 }
 
 .our-txt {
@@ -59,42 +62,37 @@ h1 {
   text-align: center;
 }
 
-span {
-  font-size: 45px;
-  color: var(--bard-blue);
+#common-h1 span {
+  color: var(--lite-gray);
 }
 
-.iot-text {
-  color: #FF0F3A;
-  -webkit-background-clip: text;
-
-}
-
-p {
-  font-size: 1.2rem;
+#common-h4 {
   font-weight: 400;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Assistent', sans-serif;
   line-height: 1.7;
-  color: #404B62;
+  color: var(--dark-gray);
   margin-bottom: 30px;
+  text-align: left;
 }
 
 button {
   position: relative;
   overflow: hidden;
   padding: 12px 35px;
-  font-size: 14px;
-  background-color: var(--red);
-  color: #ffffff;
+  background-color: var(--black);
+  font-family: 'Assistent', sans-serif;
+  color: var(--white);
   font-size: 18px;
-  border: none;
+  border: 1px solid var(--white);
   border-radius: 10px;
   cursor: pointer;
   outline: none;
 }
 
 button:hover {
-  background-color: #D20C2E;
+background-color: var(--white);
+color: var(--black);
+border: 1px solid var(--black);
 }
 
 button i {
@@ -137,23 +135,10 @@ button:hover i {
   }
 }
 
-@media(min-width:1300px) {
-  .main-container {
-    padding-top: 10%;
-  }
-}
 
-@media(max-width:1300px) {
-  .main-container {
-    padding-top: 13%;
-  }
-
-}
 
 @media(max-width:991px) {
-  .main-container {
-    padding-top: 12%;
-  }
+
   .col-md-6{
     width: 100%;
   }
@@ -164,9 +149,7 @@ button:hover i {
 }
 
 @media (max-width: 767px) {
-  .main-container {
-    padding-top: 16%;
-  }
+
 
   .iot-text {
     background-size: 200% 100%;
@@ -196,32 +179,18 @@ button:hover i {
 }
 
 @media(max-width:575px) {
-  .main-container {
-    padding-top: 20%;
-  }
 
-  p {
-    font-size: 1rem;
+
+  #common-h4 {
+    font-size: 18px;
   }
 
   .iot-text {
     font-size: 35px;
     background-size: 200% 100%;
   }
-  h1 {
+  #common-h1 {
     font-size: 35px;
   }
 
-}
-
-@media(max-width:480px) {
-  .main-container {
-    padding-top: 15%;
-  }
-}
-
-@media(max-width:380px) {
-  .main-container {
-    padding-top: 42%;
-  }
 }

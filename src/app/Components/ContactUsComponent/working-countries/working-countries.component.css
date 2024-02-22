@@ -1,17 +1,13 @@
 .main-container{
   width: 100%;
-  padding: 0%;
-  margin-top: 100px;
-  background-color: #FFFFFF;
+  background-color:var(--black);
 }
-.container h1{
-  font-size: 45px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  color: var(--bard-blue);
-  margin-bottom: 10px;
+#common-h1{
+  font-weight: 600;
+  font-family: 'Adamina', sans-serif;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
   text-align: center;
-  line-height: 1.5;
 }
 .row{
   margin-top: 40px;
@@ -24,26 +20,26 @@
   flex-direction: column;
   gap: 20px;
   padding: 10px;
+  background-color: var(--black);
 }
 .card{
   border: none;
   padding: 10px;
   cursor: pointer;
+  background-color: var(--medium-black);
 }
-.card h1{
-  font-size: 24px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  color: var(--bard-blue);
+#common-h3{
+  font-weight: 500;
+  font-family: 'Adamina', sans-serif;
+  color: var(--lite-gray);
   margin-bottom: 10px;
   text-align: start;
 }
-.card p{
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: var(--dark-gray);
+#common-p{
+  font-family: 'Assistent', sans-serif;
+  color: var(--white);
   margin-bottom: 10px;
-  line-height: 1.5;
+  font-weight:400;
 }
 iframe{
   width:100% ;
@@ -58,8 +54,9 @@ iframe{
   color: red;
   margin-left: 5;
 }
-.card.selected-country p {
+.card.selected-country #common-p {
   margin-left: 5;
+  color: var(--black);
 }
 @media (max-width:767px) {
   .col-md-4{

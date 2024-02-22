@@ -1,53 +1,94 @@
-import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-questions-section',
   templateUrl: './questions-section.component.html',
   styleUrls: ['./questions-section.component.css']
 })
-export class QuestionsSectionComponent {
-  footerZIndex: number = -100;
-  prevScrollPosition: number = 0;
-
-  constructor(private router: Router) {}
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event): void {
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-    // Determine scroll direction based on the change in scroll position
-    const scrollDirection = scrollPosition > this.prevScrollPosition ? 'down' : 'up';
-
-    // Get the height of the footer element
-    const footerHeight = document.querySelector('footer')?.offsetHeight || 0;
-
-    // Update the footer z-index based on scroll direction and reaching the end of the footer
-    this.footerZIndex =
-      scrollDirection === 'down' && scrollPosition + window.innerHeight >= document.body.scrollHeight - footerHeight
-        ? 1
-        : -100;
-
-    // Update the previous scroll position
-    this.prevScrollPosition = scrollPosition;
-  }
-  socialLinks: SocialLink[] = [
-    { iconClass: 'fa-brands fa-linkedin-in', link: 'https://www.linkedin.com/company/ettiksofttechnologies-pvtltd/' },
-    { iconClass: 'fa-brands fa-instagram', link: 'https://www.instagram.com/ettiksoft_technologies?igsh=cnljYzJxYnF2YnU4' },
-    { iconClass: 'fa-brands fa-youtube', link: 'https://youtube.com/@Ettiksoft?si=dOAC3xsdKfbTQUCB' }
+export class QuestionsSectionComponent  {
+  siteLinks: SiteLink[] = [
+    {
+      category: 'Company',
+      links: [
+        { label: 'About us', path: '/about-page' },
+        { label: 'Life at Ettiksoft', path: '/life-at-ettiksoft' },
+        { label: 'Contact Us', path: '/contact-us' },
+        { label: 'Careers', path: '/careers-page' },
+      ]
+    },
+    {
+      category: 'Products',
+      links: [
+        { label: 'Load Box', path: '/load-box' },
+        { label: 'Break out Box', path: '/break-out-box' },
+        { label: 'EMI Wiring', path: '/emi-wiring' },
+        { label: 'EV Components Test System', path: '/ev-page' },
+        { label: 'Variant switche', path: '/variant-switch' },
+      ]
+    },
+    {
+      category: 'Services',
+      links: [
+        { label: 'Mobility Engineering Services', path: '/mobility-engineering-page' },
+        { label: 'IOT Solutions', path: '/iot-solution-page' },
+      ]
+    },
   ];
-  navigateToAboutPage() {
-    this.router.navigate(['/about-page']);
-  }
-  navigateToLifeAtEttiksoft(){
-    this.router.navigate(['/life-at-ettiksoft'])
+
+  socialLinks: SocialLink[] = [
+    { title: 'LinkedIn', iconClass: 'fa-brands fa-linkedin-in', link: 'https://www.linkedin.com/company/ettiksofttechnologies-pvtltd/' },
+    { title: 'Instagram', iconClass: 'fa-brands fa-instagram', link: 'https://www.instagram.com/ettiksoft_technologies?igsh=cnljYzJxYnF2YnU4' },
+    { title: 'YouTube', iconClass: 'fa-brands fa-youtube', link: 'https://youtube.com/@Ettiksoft?si=dOAC3xsdKfbTQUCB' }
+    // Add more social links as needed
+  ];
+
+  private previousUrl: string | undefined;
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      if (this.previousUrl !== event.urlAfterRedirects) {
+        this.scrollToTop();
+      }
+      this.previousUrl = event.urlAfterRedirects;
+    });
   }
 
-  scrollToTop() {
-    window.scrollTo(0, 0);
+  private scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  private scrollInside() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  goToTop(scrollToTop?: boolean) {
+    if (scrollToTop === undefined || scrollToTop) {
+      this.scrollInside();
+    } else {
+      this.router.navigate(['/'], { fragment: 'top' });
+    }
   }
 }
+
+interface SiteLink {
+  category: string;
+  links: NavLink[];
+}
+
+interface NavLink {
+  label: string;
+  path: string;
+}
+
 interface SocialLink {
+  title: string;
   iconClass: string;
   link: string;
 }

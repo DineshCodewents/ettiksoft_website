@@ -83,37 +83,20 @@ img {
   font-weight: 400;
   margin: 10px 30px;
 }
-@media screen and (max-width: 1300px) {
-  .etticksoft-heading{
-    padding-top: 15%;
-  }
-}
 
 @media screen and (max-width: 767px) {
   .heading {
     max-width: 80%;
   }
-
 }
 
 @media screen and (max-width: 575px) {
   .heading {
     max-width: 100%;
   }
-  .etticksoft-heading{
-    padding-top: 22%;
-  }
+
   .skeleton-rect{
     height: 160px;
   }
 }
-@media screen and (max-width: 450px) {
-  .etticksoft-heading{
-    padding-top: 28%;
-  }
-}
-@media screen and (max-width: 380px) {
-  .etticksoft-heading{
-    padding-top: 32%;
-  }
-}
+

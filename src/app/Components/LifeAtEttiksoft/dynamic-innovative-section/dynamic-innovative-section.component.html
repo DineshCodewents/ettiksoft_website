@@ -1,15 +1,13 @@
 <div class="main-container" id="main-container" appLifeAtEttiksoftScroll>
-  <div class="container">
+  <div class="container" id="container">
     <div class="row">
-      <div class="col-lg-4 d-flex mx-auto">
-          <div class="img-section">
+      <div class="col-md-4 d-flex mx-auto">
             <img src="../../../../assets/images/life-at-ettiksoft/SECTION3 -LAE.svg" alt="img-1" class="img-fluid"
             alt="Image 1" (load)="onImageLoad()"
             [hidden]="isLoading && !isImageLoaded">
             <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
-          </div>
       </div>
-      <div class="col-lg-8 d-flex mx-auto">
+      <div class="col-md-8 d-flex mx-auto">
           <div class="section-txt">
             <div class="heading-section">
               <div class="innovative-txt animate-on-scroll">

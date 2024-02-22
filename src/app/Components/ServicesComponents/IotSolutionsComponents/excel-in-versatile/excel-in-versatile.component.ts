@@ -24,11 +24,10 @@ export class ExcelInVersatileComponent {
   }
 
   public clients = [
-    { src: '../../../../../assets/images/1 (1).png', alt: 'bosch-img' },
-    { src: '../../../../../assets/images/4.png', alt: 'murugapa-img' },
-    { src: '../../../../../assets/images/5 (1).png', alt: 'mahindra-img' },
-    { src: '../../../../../assets/images/Group 12.jpg', alt: 'spectrum-img' },
-    { src: '../../../../../assets/images/5.png', alt: 'mahindra-electric-img' }
+    { src: '../../../../../assets/images/our-client-img-1.png', alt: 'mahindra-electric-img' },
+    { src: '../../../../../assets/images/our-client-img-2.png', alt: 'rana-img' },
+    { src: '../../../../../assets/images/our-client-img-3.png', alt: 'mahindra-img' },
+    { src: '../../../../../assets/images/our-client-img-4.png', alt: 'murugapa-img' }
   ];
   isLoading = true;
   isImageLoaded = false;

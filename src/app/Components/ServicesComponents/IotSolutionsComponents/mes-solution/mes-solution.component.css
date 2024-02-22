@@ -1,18 +1,19 @@
 .main-container {
-  margin-top: 40px;
+ background-color: var(--black);
 }
-
-h1 {
-  font-size: 45px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+.img-column img{
+  width: 100%;
+}
+#common-h1 {
+  font-weight: 600;
+  font-family: 'Adamina', sans-serif;
+  color:var(--dark-gray);
   margin-bottom: 40px;
-  line-height: 1.5;
   text-align: center;
 }
 
-h1 span {
-  color: #00C265;
+#common-h1 span {
+  color: var(--lite-gray);
   /* background: linear-gradient(90deg, #FF0F3A 0%, #00DFDE 32.42%); */
   -webkit-background-clip: text;
 }
@@ -21,19 +22,18 @@ h1 span {
   content: '';
   width: 100%;
   height: 400px;
-  background: linear-gradient(90deg, #ddd, #f4f4f4, #ddd);
+  background: var(--medium-black);
   margin: 0 10px;
   background-size: 200%;
   animation: skeleton 10s linear infinite;
 }
 
-p {
-  font-size: 1.2rem;
+#common-h4{
   font-weight: 400;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Assistent', sans-serif;
   line-height: 1.7;
   margin-bottom: 40px;
-  color: #404B62;
+  color: var(--lite-gray);
 }
 
 .mes-txt {
@@ -76,22 +76,22 @@ p {
 }
 
 @media (max-width:767px) {
-  h1 {
+  #common-h1 {
     font-size: 35px;
   }
 
-  p {
-    font-size: 16px;
+  #common-h4 {
+    font-size: 18px;
   }
 }
 
 @media (max-width:575px) {
-  h1 {
+  #common-h1 {
     font-size: 28px;
     margin-bottom: 25px;
   }
 
-  p {
-    font-size: 1rem;
+  #common-h4 {
+    font-size: 16px;
   }
 }

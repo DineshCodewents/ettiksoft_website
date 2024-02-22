@@ -1,7 +1,7 @@
 .main-container {
   max-width: 100%;
   padding: 0;
-  background-color: #191919;
+  background-color: var(--medium-black);
 }
 .heading-section{
   padding-top: 80px;

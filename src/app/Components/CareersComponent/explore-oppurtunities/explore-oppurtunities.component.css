@@ -1,54 +1,60 @@
-.heading h1{
+.main-container{
+  background-color: var(--medium-black);
+}
+#common-h1{
   display: none;
-  font-size: 40px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-family: 'Adamina', sans-serif;
+  color: var(--dark-gray);
   margin-bottom: 10%;
   text-align: center;
-  line-height: 1.5;
 }
 .mt-4{
   display: none;
 }
-h1{
-  font-size: 24px;
-  font-weight: bold;
+#common-h3{
+  /* display: none; */
+  font-weight: 600;
   text-align: center;
   margin-bottom: 10%;
   color: var(--dark-gray);
 }
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--black);
   border-radius: 8px;
   box-shadow: 0px 4px 4px 0px #00000040;
+  background-color: var(--black);
 }
 .card-body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.text-section h1{
-  font-family: 'Poppins', sans-serif;
+#common-h4{
+  font-family: 'Adamina', sans-serif;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
+  color: var(--dark-gray);
 }
-.text-section p{
-  font-weight: 400;
+#common-p{
+  font-family: 'Assistent', sans-serif;
+  font-weight: 600;
+  color: var(--lite-gray);
 }
 .btn{
     width: 138px;
     height: 40px;
     border-radius: 8px;
-    border: 1px solid #00BCBB;
-    color: #00BCBB;
+    border: 1px solid var(--lite-gray);
+    color: var(--lite-gray);
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     line-height: 24px;
 }
 .btn:hover{
-  background-color: #00BCBB;
+  background-color: var(--white);
   border: 1px solid #FEFEFE;
-  color: #FEFEFE;
+  color: var(--black);
 }
 .btn i{
   font-size: 16px;

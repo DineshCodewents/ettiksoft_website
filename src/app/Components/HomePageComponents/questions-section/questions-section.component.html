@@ -1,6 +1,6 @@
 <section class="section1">
   <div class="product-container">
-    <!-- <div class="main-container">
+     <!-- <div class="main-container">
       <div class="container">
         <h1 class="question-txt-heading" id="common-h1">
           Frequently asked questions
@@ -90,12 +90,12 @@
     </div>
   </div>
 </section>
-<footer  [style.z-index]="footerZIndex">
+<footer>
   <div class="container" id="container">
     <div class="row footer-row">
       <div class="col-md-3">
         <div class="text-center">
-          <img src="../../../../assets/images/ettiksoft-logo.png" alt="Company Logo" class="img-fluid mb-2">
+          <img src="../../../../assets/images/ettiksoft-logo.png" [routerLink]="'/'" alt="Company Logo" class="img-fluid mb-2">
         </div>
         <div class="text-center social-icon">
           <a *ngFor="let socialLink of socialLinks" [href]="socialLink.link" class="text-light ml-2">
@@ -103,30 +103,12 @@
           </a>
         </div>
       </div>
-      <div class="col-md-2">
-        <h5 id="common-h4">Company</h5>
+      <div *ngFor="let siteLink of siteLinks" class="col-md-2">
+        <h5 id="common-h4">{{ siteLink.category }}</h5>
         <ul>
-          <li><a  [routerLink]="'/about-page'" (click)="scrollToTop()" id="common-p">About us</a></li>
-          <li><a [routerLink]="'/life-at-ettiksoft'" (click)="scrollToTop()" id="common-p">Life at Ettiksoft</a></li>
-          <li><a [routerLink]="'/contact-us'" (click)="scrollToTop()" id="common-p">Contact Us</a></li>
-          <li><a [routerLink]="'/careers-page'" (click)="scrollToTop()" id="common-p">Careers</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2">
-        <h5 id="common-h4">Products</h5>
-        <ul>
-          <li><a [routerLink]="'/load-box'" (click)="scrollToTop()" id="common-p">Load Box</a></li>
-          <li><a [routerLink]="'/break-out-box'" (click)="scrollToTop()" id="common-p">Break out Box</a></li>
-          <li><a [routerLink]="'/emi-wiring'" (click)="scrollToTop()" id="common-p">EMI Wiring</a></li>
-          <li><a [routerLink]="'/ev-page'" (click)="scrollToTop()" id="common-p">EV Components Test System</a></li>
-          <li><a [routerLink]="'/variant-switch'" (click)="scrollToTop()" id="common-p">Smart Gate System</a></li>
-        </ul>
-      </div>
-      <div class="col-md-2">
-        <h5 id="common-h4">Services</h5>
-        <ul>
-          <li><a [routerLink]="'/mobility-engineering-page'" (click)="scrollToTop()"  id="common-p">Mobility Engineering Services</a></li>
-          <li><a [routerLink]="'/iot-solution-page'" (click)="scrollToTop()"  id="common-p">IOT Solutions</a></li>
+          <li *ngFor="let link of siteLink.links">
+            <a [routerLink]="link.path" (click)="goToTop()" id="common-p">{{ link.label }}</a>
+          </li>
         </ul>
       </div>
       <div class="col-md-2">
@@ -158,58 +140,21 @@
         </div>
       </div>
       <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item custom-accordion">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed " id="common-h4" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Company
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <ul>
-                <li><a  [routerLink]="'/about-page'" (click)="scrollToTop()" id="common-p">About us</a></li>
-                <li><a [routerLink]="'/life-at-ettiksoft'" (click)="scrollToTop()" id="common-p">Life at Ettiksoft</a></li>
-                <li><a [routerLink]="'/contact-us'" (click)="scrollToTop()" id="common-p">Contact Us</a></li>
-                <li><a [routerLink]="'/careers-page'" (click)="scrollToTop()" id="common-p">Careers</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item custom-accordion">
-          <h2 class="accordion-header" id="flush-headingTwo">
+        <div *ngFor="let siteLink of siteLinks" class="accordion-item custom-accordion">
+          <h2 class="accordion-header" [attr.id]="'flush-heading' + siteLink.category | lowercase">
             <button class="accordion-button collapsed" id="common-h4" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Products
+              [attr.data-bs-target]="'#flush-collapse' + siteLink.category | lowercase" aria-expanded="false"
+              [attr.aria-controls]="'flush-collapse' + siteLink.category | lowercase">
+              {{ siteLink.category }}
             </button>
           </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-            data-bs-parent="#accordionFlushExample">
+          <div [attr.id]="'flush-collapse' + siteLink.category | lowercase" class="accordion-collapse collapse"
+            [attr.aria-labelledby]="'flush-heading' + siteLink.category | lowercase" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <ul>
-                <li><a [routerLink]="'/load-box'" (click)="scrollToTop()" id="common-p">Load Box</a></li>
-                <li><a [routerLink]="'/break-out-box'" (click)="scrollToTop()" id="common-p">Break out Box</a></li>
-                <li><a [routerLink]="'/emi-wiring'" (click)="scrollToTop()" id="common-p">EMI Wiring</a></li>
-                <li><a [routerLink]="'/ev-page'" (click)="scrollToTop()" id="common-p">EV Components Test System</a></li>
-                <li><a [routerLink]="'/variant-switch'" (click)="scrollToTop()" id="common-p">Smart Gate System</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item custom-accordion">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed" id="common-h4" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Services
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <ul>
-                <li><a [routerLink]="'/mobility-engineering-page'" (click)="scrollToTop()"  id="common-p">Mobility Engineering Services</a></li>
-                <li><a [routerLink]="'/iot-solution-page'" (click)="scrollToTop()"  id="common-p">IOT Solutions</a></li>
+                <li *ngFor="let link of siteLink.links">
+                  <a [routerLink]="link.path" (click)="goToTop()" id="common-p">{{ link.label }}</a>
+                </li>
               </ul>
             </div>
           </div>

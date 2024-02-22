@@ -1,6 +1,6 @@
 .main-container {
   max-width: 100%;
-  padding-top: 10%;
+  background-color: var(--black);
 }
 
 .background-img {
@@ -46,25 +46,24 @@
   gap: 10px;
 }
 
-.heading-txt h1 {
-  font-size: 45px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  line-height: 1;
+#common-h1 {
+  font-family: 'Adamina', sans-serif;
+  color: var(--dark-gray);
+  font-weight: 600;
   margin: 0;
 }
 
-.paragraph-txt p {
-  font-size: 1rem;
-  font-weight: normal;
+#common-p {
+  font-weight: 400;
+  font-family: 'Assistent', sans-serif;
   text-align: left;
-  line-height: 1.5;
+  color: var(--lite-gray);
 }
 
 .stright-line {
   height: 3px;
   width: 60%;
-  background-color: #FFFFFF;
+  background-color: var(--dark-gray);
 }
 
 .slide-left {
