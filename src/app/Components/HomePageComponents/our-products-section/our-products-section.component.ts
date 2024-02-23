@@ -1,4 +1,6 @@
 import { Component, ElementRef, Renderer2, AfterViewInit, HostListener } from '@angular/core';
+import { Router, NavigationStart } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-our-products-section',
@@ -6,7 +8,25 @@ import { Component, ElementRef, Renderer2, AfterViewInit, HostListener } from '@
   styleUrls: ['./our-products-section.component.css']
 })
 export class OurProductsSectionComponent implements AfterViewInit {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  private previousUrl: string | undefined = undefined;
+  constructor(private el: ElementRef, private renderer: Renderer2,private router: Router) { 
+    this.router.events.pipe(
+    filter((event): event is NavigationStart => event instanceof NavigationStart)
+  ).subscribe((event: NavigationStart) => {
+    if (this.previousUrl !== event.url) {
+      this.scrollInside();
+    }
+    this.previousUrl = event.url;
+  });
+}
+
+public scrollInside(): void {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+  });
+}
 
   ngAfterViewInit(): void {
     this.animateOnScroll();
@@ -39,4 +59,6 @@ export class OurProductsSectionComponent implements AfterViewInit {
       rect.bottom <= windowHeight + rect.height / 2
     );
   }
+
+  
 }

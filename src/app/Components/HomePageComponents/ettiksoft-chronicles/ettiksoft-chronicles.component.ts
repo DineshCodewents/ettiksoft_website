@@ -19,19 +19,20 @@ export class EttiksoftChroniclesComponent {
   }
   @HostListener('window:scroll', [])
   onScroll(): void {
-    const element = this.el.nativeElement.querySelector('.custom-image');
-    if (this.isElementHalfInViewport(element)) {
-      this.renderer.addClass(element, 'slide-in-from-left');
+    const elementOne = this.el.nativeElement.querySelector('.img-1');
+    const elementTwo = this.el.nativeElement.querySelector('.img-2');
+    const elementThree = this.el.nativeElement.querySelector('.img-3');
+    if (this.isElementHalfInViewport(elementOne)) {
+      this.renderer.addClass(elementOne, 'slideInFromRight');
+    } 
+    if (this.isElementHalfInViewport(elementTwo)) {
+      this.renderer.addClass(elementTwo, 'slideInFromRight');
+    } 
+    if (this.isElementHalfInViewport(elementThree)) {
+      this.renderer.addClass(elementThree, 'slideInFromRight');
     } 
 
-    const contentElement = this.el.nativeElement.querySelector('.content-section');
-     const exploreBtnElement = this.el.nativeElement.querySelector('.explore-btn');
-    if (this.isElementHalfInViewport(contentElement)) {
-      this.renderer.addClass(contentElement, 'fadeInUp');
-    }
-     if (this.isElementHalfInViewport(exploreBtnElement)) {
-      this.renderer.addClass(exploreBtnElement, 'fadeInUp');
-    }
+    
   }
 
   private isElementHalfInViewport(el: HTMLElement): boolean {

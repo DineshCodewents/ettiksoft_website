@@ -26,6 +26,8 @@ import { CareersFormModule } from './Components/CareersFormComponent/careers-for
 import { ContactUsModule } from './Components/ContactUsComponent/contact-us.module';
 import { ProductsPageModule } from './Components/ProductspageComponents/products-page.module';
 import { EttiksoftServiceModule } from './Components/ServicesComponents/ettiksoft-service.module';
+import { CustomRouteReuseStrategy } from './custom-route-reuse.strategy';
+import { RouteReuseStrategy } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { EttiksoftServiceModule } from './Components/ServicesComponents/ettiksof
     ProductsPageModule,
     EttiksoftServiceModule
   ],
-  providers: [],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: CustomRouteReuseStrategy }, // Provide the custom strategy
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
