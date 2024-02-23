@@ -41,10 +41,12 @@ export class SystemEngineeringPageComponent {
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
   ngOnInit() {
+    this.onScroll(); 
     this.animateElements();
   }
   @HostListener('window:scroll', [])
   onScroll(): void {
+    console.log('Scrolling...');
     const element = this.el.nativeElement.querySelector('.col-md-4');
     const imgElement = this.el.nativeElement.querySelector('.col-md-8');
     if (this.isElementHalfInViewport(element)) {

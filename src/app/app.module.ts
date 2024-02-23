@@ -17,7 +17,6 @@ import { ServicesComponent } from './Components/FooterComponent/services/service
 import { EttiksoftMapSectionComponent } from './Components/HomePageComponents/ettiksoft-map-section/ettiksoft-map-section.component';
 import { OurSpecialitySectionComponent } from './Components/HomePageComponents/our-speciality-section/our-speciality-section.component';
 import { EttiksoftChroniclesComponent } from './Components/HomePageComponents/ettiksoft-chronicles/ettiksoft-chronicles.component';
-import { AboutPageComponent } from './Components/AboutPageComponents/about-page/about-page.component';
 import { AboutPageModule } from './Components/AboutPageComponents/about-page.module';
 import { HomePageComponent } from './Components/HomePageComponents/home-page/home-page.component';
 import { NavBarComponent } from './Components/HomePageComponents/nav-bar/nav-bar.component';

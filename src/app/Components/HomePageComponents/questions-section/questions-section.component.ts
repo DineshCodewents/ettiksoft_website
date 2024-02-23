@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
 @Component({
@@ -45,28 +45,37 @@ export class QuestionsSectionComponent  {
   private previousUrl : string |undefined;
   constructor(private router: Router) {
     this.router.events.pipe(
-      filter((event) : event is NavigationEnd => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      if (this.previousUrl !== event.urlAfterRedirects){
-      this.scrollToTop();
+      filter((event): event is NavigationStart => event instanceof NavigationStart)
+    ).subscribe((event: NavigationStart) => {
+      if (this.previousUrl !== event.url) {
+        this.scrollToTop();
       }
-      this.previousUrl = event.urlAfterRedirects;
+      this.previousUrl = event.url;
     });
   }
 
   private scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
   }
   private scrollInside() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant"
+    });
   }
   goToTop() {
     const currentUrl = this.router.url;
-    if (this.previousUrl === currentUrl){
-      this.scrollInside();
+    if (this.previousUrl === currentUrl) {
+      // Smooth scroll to top
+      this.scrollToTop();
     } else {
-      this.router.navigate(['/'], {fragment: 'top'});
+      // Instant scroll to top when navigating between pages
+      this.scrollInside();
     }
   }
 }
