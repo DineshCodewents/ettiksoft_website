@@ -44,16 +44,13 @@ export class QuestionsSectionComponent  {
     // Add more social links as needed
   ];
 
-  private previousUrl: string | undefined;
-
-  constructor(private router: Router) { }
-
-  ngOnInit() {
+  private previousUrl : string |undefined;
+  constructor(private router: Router) {
     this.router.events.pipe(
-      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+      filter((event) : event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      if (this.previousUrl !== event.urlAfterRedirects) {
-        this.scrollToTop();
+      if (this.previousUrl !== event.urlAfterRedirects){
+      this.scrollToTop();
       }
       this.previousUrl = event.urlAfterRedirects;
     });
@@ -63,16 +60,15 @@ export class QuestionsSectionComponent  {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
   private scrollInside() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top: 0, behavior: 'smooth'});
   }
-
-  goToTop(scrollToTop?: boolean) {
-    if (scrollToTop === undefined || scrollToTop) {
+  goToTop() {
+    const currentUrl = this.router.url;
+    if (this.previousUrl === currentUrl){
       this.scrollInside();
     } else {
-      this.router.navigate(['/'], { fragment: 'top' });
+      this.router.navigate(['/'], {fragment: 'top'});
     }
   }
 }

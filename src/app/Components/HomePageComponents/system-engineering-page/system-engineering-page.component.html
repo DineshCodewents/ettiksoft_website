@@ -6,10 +6,14 @@
       </div>
       <div class="row">
         <div class="col-md-12 services-section">
-          <button class="btn btn-dark" [class.active-btn]="selectedService === 'Automotive'" (click)="updateService('Automotive')">Automotive</button>
-          <button class="btn btn-dark" [class.active-btn]="selectedService === 'Medical'" (click)="updateService('Medical')">Medical</button>
-          <button class="btn btn-dark" [class.active-btn]="selectedService === 'IOT'" (click)="updateService('IOT')">IOT</button>
-          <button class="btn btn-dark" [class.active-btn]="selectedService === 'IIOT'" (click)="updateService('IIOT')">IIOT</button>
+          <button class="btn btn-dark" [class.active-btn]="selectedService === 'Automotive'"
+            (click)="updateService('Automotive')">Automotive</button>
+          <button class="btn btn-dark" [class.active-btn]="selectedService === 'Medical'"
+            (click)="updateService('Medical')">Medical</button>
+          <button class="btn btn-dark" [class.active-btn]="selectedService === 'IOT'"
+            (click)="updateService('IOT')">IOT</button>
+          <button class="btn btn-dark" [class.active-btn]="selectedService === 'IIOT'"
+            (click)="updateService('IIOT')">IIOT</button>
         </div>
       </div>
     </div>
@@ -28,7 +32,11 @@
         </div>
       </div>
       <div class="col-md-8">
-        <img [src]="getServiceContent()?.imagePath" alt="{{ selectedService }}-img" class="img-fluid">
+        <div *ngIf="isLoaded; else loadedContent" class="skeleton-template"></div>
+        <ng-template #loadedContent>
+          <img *ngIf="!isLoaded" [src]="getServiceContent()?.imagePath" alt="{{ selectedService }}-img"
+            class="img-fluid">
+        </ng-template>
       </div>
     </div>
   </div>

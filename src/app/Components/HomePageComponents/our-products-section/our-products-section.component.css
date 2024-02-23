@@ -16,6 +16,25 @@
   background: rgba(0, 0, 0, 0.9);
   background-size: cover;
 }
+
+.explore-btn{
+  color: var(--white);
+  font-family: 'Assistant', serif;
+  font-weight: 400;
+  display: flex;
+  gap: 20px;
+  width: 150px;
+  border-radius: 15px;
+  border:1px solid var(--dark-gray) ;
+  padding: 5px 40px;
+  align-items: baseline;
+}
+.explore-btn:hover{
+  background-color: var(--lite-gray);
+  color: var(--black);
+  border: 1px solid var(--lite-gray);
+  font-weight: 600;
+}
 .product-txt{
   color: var(--dark-gray);
   font-family: 'Adamin','serif';
@@ -209,6 +228,26 @@
   display: flex;
   flex-direction: row;
 }
+.our-team-col,.cards-column{
+  opacity: 0;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.slideInFromBottom {
+  animation: slideInFromBottom 1s ease-out;
+  opacity: 1;
+}
+
+/* Apply animations to specific elements */
+
 @media (max-width:1440px){
   #common-h1{
     font-size:30px;
@@ -241,7 +280,7 @@
     padding: 0 15px 0px 15px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
   }
   .load-box-txt-section,.break-out-txt-section{
@@ -307,7 +346,7 @@
     padding: 0 15px 0px 15px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 0; /* number of lines to show */
+    -webkit-line-clamp: 0;
     -webkit-box-orient: vertical;
   }
 }
