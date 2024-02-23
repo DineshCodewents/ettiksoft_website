@@ -54,14 +54,14 @@
   border-radius: 8px;
   background-color: var(--black);
   font-family: 'Assistent', sans-serif;
-  color: var(--white);
+  color: var(--lite-gray);
   font-size: 18px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--lite-gray);
   line-height: 24px;
 }
 
 .btn:hover {
-  background-color: var(--white);
+  background-color: var(--lite-gray);
   color: var(--black);
   border: 1px solid var(--black);
 }

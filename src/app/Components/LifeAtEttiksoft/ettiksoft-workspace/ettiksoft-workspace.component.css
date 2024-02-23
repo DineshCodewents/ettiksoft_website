@@ -46,12 +46,12 @@
 #common-h1{
   font-family: 'Adamina', sans-serif;
   font-weight:400;
-  color: var(--lite-gray);
+  color:var(--dark-gray);
 }
 #common-h4{
   font-family:'Assistent', sans-serif;
   animation: slideInBottomToTop 1s ease-out 0.5s;
-  color:var(--dark-gray);
+  color: var(--lite-gray);
   text-align:left;
 }
 @keyframes slideInBottomToTop {

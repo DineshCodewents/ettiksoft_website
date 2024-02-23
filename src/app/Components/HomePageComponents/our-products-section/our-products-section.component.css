@@ -157,6 +157,7 @@
   font-weight: 400;
   display: flex;
   gap: 10px;
+  padding: 0 35px 0px 35px;
   transition: 0.3s all ease-in-out;
 }
 
@@ -177,6 +178,7 @@
   font-weight: 400;
   display: flex;
   gap:10px;
+  padding: 0 35px 0px 35px;
   transition: 0.3s all ease-in-out;
 }
 .card:hover span{

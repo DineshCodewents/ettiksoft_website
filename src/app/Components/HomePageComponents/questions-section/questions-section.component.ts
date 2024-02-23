@@ -12,27 +12,27 @@ export class QuestionsSectionComponent  {
     {
       category: 'Company',
       links: [
-        { label: 'About us', path: '/about-page' },
-        { label: 'Life at Ettiksoft', path: '/life-at-ettiksoft' },
-        { label: 'Contact Us', path: '/contact-us' },
-        { label: 'Careers', path: '/careers-page' },
+        { label: 'About us', path: 'about-page' },
+        { label: 'Life at Ettiksoft', path: 'life-at-ettiksoft' },
+        { label: 'Contact Us', path: 'contact-us' },
+        { label: 'Careers', path: 'careers-page' },
       ]
     },
     {
       category: 'Products',
       links: [
-        { label: 'Load Box', path: '/load-box' },
-        { label: 'Break out Box', path: '/break-out-box' },
-        { label: 'EMI Wiring', path: '/emi-wiring' },
-        { label: 'EV Components Test System', path: '/ev-page' },
-        { label: 'Variant switche', path: '/variant-switch' },
+        { label: 'Load Box', path: 'load-box' },
+        { label: 'Break out Box', path: 'break-out-box' },
+        { label: 'EMI Wiring', path: 'emi-wiring' },
+        { label: 'EV Components Test System', path: 'ev-page' },
+        { label: 'Variant switche', path: 'variant-switch' },
       ]
     },
     {
       category: 'Services',
       links: [
-        { label: 'Mobility Engineering Services', path: '/mobility-engineering-page' },
-        { label: 'IOT Solutions', path: '/iot-solution-page' },
+        { label: 'Mobility Engineering Services', path: 'mobility-engineering-page' },
+        { label: 'IOT Solutions', path: 'iot-solution-page' },
       ]
     },
   ];
@@ -41,9 +41,7 @@ export class QuestionsSectionComponent  {
     { title: 'LinkedIn', iconClass: 'fa-brands fa-linkedin-in', link: 'https://www.linkedin.com/company/ettiksofttechnologies-pvtltd/' },
     { title: 'Instagram', iconClass: 'fa-brands fa-instagram', link: 'https://www.instagram.com/ettiksoft_technologies?igsh=cnljYzJxYnF2YnU4' },
     { title: 'YouTube', iconClass: 'fa-brands fa-youtube', link: 'https://youtube.com/@Ettiksoft?si=dOAC3xsdKfbTQUCB' }
-    // Add more social links as needed
   ];
-
   private previousUrl : string |undefined;
   constructor(private router: Router) {
     this.router.events.pipe(

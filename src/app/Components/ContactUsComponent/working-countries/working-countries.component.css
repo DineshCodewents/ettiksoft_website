@@ -37,7 +37,7 @@
 }
 #common-p{
   font-family: 'Assistent', sans-serif;
-  color: var(--white);
+  color: var(--dark-gray);
   margin-bottom: 10px;
   font-weight:400;
 }
@@ -46,17 +46,18 @@ iframe{
   height:"550" ;
 }
 .card.selected-country {
-  background-color: #F0F7FF;
+  background-color: var(--black);
   border-radius: 15px;
+  border: 1px solid var(--lite-gray);
 }
 
 .card.selected-country h1 {
-  color: red;
-  margin-left: 5;
+  color: var(--lite-gray);
+  margin-left: 5px;
 }
 .card.selected-country #common-p {
   margin-left: 5;
-  color: var(--black);
+  color: var(--dark-gray);
 }
 @media (max-width:767px) {
   .col-md-4{

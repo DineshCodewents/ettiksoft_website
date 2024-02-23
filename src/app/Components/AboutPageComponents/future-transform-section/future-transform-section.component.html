@@ -1,4 +1,4 @@
-<div class="main-container" appAboutScroll>
+<div class="main-container" id="main-container" appAboutScroll>
   <div class="heading-section">
     <div class="heading">
       <h1 class="animate-on-scroll" [ngClass]="{'visible': isVisible}"style="animation-delay: 0.2s;" id="common-h1">On a Mission to Transform Future Endeavors.</h1>
@@ -6,7 +6,7 @@
         and social responsibility, creating value for customers, associates, and suppliers.</p>
     </div>
   </div>
-  <div class="img-section">
+  <div class="img-section" style="display: none;">
     <img src="../../../../assets/images/about/map_aboutus.jpg" alt="map-img"(load)="onImageLoad()"
     [hidden]="isLoading && !isImageLoaded">
     <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>

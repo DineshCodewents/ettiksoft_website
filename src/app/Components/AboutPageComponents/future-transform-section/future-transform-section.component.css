@@ -4,11 +4,9 @@
   background-color: var(--medium-black);
 }
 .heading-section{
-  padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
 }
 .heading{
   justify-content: center;

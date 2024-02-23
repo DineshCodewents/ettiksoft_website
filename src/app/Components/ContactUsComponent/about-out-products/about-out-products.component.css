@@ -15,7 +15,7 @@
 #common-h1 {
   font-weight: 600;
   font-family: 'Adamina', sans-serif;
-  color: var(--lite-gray);
+  color: var(--dark-gray);
   margin-bottom: 10px;
 }
 
@@ -29,7 +29,7 @@ p {
 .stright-line {
   height: 5px;
   width: 300px;
-  background-color: var(--lite-gray);
+  background-color: var(--dark-gray);
   margin: 20px 0;
 }
 
@@ -59,7 +59,7 @@ img {
 }
 
 .form-column {
-  background-color: #FFFFFF;
+  background-color: var(--medium-black);
   padding: 20px 40px;
   margin-bottom: 20px;
   border-radius: 11px;
@@ -89,10 +89,13 @@ img {
   display: inline-block;
   border-radius: 0.376rem;
 }
-
+.custom-select option{
+  color: var(--dark-gray);
+}
 label {
-  color: var(--black);
+  color: var(--dark-gray);
   padding-bottom: 10px;
+  font-size: 16px;
   font-family: 'Adamina', sans-serif;
   font-weight: 400;
 }
@@ -108,23 +111,25 @@ label {
 }
 
 .submit-btn {
-  background-color: #00BCBB;
-  color: #ffffff;
+  background-color:var(--black);
+  color: var(--lite-gray);
   height: 40px;
   border: none;
   width: 100%;
+  font-family: 'Assistent', sans-serif;
   border-radius: 8px;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .submit-btn:hover {
-  background-color: #008080;
-  color: white;
+  background-color: var(--lite-gray);
+  color: var(--black);
+  font-weight: 600;
 }
 
 .privacy-text p {
-  color: #000000;
+  color: var(--lite-gray);
   font-size: 16px;
   font-weight: 400;
   font-family: 'Assistent', sans-serif;

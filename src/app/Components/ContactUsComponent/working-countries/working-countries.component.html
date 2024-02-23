@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="card" *ngFor="let country of countries" (click)="showCountry(country)" [ngClass]="{'selected-country': selectedCountry === country.name}">
-          <h1 id="common-h3" [style.color]="selectedCountry === country.name ? 'red' : ''">{{ country.name }}</h1>
+          <h1 id="common-h3" [style.color]="selectedCountry === country.name ?'' : ''">{{ country.name }}</h1>
           <p id="common-p">{{ country.address }}</p>
         </div>
       </div>      

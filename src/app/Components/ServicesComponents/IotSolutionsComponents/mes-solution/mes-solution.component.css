@@ -12,12 +12,6 @@
   text-align: center;
 }
 
-#common-h1 span {
-  color: var(--lite-gray);
-  /* background: linear-gradient(90deg, #FF0F3A 0%, #00DFDE 32.42%); */
-  -webkit-background-clip: text;
-}
-
 .skeleton-rect {
   content: '';
   width: 100%;

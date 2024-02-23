@@ -41,19 +41,19 @@
 #common-h1 {
   font-weight: 600;
   font-family: 'Adamina', sans-serif;
-  color: var(--white);
+  color: var(--dark-gray);
 }
 
 #common-h4 {
   font-weight: 400;
   font-family: 'Assistent', sans-serif;
-  color:var(--lite-gray);
+  color:var(--dark-gray);
 }
 
 .stright-line {
   height: 5px;
   width: 300px;
-  background-color: #FFFFFF;
+  background-color: var(--dark-gray);
   margin: 0px auto;
   text-align: center;
 }
@@ -69,16 +69,16 @@ button {
   padding: 12px 35px;
   background-color: var(--black);
   font-family: 'Assistent', sans-serif;
-  color: var(--white);
+  color: var(--lite-gray);
   font-size: 18px;
-  border: 1px solid var(--white);
+  border: 1px solid var(--lite-gray);
   border-radius: 10px;
   cursor: pointer;
   outline: none;
 }
 
 button:hover {
-  background-color: var(--white);
+  background-color: var(--lite-gray);
   color: var(--black);
   border: 1px solid var(--black);
 }

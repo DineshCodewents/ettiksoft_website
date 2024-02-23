@@ -47,16 +47,12 @@
     font-family: 'Adamina', sans-serif;
     margin-bottom: 5px;
 }
-#common-h1 span{
-    color: var(--lite-gray);
-}
- 
 
 #common-h4 {
     font-weight: 400;
     font-family: 'Assistent', sans-serif;
     line-height: 1.7;
-    color: var(--lite-gray);
+    color: var(--dark-gray);
     margin-bottom: 30px;
 }
 

@@ -23,7 +23,7 @@
  #common-h2{
   font-weight: 600;
   font-family: 'Adamina', sans-serif;
-  color: var(--lite-gray);
+  color: var(--dark-gray);
  }
  
  .content-scroll{
@@ -56,7 +56,7 @@
  #common-p{
   font-family: 'Assistent', sans-serif;
   font-weight:400;
-  color: var(--dark-gray);
+  color: var(--lite-gray);
 
  }
 

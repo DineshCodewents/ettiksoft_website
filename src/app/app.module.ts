@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroSectionComponent } from './Components/HomePageComponents/intro-section/intro-section.component';
@@ -50,6 +51,7 @@ import { EttiksoftServiceModule } from './Components/ServicesComponents/ettiksof
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     AboutPageModule,
     LifeAtEttiksoftModule,
     CareersModule,
