@@ -1,0 +1,81 @@
+<div class="main-container">
+  <div class="nav-bar" [class.show-nav-bar]="showNavBar">
+    <div class="brand">
+      <img src="../../../../assets/images/ettiksoft-logo.png" [routerLink]="'/'" alt="logo">
+    </div>
+    <div class="nav-right-side">
+      <div id="nav-icon1" class="hamburger-menu nav-icon1" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+     <div class="laguage-section">
+      <app-language-media-nav></app-language-media-nav>
+     </div>
+    <div class="menu-links" *ngIf="showMenu">
+      <div class="dropdowns-section">
+        <a class="nav-link dropdown-toggle" id="company-dropdown" role="button" data-bs-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Company
+        </a>
+        <div class="dropdown-menu" aria-labelledby="company-dropdown">
+          <app-company-nav></app-company-nav>
+        </div>
+
+        <a class="nav-link dropdown-toggle" id="products-dropdown" role="button" data-bs-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Products
+        </a>
+        <div class="dropdown-menu" aria-labelledby="products-dropdown">
+          <app-product-nav></app-product-nav>
+        </div>
+
+        <a class="nav-link dropdown-toggle" id="services-dropdown" role="button" data-bs-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="services-dropdown">
+          <app-service-nav></app-service-nav>
+        </div>
+      </div>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item custom-accordion">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Company
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"><app-company-nav></app-company-nav></div>
+          </div>
+        </div>
+        <div class="accordion-item custom-accordion">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Product
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"><app-product-nav></app-product-nav></div>
+          </div>
+        </div>
+        <div class="accordion-item custom-accordion">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Service
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"><app-service-nav></app-service-nav></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

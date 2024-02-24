@@ -1,0 +1,18 @@
+<a class="language-link dropdown-toggle" role="button" id="navbarDropdownlang" data-bs-toggle="dropdown"
+  aria-haspopup="true" aria-expanded="false">
+  <p><i class="fa fa-globe" aria-hidden="true"> En</i></p>
+</a>
+<div class="dropdown-menu " aria-labelledby="navbarDropdownlang">
+  <div class="inside-nav">
+
+    <ul>
+      <li *ngFor="let menuItem of menuItems">
+        <span>
+          <img src="{{ menuItem.imagePath }}" alt="{{ menuItem.label }}-image"> {{ menuItem.label }}
+        </span>
+      </li>
+    </ul>
+
+
+  </div>
+</div>

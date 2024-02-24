@@ -1,0 +1,32 @@
+<div class="main-container">
+    <h1 class="heading-txt" id="Common-h3">Products</h1>
+    <div class="stright-line"></div>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let card of column1" (click)="navigateToProductPage(card.path)">
+            <div class="card">
+                <div class="card-body">
+                    <h1 id="common-h4" class="card-title">{{ card.title }}</h1>
+                    <p id="common-p" class="card-text">{{ card.content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-4" *ngFor="let card of column2"(click)="navigateToProductPage(card.path)">
+            <div class="card">
+                <div class="card-body">
+                    <h1 id="common-h4" class="card-title">{{ card.title }}</h1>
+                    <p id="common-p" class="card-text">{{ card.content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="inside-nav">
+    <ul>
+      <li *ngFor="let menuItem of menuItems" (click)="navigateTo(menuItem.path)">
+        <a>{{ menuItem.label }}</a>
+      </li>
+    </ul>
+  </div>
