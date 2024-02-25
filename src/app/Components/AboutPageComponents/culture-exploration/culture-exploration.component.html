@@ -7,10 +7,7 @@
         </h1>
       </div>
       <div class="contact-us-btn animate-on-scroll" [ngClass]="{'visible': isVisible}" style="animation-delay: 0.4s;">
-        <button type="button" class="btn btn-primary btn-sm" (mouseenter)="changeIcon()"
-          (mouseleave)="resetIcon()" (click)=" navigateToLifeAtEttikPage()">Explore
-          <i [class]="iconClass" aria-hidden="true"></i>
-        </button>
+        <button class="btn explore-btn"  (click)=" navigateToLifeAtEttikPage()">Explore <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div>
     <div class="company-img">

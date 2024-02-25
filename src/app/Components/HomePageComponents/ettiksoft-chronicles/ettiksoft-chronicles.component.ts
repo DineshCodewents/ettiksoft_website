@@ -9,14 +9,7 @@ import { Router } from '@angular/router';
 export class EttiksoftChroniclesComponent {
  
   constructor(private el: ElementRef, private renderer: Renderer2,private router: Router) {}
-  navigateToAboutPage() {
-    this.router.navigate(['/life-at-ettiksoft']);
-  }
 
-  scrollToTop() {
-    window.scrollTo(0, 0);
-    this.navigateToAboutPage();
-  }
   @HostListener('window:scroll', [])
   onScroll(): void {
     const elementOne = this.el.nativeElement.querySelector('.img-1');

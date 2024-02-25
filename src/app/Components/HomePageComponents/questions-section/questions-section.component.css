@@ -271,22 +271,7 @@ ul li {
     max-width: 100%;
   }
 
-  .footer-accordion {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    gap: 30px;
-  }
 
-  .footer-accordion .accordion-header {
-    margin: 0;
-    line-height: 0;
-    border-radius: 10px;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
-    border-bottom: none
-  }
 
   .footer-accordion .accordion-button::after {
     background-image: url('../../../../assets/images/down-arrow.svg');

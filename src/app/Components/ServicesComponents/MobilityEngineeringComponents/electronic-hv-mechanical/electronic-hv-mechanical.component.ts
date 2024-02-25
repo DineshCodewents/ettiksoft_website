@@ -72,9 +72,7 @@ export class ElectronicHvMechanicalComponent {
   ];
   toggleHiddenContent(sectionIndex: number) {
     const currentSection = this.sectionsData[sectionIndex];
-  
-    currentSection.showHiddenContent = !currentSection.showHiddenContent;
-  
+    currentSection.showHiddenContent = !currentSection.showHiddenContent;     
     if (currentSection.showHiddenContent && currentSection.tools.length > 0) {
       currentSection.showTools = true;
     } else {

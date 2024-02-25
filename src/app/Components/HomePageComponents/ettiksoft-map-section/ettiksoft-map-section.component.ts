@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
@@ -30,15 +30,11 @@ export class EttiksoftMapSectionComponent implements AfterViewInit {
 
   playVideo() {
     // Play video logic, you might need to adjust this based on your video element
-    const videoElement = document.getElementById('background-video') as HTMLVideoElement;
+    const videoElement = document.getElementById('backgroundVideo') as HTMLVideoElement;
     if (videoElement) {
       videoElement.play();
     }
   }
 
-
   video = '../../../../assets/images/map1.mp4';
 }
-
-  
-

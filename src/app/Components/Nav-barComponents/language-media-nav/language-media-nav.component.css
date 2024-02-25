@@ -2,7 +2,7 @@
   display: flex;
   align-items: baseline;
   gap: 10px;
-  color: var(--lite-gray);
+  color: var(--dark-gray);
   font-size: 14px;
 }
 

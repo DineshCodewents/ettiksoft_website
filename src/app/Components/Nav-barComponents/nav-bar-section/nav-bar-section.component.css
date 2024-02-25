@@ -64,6 +64,7 @@
   color: var(--lite-gray); 
   font-size: 20px;
   font-weight: 500;
+  font-family: 'Adamina',serif;
   text-decoration: none;
   transition: max-height 0.3s ease, visibility 0.3s ease;
 }
@@ -93,6 +94,7 @@
   content: url('../../../../assets/images/nav-down-arrow.svg');
   vertical-align: middle;
   width: 40%;
+  transition: transform 0.3s ease;
 }
 .dropdown-toggle[aria-expanded="true"]::after {
   content: url('../../../../assets/images/nav-down-arrow.svg');
@@ -223,7 +225,7 @@
   position: absolute;
   height: 6px;
   width: 60%;
-  background: var(--lite-gray);
+  background: var(--dark-gray);
   border-radius: 9px;
   opacity: 1;
   left: 0;

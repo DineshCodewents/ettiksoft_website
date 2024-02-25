@@ -81,13 +81,18 @@
 .img-col-2 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
 }
 
 .img-col-2 img {
   width: 100%;
   height: 100%;
   border-radius: 25px;
+  align-self: stretch; /* Reset align-self to stretch for all images */
+}
+
+.img-col-2 img:last-child {
+  align-self: flex-end; /* Align only the last child image to the end */
 }
 
 .img-col-1 {
@@ -103,11 +108,9 @@
   border-radius: 25px;
 }
 .col-md-12{
-  height: 50%;
+  height: 48%;
 }
-.col-md-12-img-1{
-  margin-bottom: 20px;
-}
+
 .img-1,.img-2,.img-3{
   opacity: 0;
 }

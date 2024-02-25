@@ -19,7 +19,6 @@ import { OurSpecialitySectionComponent } from './Components/HomePageComponents/o
 import { EttiksoftChroniclesComponent } from './Components/HomePageComponents/ettiksoft-chronicles/ettiksoft-chronicles.component';
 import { AboutPageModule } from './Components/AboutPageComponents/about-page.module';
 import { HomePageComponent } from './Components/HomePageComponents/home-page/home-page.component';
-import { NavBarComponent } from './Components/HomePageComponents/nav-bar/nav-bar.component';
 import { LifeAtEttiksoftModule } from './Components/LifeAtEttiksoft/life-at-ettiksoft.module';
 import { CareersModule } from './Components/CareersComponent/careers.module';
 import { CareersFormModule } from './Components/CareersFormComponent/careers-form.module';
@@ -28,6 +27,11 @@ import { ProductsPageModule } from './Components/ProductspageComponents/products
 import { EttiksoftServiceModule } from './Components/ServicesComponents/ettiksoft-service.module';
 import { CustomRouteReuseStrategy } from './custom-route-reuse.strategy';
 import { RouteReuseStrategy } from '@angular/router';
+import { CompanyNavComponent } from './Components/Nav-barComponents/company-nav/company-nav.component';
+import { ProductNavComponent } from './Components/Nav-barComponents/product-nav/product-nav.component';
+import { ServiceNavComponent } from './Components/Nav-barComponents/service-nav/service-nav.component';
+import { LanguageMediaNavComponent } from './Components/Nav-barComponents/language-media-nav/language-media-nav.component';
+import { NavBarSectionComponent } from './Components/Nav-barComponents/nav-bar-section/nav-bar-section.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,11 @@ import { RouteReuseStrategy } from '@angular/router';
     OurSpecialitySectionComponent,
     EttiksoftChroniclesComponent,
     HomePageComponent,
-    NavBarComponent,
+    CompanyNavComponent,
+    ProductNavComponent,
+    ServiceNavComponent,
+    LanguageMediaNavComponent,
+    NavBarSectionComponent,
   ],
   imports: [
     BrowserModule,

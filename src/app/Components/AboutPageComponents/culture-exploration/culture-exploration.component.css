@@ -36,22 +36,25 @@
 .contact-us-btn i{
   margin-left:10px;
 }
-.contact-us-btn button {
-  background-color: #00BCBB;
+.explore-btn{
   color: var(--lite-gray);
-  padding: 10px 30px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Assistent', sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Assistant', serif;
+  font-weight: 400;
+  display: flex;
+  gap: 10px;
+  border-radius: 15px;
+  border:1px solid var(--dark-gray) ;
+  padding: 5px 40px;
+  align-items: baseline;
+ 
 }
-.contact-us-btn button:hover {
-  background-color:  #008080;
+.explore-btn:hover{
+  background-color: var(--lite-gray);
+  color: var(--black);
+  border: 1px solid var(--lite-gray);
+  font-weight: 600;
 }
-button i {
-  transition: transform 0.3s ease;
-}
+
 .company-img{
   display: flex;
   flex-direction: column;
