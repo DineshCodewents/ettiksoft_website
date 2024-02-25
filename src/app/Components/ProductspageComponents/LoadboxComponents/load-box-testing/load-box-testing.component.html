@@ -1,0 +1,36 @@
+<div class="main-container" id="main-container" appProductPage>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="../../../../assets/images/products-page/web-images-06.jpg" class="img-fluid"
+                    alt="load-box-img"(load)="onImageLoad()"
+                    [hidden]="isLoading && !isImageLoaded">
+                    <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+            </div>
+            <div class="col-md-7">
+                <div class="heading-section">
+                    <h1 id="common-h2" class="slide-left"style="animation-delay: 0.5s;">Load Box</h1>
+                    <button type="button" class="btn btn-outline "(mouseenter)="changeIcon()" 
+                    (mouseleave)="resetIcon()" (click)="openEnquirePopup()">
+                        Enquire<i [class]="iconClass" aria-hidden="true"></i></button>
+                </div>
+                <div class="subject-section">
+                    <h3 id="common-h4"  class="unlock-text slide-left"style="animation-delay: 0.8s;">Revolutionize your automative ECU bench testing with our cutting-edge Load Box.</h3>
+                    <h2  class="slide-left" style="animation-delay: 1s;">Versatile Testing Solutions</h2>
+                    <p id="common-p" class="slide-left" style="animation-delay: 1.2s;">Explore our Load Box, a dynamic component of electrical test equipment designed for simulating
+                        electrical loads with precision. Tailored to meet a spectrum of testing needs, our Load Boxes
+                        offer
+                        versatility, ensuring seamless integration into diverse testing scenarios.
+                    </p>
+                    <h3  class="key-text slide-left" style="animation-delay: 1.4s;">Key Features:</h3>
+                    <ul>
+                        <li id="common-p" class="animate-on-scroll" style="animation-delay: 0.5s;">Precision Load Simulation</li>
+                        <li id="common-p" class="animate-on-scroll" style="animation-delay: 0.7s;">Advanced Metering and Control</li>
+                        <li id="common-p" class="animate-on-scroll" style="animation-delay: 0.8s;">Overload Protection</li>
+                        <li id="common-p" class="animate-on-scroll" style="animation-delay: 1s;">Durable Construction for Longevity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

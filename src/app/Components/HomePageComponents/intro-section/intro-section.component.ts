@@ -1,28 +1,40 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-intro-section',
   templateUrl: './intro-section.component.html',
   styleUrls: ['./intro-section.component.css']
 })
-export class IntroSectionComponent {
-  showNavBar = false;
-  lastScrollPosition = 0;
+export class IntroSectionComponent implements AfterViewInit {
+  navigationBack: boolean | undefined;
 
-  @HostListener('document:scroll')
-  onWindowScroll() {
-    const currentScrollPosition = window.scrollY;
+  constructor(private router: Router) {}
 
-    if (currentScrollPosition > this.lastScrollPosition && currentScrollPosition > 50) {
-      this.showNavBar = false; // Scrolling down, hide nav-bar
-    } else {
-      this.showNavBar = true; // Scrolling up or at the top, show nav-bar
+  ngAfterViewInit() {
+    // Subscribe to NavigationEnd events to detect future navigations
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      // Check if it's a back navigation
+      const navigation = this.router.getCurrentNavigation();
+      if (navigation?.previousNavigation) {
+        this.navigationBack = true;
+        this.playVideo(); // Play video when navigating back
+      } else {
+        this.navigationBack = false;
+      }
+    });
+  }
+
+  playVideo() {
+    // Play video logic, you might need to adjust this based on your video element
+    const videoElement = document.getElementById('background-video') as HTMLVideoElement;
+    if (videoElement) {
+      videoElement.play();
     }
-
-    this.lastScrollPosition = currentScrollPosition;
   }
 
-  ngOnInit() {
-  }
-  video = '../../../../assets/images/intro_video.mp4'
+  video = '../../../../assets/images/intro_video.mp4';
 }

@@ -1,0 +1,39 @@
+<div class="main-container">
+  <div class="content">
+    <div class="container">
+      <div class="heading-section slide-left ">
+        <h1 id="common-h1">Our workplace thrives as a dynamic environment that nurtures collaboration.</h1>
+      </div>
+    </div>
+  </div>
+  <div class="img-section">
+    <div class="container" id="container">
+      <div class="image-container">
+        <div class="img-section section-1">
+          <div class="column image-scrol">
+            <img src="../../../../assets/images/life-at-ettiksoft/section2-LAE/1.jpg" alt="Image 1"
+              (load)="onImageLoad()" [hidden]="isLoading && !isImageLoaded" />
+          </div>
+          <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+          <div class="column image-scrol">
+            <img src="../../../../assets/images/life-at-ettiksoft/section2-LAE/2.jpg" alt="Image 2"
+              (load)="onImageLoad()" [hidden]="isLoading && !isImageLoaded" />
+          </div>
+          <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+        </div>
+        <div class="img-section section-2">
+          <div class="column image-scrol">
+            <img src="../../../../assets/images/life-at-ettiksoft/section2-LAE/4.jpg" alt="Image 3"
+              (load)="onImageLoad()" [hidden]="isLoading && !isImageLoaded" />
+          </div>
+          <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+          <div class="column image-scrol">
+            <img src="../../../../assets/images/life-at-ettiksoft/section2-LAE/3.jpg" alt="Image 4"
+              (load)="onImageLoad()" [hidden]="isLoading && !isImageLoaded" />
+          </div>
+          <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

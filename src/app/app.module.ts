@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroSectionComponent } from './Components/HomePageComponents/intro-section/intro-section.component';
@@ -16,7 +17,21 @@ import { ServicesComponent } from './Components/FooterComponent/services/service
 import { EttiksoftMapSectionComponent } from './Components/HomePageComponents/ettiksoft-map-section/ettiksoft-map-section.component';
 import { OurSpecialitySectionComponent } from './Components/HomePageComponents/our-speciality-section/our-speciality-section.component';
 import { EttiksoftChroniclesComponent } from './Components/HomePageComponents/ettiksoft-chronicles/ettiksoft-chronicles.component';
-import { AboutPageComponent } from './Components/AboutPageComponents/about-page/about-page.component';
+import { AboutPageModule } from './Components/AboutPageComponents/about-page.module';
+import { HomePageComponent } from './Components/HomePageComponents/home-page/home-page.component';
+import { LifeAtEttiksoftModule } from './Components/LifeAtEttiksoft/life-at-ettiksoft.module';
+import { CareersModule } from './Components/CareersComponent/careers.module';
+import { CareersFormModule } from './Components/CareersFormComponent/careers-form.module';
+import { ContactUsModule } from './Components/ContactUsComponent/contact-us.module';
+import { ProductsPageModule } from './Components/ProductspageComponents/products-page.module';
+import { EttiksoftServiceModule } from './Components/ServicesComponents/ettiksoft-service.module';
+import { CustomRouteReuseStrategy } from './custom-route-reuse.strategy';
+import { RouteReuseStrategy } from '@angular/router';
+import { CompanyNavComponent } from './Components/Nav-barComponents/company-nav/company-nav.component';
+import { ProductNavComponent } from './Components/Nav-barComponents/product-nav/product-nav.component';
+import { ServiceNavComponent } from './Components/Nav-barComponents/service-nav/service-nav.component';
+import { LanguageMediaNavComponent } from './Components/Nav-barComponents/language-media-nav/language-media-nav.component';
+import { NavBarSectionComponent } from './Components/Nav-barComponents/nav-bar-section/nav-bar-section.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +50,28 @@ import { AboutPageComponent } from './Components/AboutPageComponents/about-page/
     EttiksoftMapSectionComponent,
     OurSpecialitySectionComponent,
     EttiksoftChroniclesComponent,
-    AboutPageComponent,
+    HomePageComponent,
+    CompanyNavComponent,
+    ProductNavComponent,
+    ServiceNavComponent,
+    LanguageMediaNavComponent,
+    NavBarSectionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    AboutPageModule,
+    LifeAtEttiksoftModule,
+    CareersModule,
+    CareersFormModule,
+    ContactUsModule,
+    ProductsPageModule,
+    EttiksoftServiceModule
   ],
-  providers: [],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: CustomRouteReuseStrategy }, // Provide the custom strategy
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

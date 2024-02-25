@@ -1,0 +1,72 @@
+.container {
+  margin-top: 50px;
+}
+.form-section {
+  border: 2px solid #D0D0D0;
+  border-radius: 23px;
+  margin: 0 50px;
+}
+.form-feild {
+  display: flex;
+  flex-direction: row;
+ padding: 20px 50px;
+}
+
+.form-heading{
+  font-family: 'Poppins', sans-serif;
+}
+h1{
+  font-size: 30px;
+  margin: 30px 40px;
+  font-weight: bold;
+  color: var(--bard-blue);
+}
+.stright-line {
+  height: 1px;
+  width: 95%;
+  background-color: #C0C0C0;
+  margin-left: 20px; 
+}
+.lable-name {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.required {
+  color: #FF0F3A;
+  margin-left: 5px;
+}
+.sigin-btn {
+  background-color:#00BCBB ;
+  color: #ffffff; 
+  width:250px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+}
+.sigin-btn:hover{
+  background-color: #008080;
+}
+.submit-btn{
+  margin-bottom: 30px;
+  text-align:center;
+}
+i{
+  color: blue;
+}
+.form-control:focus {
+  border-color:white;
+  box-shadow: 0 0 0 0.1rem #6B6E80;
+}
+@media screen and (max-width:767px){
+  .form-section{
+    margin: 0;
+  }
+}
+@media (max-width:575px) {
+  .sigin-btn {
+    width:350px;
+  }
+}

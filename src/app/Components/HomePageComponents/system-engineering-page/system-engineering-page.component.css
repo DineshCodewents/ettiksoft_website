@@ -1,6 +1,7 @@
 .main-container{
   width: 100%;
   background-color: var(--black);
+  overflow-x: hidden;
 }
 .our-servive-section{
   margin-bottom: 80px;
@@ -64,7 +65,14 @@
   animation: slideInRight 1s ease-out;
   opacity: 1;
 }
-
+.skeleton-template {
+  background-color: var(--medium-black); /* Adjust background color as needed */
+  height: 500px; /* Adjust height as needed */
+  width: 100%; /* Adjust width as needed */
+  border-radius: 4px; /* Adjust border-radius as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+  /* Add any other styling for your skeleton template */
+}
 @keyframes slideInLeft {
   from {
     transform: translateX(-100%);
@@ -84,6 +92,36 @@
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+.slideInLeftReverse {
+  animation: slideInLeftReverse 1s ease-out;
+  opacity: 1;
+}
+
+.slideInRightReverse {
+  animation: slideInRightReverse 1s ease-out;
+  opacity: 1;
+}
+@keyframes slideInLeftReverse {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInRightReverse {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
 .sys-paragraph .system-paragraph{
@@ -108,9 +146,7 @@
   border: 1px solid var(--lite-gray);
   font-weight: 600;
 }
-.col-md-8{
-  align-self: center;
-}
+
 @media(max-width:1440px){
   #common-h1{
     font-size: 35px;

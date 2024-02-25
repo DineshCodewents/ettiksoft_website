@@ -1,0 +1,116 @@
+.main-container {
+  overflow: hidden;
+}
+.content{
+  background-image: url('../../../../assets/images/life-at-ettiksoft/section1-LAE.jpg'); 
+  background-size: cover;
+  background-position: top;
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height:70vh;
+}
+.skeleton-rect {
+  content: '';
+  width: 100%;
+  height: 500px;
+  background:var(--medium-black);
+  background-size: 200%;
+  animation: skeleton 10s linear infinite;
+}
+@keyframes skeleton{
+  0%{
+    background-position: -100% 0;
+  }
+  50%{
+    background-position: 50% 0;
+  }
+  100%{
+    background-position: 100% 0;
+  }
+}
+.heading-section{
+  display:flex;
+  flex-direction: column;
+  width: 25%;
+   background: var(--black);
+  border-radius:  15px 15px 0 0;
+  color: var(--white);
+  margin-left: 5%;
+  margin-top:15%;
+  animation: slideInBottomToTop 1s ease-out;
+}
+.heading{
+  margin:20px;
+}
+#common-h1{
+  font-family: 'Adamina', sans-serif;
+  font-weight:400;
+  color:var(--dark-gray);
+}
+#common-h4{
+  font-family:'Assistent', sans-serif;
+  animation: slideInBottomToTop 1s ease-out 0.5s;
+  color: var(--lite-gray);
+  text-align:left;
+}
+@keyframes slideInBottomToTop {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media(max-width:1200px){
+  .heading-section{
+    width:25%;
+  }
+  #common-h1{
+    font-size: 24px;
+  }
+  #common-h4{
+    font-size: 16px;
+  }
+}
+@media (max-width:991px){
+  .heading-section{
+    width:26%;
+  }
+
+}
+@media(max-width:767px){
+  .heading-section{
+    width:30%;
+    margin-top:18%;
+  }
+  .heading{
+    margin:10px;
+  }
+  #common-h1{
+    font-size: 20px;
+  }
+  #common-h4{
+    font-size: 16px;
+  }
+}
+@media (max-width:575px){
+  .heading-section{
+    width:40%;
+    margin-top:22%;
+  }
+}
+@media(max-width:475px){
+  .heading-section{
+    width:40%;
+    margin-top:28%;
+  }
+  #common-h1{
+    font-size: 18px;
+  }
+  #common-h4{
+    font-size: 14px;
+  }
+}

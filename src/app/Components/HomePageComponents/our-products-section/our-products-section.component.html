@@ -2,7 +2,7 @@
   <div class="container" id="container">
     <h1 class="product-txt" id="common-h1">PRODUCTS</h1>
     <div class="row product-row">
-      <div class="col-md-4 our-team-col">
+      <div class="col-md-4 our-team-col ">
         <div class="row">
           <div class="our-team-column">
             <div class="col-md-12">
@@ -18,7 +18,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 ">
               <div class="our-team-card">
                 <div class="card our-card">
                   <div class="card-body">
@@ -46,7 +46,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card">
+              <div class="card"  style="  cursor: pointer;" (click)="scrollInside()" [routerLink]="'load-box'">
                 <div class="card-body">
                   <div class="load-box-section">
                     <div class="load-box-txt-section">
@@ -64,9 +64,8 @@
           </div>
 
           <div class="row secound-row">
-            <!-- Second Row -->
             <div class="col-md-6">
-              <div class="card">
+              <div class="card"  style="cursor: pointer;" (click)="scrollInside()" [routerLink]="'break-out-box'">
                 <div class="card-body">
                   <div class="breakout-box-section">
                     <div class="break-out-txt-section">

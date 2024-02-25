@@ -1,0 +1,23 @@
+  <div class="container">
+    <div class="heading-section" *ngFor="let job of jobDetails">
+      <div class="heading-txt">
+        <h1>{{ job.role }}</h1>
+        <p class="card-text">Experience: <span>{{ job.experience }}</span></p>
+        <p class="card-text">Location: <span>{{ job.location }}</span></p>
+      </div>
+      <div class="heading-btn">
+        <button type="button" class="btn btn-outline" (mouseenter)="changeIcon()" (mouseleave)="resetIcon()">Apply Now <i [class]="iconClass" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <div class="center-section">
+      <h3>Job Description:</h3>
+      <h4>Responsibilities</h4>
+      <ul class="responsible-list">
+        <li *ngFor="let responsibility of jobDetails[0].responsibilities">{{ responsibility }}</li>
+      </ul>
+      <h4>Requirements</h4>
+      <ul class="requirements-list">
+        <li *ngFor="let requirement of jobDetails[0].requirements">{{ requirement }}</li>
+      </ul>
+    </div>
+  </div>

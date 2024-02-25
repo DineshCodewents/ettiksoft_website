@@ -1,0 +1,146 @@
+.main-container{
+  width: 100%;
+  background-color: var(--black);
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.col-md-4 img{
+  width:100%
+}
+
+.heading-section{
+  margin-top:50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading{
+  justify-content: center;
+  max-width: 80%;
+}
+#common-h1{
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark-gray);
+  font-family: 'Adamina', sans-serif;
+}
+.contact-us-btn{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.contact-us-btn i{
+  margin-left:10px;
+}
+.explore-btn{
+  color: var(--lite-gray);
+  font-family: 'Assistant', serif;
+  font-weight: 400;
+  display: flex;
+  gap: 10px;
+  border-radius: 15px;
+  border:1px solid var(--dark-gray) ;
+  padding: 5px 40px;
+  align-items: baseline;
+ 
+}
+.explore-btn:hover{
+  background-color: var(--lite-gray);
+  color: var(--black);
+  border: 1px solid var(--lite-gray);
+  font-weight: 600;
+}
+
+.company-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+.image-section{
+  /* max-width: 70%; */
+  width:100%;
+  justify-content: center;
+}
+.center-column{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.first-column{
+  display:flex;
+  flex-direction:column;
+  align-self: center;
+}
+.first-column img{
+  margin-top: 30px;
+}
+.skeleton-rect {
+  content: '';
+  width: 200px; 
+  height: 400px; 
+  background:var(--medium-black);
+  margin: 0 10px;
+  border-radius: 15px;
+  background-size: 200%;
+  animation: skeleton 10s linear infinite;
+}
+.skeleton-rectangle{
+  content: '';
+  width: 100px; 
+  height: 200px; 
+  background:linear-gradient(90deg, #ddd, #f4f4f4, #ddd);
+  margin: 0 10px;
+  border-radius: 15px;
+  background-size: 200%;
+  animation: skeleton 10s linear infinite;
+}
+.col-md-4 img{
+  border-radius: 15px;
+}
+@keyframes skeleton{
+  0%{
+    background-position: -100% 0;
+  }
+  100%{
+    background-position: 100% 0;
+  }
+}
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll.visible {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@media screen and (max-width:767px){
+  .heading{
+    max-width:80%
+  }
+  .image-section{
+    gap: 20px;
+  }
+}
+@media screen and (max-width:575px){
+  .heading{
+    max-width: 100%;
+  }
+}

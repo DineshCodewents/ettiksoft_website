@@ -1,0 +1,17 @@
+<div class="main-container" appLifeAtEttiksoftScroll>
+  <div class="content">
+    <div class="img-section"*ngIf="!isLoading; else skeletonTemplate">
+      <div class="heading-section">
+        <div class="heading animate-on-scroll">
+          <h1 id="common-h1">Crafting a Cozy Workspace Experience.</h1>
+          <p id="common-h4">From thoughtfully designed ergonomic spaces to warm aesthetics, every detail is curated to ensure comfort
+            and
+            productivity.</p>
+        </div>
+      </div>
+    </div>
+    <ng-template #skeletonTemplate>
+      <div class="skeleton-rect"></div>
+  </ng-template>
+  </div>
+</div>

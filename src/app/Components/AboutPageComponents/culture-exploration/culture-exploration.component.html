@@ -1,0 +1,40 @@
+<div class="main-container">
+  <div class="container" id="container" appAboutScroll>
+    <div class="heading-section">
+      <div class="heading">
+        <h1 class="animate-on-scroll" [ngClass]="{'visible': isVisible}" style="animation-delay: 0.2s;" id="common-h1">
+          Explore the vibrant culture that defines life at ETTIKSOFT
+        </h1>
+      </div>
+      <div class="contact-us-btn animate-on-scroll" [ngClass]="{'visible': isVisible}" style="animation-delay: 0.4s;">
+        <button class="btn explore-btn"  (click)=" navigateToLifeAtEttikPage()">Explore <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="company-img">
+      <div class="row image-section">
+        <div class="col-md-4 first-column animate-on-scroll" [ngClass]="{'visible': isVisible}"
+          style="animation-delay: 0.2s;">
+          <img src="../../../../assets/images/about/section5/1.svg" alt="Image 1" class="img-fluid" (load)="onImageLoad()"
+            [hidden]="isLoading && !isImageLoaded">
+        </div>
+        <div class="col-md-4 center-column ">
+          <img src="../../../../assets/images/about/section5/2.svg" alt="Image 2" class="img-fluid animate-on-scroll"
+            [ngClass]="{'visible': isVisible}" style="animation-delay: 0.4s;" (load)="onImageLoad()"
+            [hidden]="isLoading && !isImageLoaded">
+          <img src="../../../../assets/images/about/section5/3.svg" alt="Image 3" class="img-fluid animate-on-scroll"
+            [ngClass]="{'visible': isVisible}" style="animation-delay: 0.6s;" (load)="onImageLoad()"
+            [hidden]="isLoading && !isImageLoaded">
+        </div>
+        <div class="col-md-4 last-column animate-on-scroll" [ngClass]="{'visible': isVisible}"
+          style="animation-delay: 0.8s;">
+          <img src="../../../../assets/images/about/section5/4.svg" alt="Image 4" class="img-fluid" (load)="onImageLoad()"
+            [hidden]="isLoading && !isImageLoaded">
+        </div>
+        <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+        <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+        <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,27 @@
+<div class="main-container">
+  <div class="text-center">
+    <h1 id="common-h1">Our Initiatives</h1>
+  </div>
+  <div class="container mt-4">
+    <div class="row">
+      <div *ngFor="let card of cards" class="col-md-4 mb-4">
+        <div class="card h-100 d-flex flex-column">
+          <img [src]="card.imageUrl" class="card-img-top" alt="Card Image"*ngIf="!isLoading; else skeletonTemplate" #imageElement>
+          <ng-template #skeletonTemplate>
+            <div class="skeleton-rect"></div>
+          </ng-template>
+          <div class="card-body card-txt">
+            <h5 class="card-title" id="common-h4">{{ card.heading }}</h5>
+            <p class="card-text" id="common-p">{{ card.content }}</p>
+          </div>
+          <div class="footer-card">
+            <div class="card-right">
+              <p>Explore</p>
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

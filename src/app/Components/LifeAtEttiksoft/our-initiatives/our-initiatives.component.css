@@ -1,0 +1,121 @@
+.main-container {
+  max-width: 100%;
+  padding-top: 70px;
+  background-color: var(--black);
+}
+
+.text-center {
+  text-align: center;
+}
+#common-h1{
+  font-weight: 600;
+  font-family: 'Adamina', sans-serif;
+  color:var(--dark-gray);
+}
+
+.row{
+  padding:50px 100px;
+}
+.card:hover {
+  box-shadow: 8px 9px 28.799999237060547px 0px #CECECE40;
+  transform: scale(1.09);
+  transition: all 0.3s cubic-bezier(.3,.4,.3,1);
+  cursor: pointer;
+}
+.card {
+  border-radius: 15px;
+  background-color: var(--medium-black);
+  margin: 10px;
+  box-shadow: 8px 9px 28.799999237060547px 0px #CECECE40;
+  transition: all 0.3s cubic-bezier(.3,.4,.3,1);
+}
+.card-img-top{
+  border-radius: 10px;
+}
+.skeleton-rect {
+  content: '';
+  width: 100%;
+  height: 150px;
+  background:var(--black);
+  background-size: 200%;
+  animation: skeleton 10s linear infinite;
+}
+@keyframes skeleton{
+  0%{
+    background-position: -100% 0;
+  }
+  100%{
+    background-position: 100% 0;
+  }
+}
+.card-body{
+  margin: 10px;
+  padding: 0;
+}
+.card-text{
+  margin:0;
+  padding:0;
+}
+#common-h4 {
+  font-weight: 400;
+  margin: 20px 0;
+  font-family: 'Adamina', sans-serif;
+  color: var(--lite-gray);
+}
+#common-p {
+  text-align: left;
+  margin-bottom: 20px;
+  color: var(--dark-gray);
+  font-family: 'Assistent', sans-serif;
+  font-weight:400;
+}
+.footer-card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.card-right{
+  display: none;
+  gap: 30px;
+  margin-top:20px;
+  cursor: pointer;
+}
+.card-right p{
+  font-size:16px;
+  font-weight:400;
+}
+.card-right i{
+  font-size: 20px;
+}
+@media (max-width:1200px){
+  .row {
+    margin: 0; 
+  }
+}
+@media (max-width: 991px) {
+  
+
+  .col-md-4 {
+    flex: 0 0 50%; 
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .col-md-4 {
+    flex: 0 0 100%; 
+    max-width: 100%;
+  }
+}
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  background-color: var(--dark-gray); 
+  border-radius: 20px; 
+}
+.custom-carousel .carousel-control-prev-icon{
+  margin-right: 100px;
+}
+.custom-carousel .carousel-control-next-icon{
+  margin-left: 100px;
+}

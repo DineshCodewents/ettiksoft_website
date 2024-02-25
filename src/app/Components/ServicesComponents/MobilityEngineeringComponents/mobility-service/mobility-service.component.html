@@ -1,0 +1,25 @@
+<div class="main-container" id="main-container" appEttiksoftServiceScroll>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../../../../../assets/images/service/mobility-engineering/mobiliti-engineering-section1.jpg"
+                    alt="tecnology-img" class="img-fluid" (load)="onImageLoad()" [hidden]="isLoading && !isImageLoaded">
+                <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+            </div>
+            <div class="col-md-6 heading-column">
+                <h1 id="common-h1" class="slide-left" style="animation-delay: 0.2s;">We excel in versatile</h1>
+                <h1 id=common-h1 class="iot-text slide-left " style="animation-delay: 0.4s;"><span>Mobility Engineering
+                    Services.</span></h1>
+                <p id="common-h4" class="slide-left" style="animation-delay: 0.6s;">Ettiksoft's team work systematically to understand
+                    clients ideas and requirements we convert these ideas into reality and deploy the products or
+                    services with high quality. Our experties focuses on reliability, safety, and cyber security in
+                    Mobility Engineeering.</p>
+                <div class="commen-button slide-left" style="animation-delay: 0.8s; display: none;">
+                    <button (mouseenter)="changeIcon()" (mouseleave)="resetIcon()">
+                        Enquire<i [class]="iconClass" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

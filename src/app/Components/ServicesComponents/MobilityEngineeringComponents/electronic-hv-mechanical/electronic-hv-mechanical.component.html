@@ -1,0 +1,66 @@
+<div class="main-container" id="main-container">
+  <div class="container">
+    <div class="heading-column">
+      <h1 id="common-h1" class="our-txt">Our Services</h1>
+    </div>
+  </div>
+  <div class="services-section">
+    <div *ngFor="let section of sectionsData; let i = index" class="main-container-1" [ngClass]="'section-' + (i + 1)"
+      appEttiksoftServiceScroll>
+      <div class="container" id="container">
+
+        <div class="row model-based" [ngClass]="{'row-reverse': (i === 1 || i === 3)}">
+          <div class="col-md-6 section-991">
+            <div class="subject-section">
+              <h3 id="common-h3" class="unlock-text">{{ section.title }}</h3>
+              <h3 id="common-h4" class="key-text">Services:</h3>
+              <ul>
+                <li id="common-p" *ngFor="let service of section.services">{{ service }}</li>
+              </ul>
+              <h3 id="common-h4" class="key-text">Tools:</h3>
+              <ul *ngIf="section.showTools || !section.showHiddenContent">
+                <ng-container *ngFor="let tool of section.tools; let first = first">
+                  <li id="common-p" *ngIf="first || (!first && section.showHiddenContent)"
+                    [ngClass]="{'hidden-tools': !first && section.showHiddenContent}">
+                    {{ tool }}
+                  </li>
+                </ng-container>
+              </ul>
+              <p id="common-p" class="read-more-txt" (click)="toggleHiddenContent(i)">
+                {{ section.showHiddenContent ? 'Read Less' : 'Read More' }}
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 section-767">
+            <div class="subject-section">
+              <h3 id="common-h3" class="unlock-text">{{ section.title }}</h3>
+              <h3 id="common-h4" class="key-text">Services:</h3>
+              <ul class="service-list">
+                <li id="common-p" *ngFor="let service of section.services.slice(0, 4)" class="">{{ service }}</li>
+              </ul>
+              <div *ngIf="section.showHiddenContent && section.showAdditionalServices">
+                <ul class="service-list">
+                  <li id="common-p" *ngFor="let service of section.services.slice(4)" class="">{{ service }}</li>
+                </ul>
+              </div>
+              <div *ngIf="section.showHiddenContent">
+                <h3 id="common-h4" class="key-text">Tools:</h3>
+                <ul *ngIf="section.showTools">
+                  <li id="common-p" *ngFor="let tool of section.tools" class="">{{ tool }}</li>
+                </ul>
+              </div>
+            </div>
+            <p id="common-p" class="read-more-txt" (click)="toggleHiddenContent(i)">
+              {{ section.showHiddenContent ? 'Read Less' : 'Read More' }}
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img [src]="section.image" class="img-fluid" alt="load-box-img" (load)="onImageLoad()"
+              [hidden]="isLoading && !isImageLoaded">
+            <div class="skeleton-rect" *ngIf="isLoading && !isImageLoaded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
