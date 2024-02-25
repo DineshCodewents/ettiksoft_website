@@ -5,8 +5,10 @@
   border: 1px solid var(--lite-gray);
   background-color: var(--black);
 }
-
-.card {
+.card:hover #common-h4, .card:hover #common-p
+{
+  color: var(--lite-gray);
+}.card {
   border: none;
   background-color: var(--medium-black);
   cursor: pointer;
@@ -23,14 +25,14 @@
   font-family: 'Adamina',serif;
 }
 #common-h4{
-  color: var(--lite-gray);
+  color: var(--dark-gray);
   font-weight: 600;
-  font-family: 'Assisten',serif;
+  font-family: 'Adamina',serif;
 }
 #common-p{
-  color: var(--lite-gray);
+  color: var(--dark-gray);
   font-weight: 400;
-  font-family: 'Assisten',serif;
+  font-family: 'Assistent',serif;
 }
 .stright-line {
   height: 1px;
