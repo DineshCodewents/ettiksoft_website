@@ -90,111 +90,66 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
 <footer>
-  <div class="container" id="container">
-    <div class="row footer-row">
-      <div class="col-md-3">
-        <div class="text-center">
-          <img src="../../../../assets/images/ettiksoft-logo.png" (click)="goToTop()" [routerLink]="'/'"  alt="Company Logo" class="img-fluid mb-2">
-        </div>
-        <div class="text-center social-icon">
-          <a *ngFor="let socialLink of socialLinks" [href]="socialLink.link" class="text-light ml-2">
-            <i [class]="socialLink.iconClass"></i>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-6 my-4 mx-3">
+        <h5 class="mb-3" (click)="toggleAccordion('Logo')">
+          <a class="navbar-brand" href="#">
+            <img src="logo" alt="Logo" />
           </a>
-        </div>
-      </div>
-      <div *ngFor="let siteLink of siteLinks" class="col-md-2">
-        <h5 id="common-h4">{{ siteLink.category }}</h5>
-        <ul>
-          <li *ngFor="let link of siteLink.links">
-            <a [routerLink]="link.path" (click)="goToTop()" id="common-p">{{ link.label }}</a>
-          </li>
+        </h5>
+        <ul class="list-unstyled d-flex">
+          <!-- Icon links here -->
         </ul>
       </div>
-      <div class="col-md-2">
-        <h5 id="common-h4">Contact us</h5>
-        <h4 id="common-h4">Phone</h4>
-        <ul>
-          <li id="common-p">+91 7373689304</li>
-          <li id="common-p">+91 9789881190</li>
+      <div class="col-md-2 col-sm-6 mb-4 mx-3">
+        <h5 class="mb-3" (click)="toggleAccordion('Company')">Company</h5>
+        <ul class="list-unstyled" [class.visible]="isOpenCompany">
+          <li>About Us</li>
+          <li>Life at Ettiksoft</li>
+          <li>Careers</li>
+          <li>Contact us</li>
         </ul>
-        <h4 id="common-h4">Email</h4>
-        <ul>
-          <li id="common-p">info@ettiksoft.com</li>
+      </div>
+      <div class="col-md-2 col-sm-6 mb-4 mx-3">
+        <h5 class="mb-3" (click)="toggleAccordion('Products')">Products</h5>
+        <ul class="list-unstyled" [class.visible]="isOpenProducts">
+          <li>Load Box</li>
+          <li>Break Out Box</li>
+          <li>EMI Wiring</li>
+          <li>EV Components</li>
+          <li>Variant Switch</li>
         </ul>
-        <h4 id="common-h4">Address</h4>
-        <ul>
-          <li id="common-p">No:6/1116-1/3, Paramathi Road, C E B Colony, Namakkal, Tamil Nadu 637001.</li>
+      </div>
+      <div class="col-md-2 col-sm-6 mb-4 mx-3">
+        <h5 class="mb-3" (click)="toggleAccordion('Services')">Services</h5>
+        <ul class="list-unstyled" [class.visible]="isOpenServices">
+          <li>IOT Solutions</li>
+          <li>Mobility Engineering</li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-6 mb-4 mx-3">
+        <h5 class="mb-3" (click)="toggleAccordion('Contact')">Contact</h5>
+        <ul class="list-unstyled" [class.visible]="isOpenContact">
+          <li class="title">Phone</li>
+          <li>+91 73736 89304</li>
+          <li>+91 97898 81190</li>
+          <li class="title">Email</li>
+          <li>info@ettiksoft.com</li>
+          <li class="title">Head Office</li>
+          <li>No:6/1116-1/3, Paramathi Road, C E B Colony, Namakkal, Tamil Nadu 637001.</li>
         </ul>
       </div>
     </div>
-    <div class="footer-accordion">
-      <div class="logo-section">
-        <div class="text-center">
-          <img src="../../../../assets/images/ettiksoft-logo.png" (click)="goToTop()" [routerLink]="'/'"  alt="Company Logo" class="img-fluid mb-2">
-        </div>
-        <div class="text-center social-icon">
-          <a *ngFor="let socialLink of socialLinks" [href]="socialLink.link" class="text-light ml-2">
-            <i [class]="socialLink.iconClass"></i>
-          </a>
-        </div>
-      </div>
-      <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div *ngFor="let siteLink of siteLinks" class="accordion-item custom-accordion">
-          <h2 class="accordion-header" [attr.id]="'flush-heading' + siteLink.category | lowercase">
-            <button class="accordion-button collapsed" id="common-h4" type="button" data-bs-toggle="collapse"
-              [attr.data-bs-target]="'#flush-collapse' + siteLink.category | lowercase" aria-expanded="false"
-              [attr.aria-controls]="'flush-collapse' + siteLink.category | lowercase">
-              {{ siteLink.category }}
-            </button>
-          </h2>
-          <div [attr.id]="'flush-collapse' + siteLink.category | lowercase" class="accordion-collapse collapse"
-            [attr.aria-labelledby]="'flush-heading' + siteLink.category | lowercase" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <ul>
-                <li *ngFor="let link of siteLink.links">
-                  <a [routerLink]="link.path" (click)="goToTop()" id="common-p">{{ link.label }}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item custom-accordion">
-          <h2 class="accordion-header" id="flush-headingFour">
-            <button class="accordion-button collapsed" id="common-h4" type="button" data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-              Contact Us
-            </button>
-          </h2>
-          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <h4 id="common-h4">Phone</h4>
-              <ul>
-                <li id="common-p">+91 7373689304</li>
-                <li id="common-p">+91 9789881190</li>
-              </ul>
-              <h4 id="common-h4">Email</h4>
-              <ul>
-                <li id="common-p">info@ettiksoft.com</li>
-              </ul>
-              <h4 id="common-h4">Address</h4>
-              <ul>
-                <li id="common-p">No:6/1116-1/3, Paramathi Road, C E B Colony, Namakkal, Tamil Nadu 637001.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="column copy_rights">
-    <p>&copy; 2024 Ettiksoft Technologies. All rights reserved.</p>
   </div>
 </footer>
+
 <!-- <section class="section3"></section> -->

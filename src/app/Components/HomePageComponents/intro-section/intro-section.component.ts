@@ -36,5 +36,5 @@ export class IntroSectionComponent implements AfterViewInit {
     }
   }
 
-  video = '../../../../assets/images/intro_video.mp4';
+  video = '../../../../assets/images/final_Stock_video.mp4';
 }

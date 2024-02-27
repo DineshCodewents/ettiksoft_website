@@ -155,191 +155,79 @@
   }
 }
 
-
-footer {
-  width: 100%;
+.footer {
   display: flex;
-  background-color: white;
-  height: auto;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  bottom: 0;
+  
+  background: var(--lite-black); /* Change to your desired background color */
+  padding: 20px; /* Add padding to the footer */
 }
-
-#container {
-  position: relative;
+h5{
+  font-family: 'Poppins',sans-serif;
+  color: var(--grey);
 }
-
-ul {
-  list-style: none;
-  padding: 0;
+li{
+  color: var(--grey);
+  margin-top: 5px;
 }
-
-.social-icon a i {
-  color: var(--medium-black);
-  cursor: pointer;
+li:hover{
+  color:var(--blue)
 }
-
-.social-icon {
+.title{
+  margin-top: 10px;
+  font-weight: 700;
+}
+.container {
   display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: 24px;
-  gap: 30px;
+  margin:0 auto; /* Center the container horizontally */
+  padding-top: 40px;
+}
+img{
+  max-width:100%;
 }
 
-.social-icon a {
-  cursor: pointer;
+
+
+@media (max-width: 420px) {  }
+
+@media (max-width: 576px) { 
+  li{
+      margin-top: 10px;
+  }
+  img{
+      display: block;
+      max-width:60%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      
+    }
+  .col-md-2 h5{
+      font-size: 1.2rem;
+      font-weight: normal;
+  }
+  .list-unstyled {
+      display: none;
+    }
+    
+    .list-unstyled.visible {
+      display: block;
+    }
+    .col-md-2 {
+      border-bottom: 2px solid var(--dark-grey); /* Add a border line at the bottom */
+      padding-bottom: 15px; /* Optional: Add some space between the line and the content */
+      margin-bottom: 15px; /* Optional: Add some space between each column */
+    }
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 8px;
-}
-
-.col-md-2 ul li a {
-  color: var(--black);
-  text-decoration: none;
-  cursor: pointer;
-  position: relative;
-}
-
-.copy_rights {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.copy_rights p {
-  margin: 0;
-  font-size: 18px;
-  font-family: 'Assistent', serif;
-  color: var(--dark-gray);
-}
-
-.footer-row #common-h4 {
-  font-family: 'Adamina', serif;
-  font-weight: 500;
-  color: var(--black);
-}
-
-#common-p {
-  font-family: 'Assistent', serif;
-  font-weight: 400;
-  font-size: 18px;
-  text-align: left;
-  color: var(--black);
-  text-decoration: none;
-}
-
-.footer-row {
-  gap: 10px;
-  position: relative;
-}
-
-.text-center img {
-  width: 200px;
-  cursor: pointer;
-}
-
-.footer-accordion {
-  display: none;
-}
-
-@media screen and (min-width: 1440px) {
-  .footer-row {
-    gap: 30px;
-  }
-
-  .text-center img {
-    width: 300px
-  }
-}
-
-@media (max-width: 991px) {
-  .footer-row {
-    display: none;
-  }
-
-  .text-center img {
-    max-width: 100%;
-  }
+@media (min-width: 768px) { }
 
 
+@media (min-width: 992px) {  }
 
-  .footer-accordion .accordion-button::after {
-    background-image: url('../../../../assets/images/down-arrow.svg');
-    height: 1em;
-    width: 1em;
-  }
+@media (min-width: 1200px) {  }
 
-  .footer-accordion .accordion-button:not(.collapsed)::after {
-    background-image: url('../../../../assets/images/down-arrow.svg');
-  }
-
-  .footer-accordion .accordion-button:not(.collapsed) {
-    color: var(--ocean-blue);
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
-  }
-
-  .footer-accordion .accordion-button:focus {
-    z-index: 0;
-    border-color: #FEFEFE;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .footer-accordion .accordion-button:focus {
-    box-shadow: none;
-  }
-
-  .footer-accordion .custom-accordion {
-    margin-top: 20px;
-    display: block;
-    border: none;
-    border-bottom: 0;
-  }
-
-  .custom-accordion-body ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .custom-accordion-body li {
-    margin-bottom: 20px;
-    margin-left: 15px;
-  }
-
-  .custom-accordion-body ul li a {
-    text-decoration: none;
-    font-family: 'Assistent', sans-serif;
-    color: var(--black);
-    font-weight: 400;
-    cursor: pointer;
-  }
-
-  .accordion-button:focus {
-    box-shadow: none;
-  }
-
-  .accordion-collapse {
-    transition: height 0.3s ease-in-out;
-  }
-
-  .custom-accordion #common-h4 {
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .custom-accordion #common-p {
-    font-size: 18px;
-    font-weight: 400;
-  }
-}
+@media (min-width: 1400px) {  }

@@ -1,70 +1,76 @@
-.container {
-  background-color: var(--white);
-  margin-top: 50px;
-}
-
-.footer-container {
-  padding: 20px; 
-}
-
-.row-column {
+.footer {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
+  
+  background: var(--lite-black); /* Change to your desired background color */
+  padding: 20px; /* Add padding to the footer */
 }
-
-.section-row {
-  gap: 40px;
+h5{
+  font-family: 'Poppins',sans-serif;
+  color: var(--grey);
 }
-.stright-line {
-  height: 1px;
-  width: 100%;
-  background-color: var(--dark-gray);
+li{
+  color: var(--grey);
+  margin-top: 5px;
 }
-.footer-end {
-  padding: 10px 0;
+li:hover{
+  color:var(--blue)
 }
-
-.left-section {
-  display: flex;
-  flex-basis: 70%;
-  flex-wrap: wrap;
-}
-
-.left-section a {
-  text-decoration: none;
-  color: var(--dark-gray); 
-  margin-right: 10px;
-}
-
-.right-section {
-  flex-basis: 30%;
-}
-@media (max-width: 987.98px) {
-  .section-row {
-    justify-content: center;
-    column-gap: 80px;
-  }
-  .with-gap{
-    margin-right: 20px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .section-row{  
-    gap: 0;
-  }
-  .footer-container {
-    padding: 0; 
-  }
-  .with-gap{
-    margin-right: 0;
-  }
-  .row{
-    flex-direction: column;
-  }
-  .right-section{
+.title{
   margin-top: 10px;
-  text-align: left;
-  }
+  font-weight: 700;
 }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto; /* Center the container horizontally */
+  padding-top: 40px;
+}
+img{
+  max-width:100%;
+}
+
+
+
+@media (max-width: 420px) {  }
+
+@media (max-width: 576px) { 
+  li{
+      margin-top: 10px;
+  }
+  img{
+      display: block;
+      max-width:60%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      
+    }
+  .col-md-2 h5{
+      font-size: 1.2rem;
+      font-weight: normal;
+  }
+  .list-unstyled {
+      display: none;
+    }
+    
+    .list-unstyled.visible {
+      display: block;
+    }
+    .col-md-2 {
+      border-bottom: 2px solid var(--dark-grey); /* Add a border line at the bottom */
+      padding-bottom: 15px; /* Optional: Add some space between the line and the content */
+      margin-bottom: 15px; /* Optional: Add some space between each column */
+    }
+}
+
+@media (min-width: 768px) { }
+
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1200px) {  }
+
+@media (min-width: 1400px) {  }

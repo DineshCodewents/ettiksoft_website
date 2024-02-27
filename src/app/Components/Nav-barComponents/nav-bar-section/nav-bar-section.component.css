@@ -109,6 +109,9 @@
     margin-right: 10px;
 }
 @media (max-width:576px) { 
+    .navbar a img{
+        max-width: 130px;
+       }
     .navbar-collapse{
         margin-left: 10px;
         margin-right: 10px;
