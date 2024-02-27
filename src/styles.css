@@ -3,60 +3,78 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 :root{
   --black:#000000;
-  --white:#FFFFFF;
-  --medium-black:#191919;
-  --dark-gray:#ADADAD;
-  --lite-gray :#E7E7E7;
+  --white:hsl(0, 0%, 4%);
+  --medium-black:#121212;
+  --grey:#ADADAD;
+  --lite-grey :#E7E7E7;
   --lite-blue:#00D8D6;
+  --red: #FF1F47;
+  --lite-black: #121212;
+  --dark-grey: #191919;
+  --line-grey:#272727;
+
+
+
 }
 html, body { 
   height: 100%; 
   width:100%;
+  font-family: 'Poppins',sans-serif;
 }
 *{
   margin: 0;
   padding: 0;
 }
 
-#common-h1 {
-  font-size: 45px;
-  line-height: 1.5;
+h1 {
+  font-family: 'Poppins',sans-serif;
+  font-size: 2.5rem;
 }
 
-#common-h2{
-  font-size: 36px;
-  line-height: 1.5;
+h2{
+  font-family: 'Poppins',sans-serif;
+  font-size: 2rem;
 }
-#common-h3{
-  font-size: 24px;
-  line-height: 1.5;
+h3{
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.75rem;
+  /* Adjust as needed */
 }
-#common-h4{
-  font-size: 20px;
-  line-height: 1.5;
+h4{
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.5rem;
+  /* Adjust as needed */
 }
-#common-p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
+h5 {
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.25rem;
+  /* Adjust as needed */
+}
+
+h6 {
+  font-family: 'Poppins',sans-serif;
+  font-size: 1rem;
+  /* Adjust as needed */
+}
+
+/* Define font size for paragraphs */
+p {
+  font-family: 'Poppins',sans-serif;
+  font-size: 1rem;
+  /* Adjust as needed */
+ 
 }
 #main-container{
   padding:80px 0px;
   position: relative;
 }
-/* font-family: 'Adamina', serif;
-font-family: 'Assistant', sans-serif; */
+
 @media(min-width:1400px){
   #container{
     max-width: 95%;
   }
-  #common-p{
-    font-size:20px;
-  }
-  #common-h4{
-    font-size: 24px;
-  }
 }
+
 @media(min-width:1200px){
   #container{
     max-width: 95%;
