@@ -2,7 +2,7 @@
 
 <div class="main-container" id="main-container">
   <div class="our-leader-heading">
-    <h1 id="common-h1">Our Leaders</h1>
+    <h1 id="common-h1">OUR LEADERS</h1>
   </div>
   <div class="card-container">
     <h2 class="leaders-card-heading" id="common-h2">Embodying exceptional leadership qualities.</h2>
@@ -13,15 +13,16 @@
             <div class="card-inner" [ngClass]="{'flipped': card.flipped}">
               <div class="front">
                 <div class="leader-img">
-                  <img src="../../../../assets/images/leader_img.png" alt="leader-profile-img" class="">
+                  <img src='../../../../assets/images/{{ card.path_f }}.png' alt="leader-profile-img" class="">
                 </div>
-                <h3 class="name" id="common-h3">{{ card.name }}</h3>
-                <p class="position">{{ card.position }}</p>
-                <h3 class="company" id="common-h3">{{ card.company }}</h3>
+                <h4 class="name" id="common-h3">{{ card.name }}</h4>
+                <h5 class="position">{{ card.position }}</h5>
+                <img class="logo" src='../../../../assets/images/ettiksoft-logo.png' alt="logo"/>
+                <!-- <p class="company" id="common-h3">{{ card.company }}</p> -->
               </div>
               <div class="back">
                 <div class="leader-img-back">
-                  <img src="../../../../assets/images/leader_img_back.png" alt="leader-profile-img" class="">
+                  <img src='../../../../assets/images/{{ card.path_b }}.png' alt="leader-profile-img" class="">
                 </div>
                 <h3 class="name" id="common-h3">{{ card.name }}</h3>
                 <p class="back-icon"><i class="{{ card.backContent.quoteIcon }}"></i></p>

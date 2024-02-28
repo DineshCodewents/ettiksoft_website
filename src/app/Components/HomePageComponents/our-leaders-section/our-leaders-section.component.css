@@ -2,10 +2,11 @@
   background-color: #191919;
 }
 #common-h1{
-  color: var(--dark-gray);
+  color: var(--grey);
   text-align: center;
-  font-family: 'Adamina', serif;
-  font-weight: 400;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 .card-container{
   padding: 50px 0;
@@ -76,25 +77,40 @@
   font-family: 'Assistant', serif;
   font-weight: 600;
 }
-.name, .position{
-  font-family: 'Assistant', serif;
-  font-weight: 600;
-  color:var(--lite-gray)
+.name{
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.5rem;
+  font-weight:500;
+  color: var(--grey);
+  
+}
+.position{
+  font-family: 'Poppins',sans-serif;
+  font-size: 1.2rem;
+  font-weight:500;
+  line-height: normal;
+  color: var(--grey);
 }
 .company{
-  font-family: 'Adamina', serif;
-  font-weight: 400;
-  color: var(--dark-gray);
+  font-family: 'Poppins',sans-serif;
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: 500;
+  color: var(--red);
 }
+
 .company-para{
-  font-family: 'Adamina', serif;
-  font-weight: 400;
-  color: var(--white);
-  padding:0 25px
+  font-family: 'Poppins',sans-serif;
+  font-size: 1rem;
+  line-height: normal;
+  color: var(--grey);
+}
+.front .logo{
+  max-width: 200px;
 }
 .back-icon{
   font-size: 40px;
-  color: var(--dark-gray);
+  color: var(--grey);
 }
 @media (max-width:991px){
   .col-md-4{
