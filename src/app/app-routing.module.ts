@@ -13,7 +13,8 @@ import { BreakoutBoxPageComponent } from './Components/ProductspageComponents/Br
 import { EmiWiringPageComponent } from './Components/ProductspageComponents/EMIWiringComponents/emi-wiring-page/emi-wiring-page.component';
 import { IotSolutionPageComponent } from './Components/ServicesComponents/IotSolutionsComponents/iot-solution-page/iot-solution-page.component';
 import { MobilityEngineeringPageComponent } from './Components/ServicesComponents/MobilityEngineeringComponents/mobility-engineering-page/mobility-engineering-page.component';
-
+import { AnimationComponent } from './Components/CarAnimationSection/animation/animation.component';
+import { CarAnimationComponent } from './Components/CarAnimationSection/car-animation/car-animation.component';
 const routes: Routes = [
   {path:'',component:HomePageComponent},
   {path:'about-page',component:AboutPageComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path:'variant-switch',component:VariantSwitchPageComponent},
   {path:'iot-solution-page',component:IotSolutionPageComponent},
   {path:'mobility-engineering-page',component:MobilityEngineeringPageComponent},
+  
 ];
 
 @NgModule({

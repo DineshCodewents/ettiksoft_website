@@ -32,6 +32,8 @@ import { ProductNavComponent } from './Components/Nav-barComponents/product-nav/
 import { ServiceNavComponent } from './Components/Nav-barComponents/service-nav/service-nav.component';
 import { LanguageMediaNavComponent } from './Components/Nav-barComponents/language-media-nav/language-media-nav.component';
 import { NavBarSectionComponent } from './Components/Nav-barComponents/nav-bar-section/nav-bar-section.component';
+import { AnimationComponent } from './Components/CarAnimationSection/animation/animation.component';
+import { CarAnimationComponent } from './Components/CarAnimationSection/car-animation/car-animation.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { NavBarSectionComponent } from './Components/Nav-barComponents/nav-bar-s
     ServiceNavComponent,
     LanguageMediaNavComponent,
     NavBarSectionComponent,
+    AnimationComponent,
+    CarAnimationComponent,
   ],
   imports: [
     BrowserModule,

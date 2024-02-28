@@ -1,0 +1,47 @@
+<div class="animation-container">
+    <h2>OUR SERVICES</h2>
+    <div class="button-container justify-content-center">
+        <button class="btn btn-dark mx-2" [class.active-button]="selectedService === 'Automotive'" (click)="updateService('Automotive')">Automotive</button>
+        <button class="btn btn-dark mx-2" [class.active-button]="selectedService === 'Medical'" (click)="updateService('Medical')">Medical</button>
+        <button class="btn btn-dark mx-2" [class.active-button]="selectedService === 'IOT'" (click)="updateService('IOT')">IOT</button>
+        <button class="btn btn-dark mx-2" [class.active-button]="selectedService === 'IIOT'" (click)="updateService('IIOT')">IIOT</button>
+    </div>
+    <div class="content-container">
+        <div *ngIf="selectedService === 'Automotive'">
+            <app-car-animation></app-car-animation>
+        </div>
+        <div *ngIf="selectedService !==  'Automotive'" class="service-section animation-service">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="service-content animation-content">
+                        <h2 class="title">{{ getSelectedContent()?.heading }}</h2>
+                        <span class="line"></span>
+                        <h3>{{ getSelectedContent()?.oneliner }}</h3>
+                        <button class="btn">Explore</button>
+                        <p>{{ getSelectedContent()?.paragraph }}</p>
+                        
+                        <div class="bot-images">
+                            <div class="bot-img-container">
+                                <img src="../../../../assets/images/medical-img.jpg" alt="to know"/>
+                            </div>
+                            <div class="bot-img-container">
+                                <img src="../../../../assets/images/iot-img.jpg" alt="to know"/>
+                            </div>
+                            <div class="bot-img-container">
+
+                                <img src="../../../../assets/images/iiot-img.jpg" alt="to know"/>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-image animation-image">
+                        <img [src]="getSelectedContent()?.imagePath" alt="{{ selectedService }} Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
