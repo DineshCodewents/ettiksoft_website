@@ -9,6 +9,7 @@
 }
 .section-title{
   text-align: center;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 .text-col{
@@ -121,6 +122,13 @@
 @media (max-width: 1399.98px) {  }
 
 @media (max-width: 1199.98px) { 
+  #common-h2{
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.75rem;
+    line-height: normal;
+    font-weight: 500;
+    color: var(--grey);
+  }
   .our-team-section h2{
     font-family: 'Poppins',sans-serif;
     font-size: 1.75rem;
