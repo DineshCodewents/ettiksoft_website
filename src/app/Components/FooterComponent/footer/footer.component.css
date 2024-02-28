@@ -1,102 +1,148 @@
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--lite-black); /* Change to your desired background color */
-  padding: 20px; /* Add padding to the footer */
+footer{
+  margin: 50px 30px;
 }
+
 .footer-row{
-  margin-top: 30px;
-}
-h5{
-  font-family: 'Poppins',sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--blue-grey);
-}
-li{
-  font-family: 'Poppins',sans-serif;
-  color: var(--blue-grey);
-  font-size: 14px;
-  margin-top: 5px;
-}
-li:hover{
-  color:var(--blue)
-}
-.title{
-  margin-top: 10px;
-  font-family: 'Poppins',sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-}
-.container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin:0 auto; /* Center the container horizontally */
- 
-}
-img{
-  max-width:100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content:center ;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .social-media{
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 1.5rem;
+  color: var(--blue-grey);
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  justify-content: center;
+  align-items:center ;
+  margin-top: 30px;
 }
 .social-media i{
-  color:var(--blue-grey);
+  transition: all 0.3s ease;
+
+}
+.social-media i:hover{
+  color: var(--lite-blue);
+}
+.sections{
+  width: 200px;
+}
+
+.sections h5{
+  font-family: 'Poppins',sans-serif;
   font-size: 1.2rem;
-  margin-right: 15px;
+  font-weight:500 ;
+  color: var(--blue-grey);
+  transition: all 0.3s ease;
 }
-.my-4{
-  margin-top: 0px!important;
+.sections li{
+  font-family: 'Poppins',sans-serif;
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: 400;
+  margin-top: 10px;
+  color: var(--blue-grey);
+  transition: all 0.3s ease;
 }
-@media (max-width: 420px) {  }
+.sections h5:hover{
+  color:var(--dark-grey)
+}
+.sections li:hover{
 
-@media (max-width: 576px) { 
-  li{
-      margin-top: 10px;
-  }
-  img{
-      display: block;
-      max-width:60%;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      
-    }
-  .col-md-2 h5{
-      font-size: 1.2rem;
-      font-weight: normal;
-  }
-  .list-unstyled {
-      display: none;
-    }
-    
-    .list-unstyled.visible {
-      display: block;
-    }
-    .col-md-2 {
-      border-bottom: 1px solid var(--dark-grey); /* Add a border line at the bottom */
-      padding-bottom: 15px; /* Optional: Add some space between the line and the content */
-      margin-bottom: 15px; /* Optional: Add some space between each column */
-    }
-    .col-md-2{
-      margin-left: 0px;
-      margin-right: 0px;
-    }
+  color:var(--lite-blue);
+
 }
 
-@media (min-width: 768px) {
+.sections .title{
+  font-family: 'Poppins',sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 10px;
+  color: var(--blue-grey);
+  transition: all 0.3s ease;
+}
+.sections .title:hover{
+  color:var(--dark-grey)
+}
+.list-unstyled {
+  display: block;
+}
+
+.list-unstyled.visible {
+  display: none;
+}
+
+
+@media (max-width: 575.98px) {
+  .sections {
+    border-bottom: 1pm solid var(--dark-grey);
+  }
 
  }
 
+@media (max-width: 767.98px) { 
+  .footer-row{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+  
+  }
+  .sections {
+    width: 100%;
+    border-bottom: 1px solid var(--lite-grey);
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-@media (min-width: 992px) {  }
+  }
+  .sections h5{
+    font-weight: 400;
+    font-size: 1rem;
 
-@media (min-width: 1200px) {  }
+  }
+  .sections li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1.3rem;
+    color: var(--blue-grey);
+    justify-content: left;
+    text-align: left;
+    align-items:left ;
+    margin-top: 30px;
+  }
+  .sections h5:active{
+    color: var(--lite-blue);
 
-@media (min-width: 1400px) {  }
+  }
+  .list-unstyled {
+    display: none;
+  }
+  
+  .list-unstyled.visible {
+    display: block;
+  }
+  
+}
+
+
+@media (max-width: 991.98px) {  }
+
+
+@media (max-width: 1199.98px) {  }
+
+
+@media (max-width: 1399.98px) {  }

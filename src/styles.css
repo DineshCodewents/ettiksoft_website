@@ -3,7 +3,7 @@
 @import '~@fortawesome/fontawesome-free/css/all.css';
 :root{
   --black:#000000;
-  --white:hsl(0, 0%, 4%);
+  --white:hsl(0, 0%, 100%);
   --medium-black:#121212;
   --grey:#ADADAD;
   --lite-grey :#E7E7E7;

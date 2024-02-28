@@ -1,55 +1,67 @@
+
+
+
 <footer>
-  <div class="container">
-    <div class="row footer-row">
-      <div class="col-md-2 col-sm-6 my-4 mx-3">
-        <div class="mb-3" (click)="toggleAccordion('Logo')">
-          <a class="navbar-brand" href="#"> <img src="../../../../assets/images/footer_logo.png" alt="logo-img"></a>
+
+    <div class="footer-row">
+        <div class="section1 sections">
+          <div (click)="toggleAccordion('Logo')">
+            <a class="navbar-brand" href="#"> <img src="../../../../assets/images/footer_logo.png" alt="logo-img"></a>
+          </div>
+          <ul class="list-unstyled d-flex social-media">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-facebook"></i>
+           
+          </ul>
+      </div>
+    
+        <div class="section2 sections">
+          <h5 class="mb-3"  (click)="toggleAccordion('Company')">Company</h5>
+          <ul class="list-unstyled" [class.visible]="isOpenCompany">
+            <li>About Us</li>
+            <li>Life at Ettiksoft</li>
+            <li>Careers</li>
+            <li>Contact us</li>
+          </ul>
+       
+      </div>
+    
+        <div class="section3 sections">
+          <h5 class="mb-3" (click)="toggleAccordion('Products')">Products</h5>
+          <ul class="list-unstyled" [class.visible]="isOpenProducts">
+            <li>Load Box</li>
+            <li>Break Out Box</li>
+            <li>EMI Wiring</li>
+            <li>EV Components</li>
+            <li>Variant Switch</li>
+          </ul>
         </div>
-        <ul class="list-unstyled d-flex social-media">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-facebook"></i>
-         
-        </ul>
+       
+   
+     
+        <div class=" section4 sections">
+          <h5 class="mb-3" (click)="toggleAccordion('Services')">Services</h5>
+          <ul class="list-unstyled" [class.visible]="isOpenServices">
+            <li>IOT Solutions</li>
+            <li>Mobility Engineering</li>
+          </ul>
+      
       </div>
-      <div class="col-md-2 col-sm-6 mb-4 mx-3">
-        <h5 class="mb-3" (click)="toggleAccordion('Company')">Company</h5>
-        <ul class="list-unstyled" [class.visible]="isOpenCompany">
-          <li>About Us</li>
-          <li>Life at Ettiksoft</li>
-          <li>Careers</li>
-          <li>Contact us</li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-sm-6 mb-4 mx-3">
-        <h5 class="mb-3" (click)="toggleAccordion('Products')">Products</h5>
-        <ul class="list-unstyled" [class.visible]="isOpenProducts">
-          <li>Load Box</li>
-          <li>Break Out Box</li>
-          <li>EMI Wiring</li>
-          <li>EV Components</li>
-          <li>Variant Switch</li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-sm-6 mb-4 mx-3">
-        <h5 class="mb-3" (click)="toggleAccordion('Services')">Services</h5>
-        <ul class="list-unstyled" [class.visible]="isOpenServices">
-          <li>IOT Solutions</li>
-          <li>Mobility Engineering</li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-sm-6 mb-4 mx-3">
-        <h5 class="mb-3" (click)="toggleAccordion('Contact')">Contact</h5>
-        <ul class="list-unstyled" [class.visible]="isOpenContact">
-          <li class="title">Phone</li>
-          <li>+91 73736 89304</li>
-          <li>+91 97898 81190</li>
-          <li class="title">Email</li>
-          <li>info@ettiksoft.com</li>
-          <li class="title">Head Office</li>
-          <li>No:6/1116-1/3, Paramathi Road, C E B Colony, Namakkal, Tamil Nadu 637001.</li>
-        </ul>
-      </div>
+     
+        <div class="section5 sections" >
+          <h5 class="mb-3" (click)="toggleAccordion('Contact')">Contact</h5>
+          <ul class="list-unstyled" [class.visible]="isOpenContact">
+            <li class="title">Phone</li>
+            <li>+91 73736 89304</li>
+            <li>+91 97898 81190</li>
+            <li class="title">Email</li>
+            <li>info@ettiksoft.com</li>
+            <li class="title">Head Office</li>
+            <li>No:6/1116-1/3, Paramathi Road, C E B Colony, Namakkal, Tamil Nadu 637001.</li>
+          </ul>
+        </div>
+     
     </div>
-  </div>
+
 </footer>
