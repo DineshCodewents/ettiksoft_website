@@ -1,9 +1,10 @@
-<div class="main-container">
-  <!-- <video autoplay muted loop id="background-video">
-    <source src="../../../../assets/images/map1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video> -->
-  <video autoplay muted loop playsinline preload="auto" onloadedmetadata="this.muted = true" id="backgroundVideo" class="embed-responsive-item">
-    <source [src]="video" type="video/mp4" />
-  </video>
+
+<div class="container-fluid fullscreen-video-container">
+  <div class="row">
+    <div class="col-md-12">
+      <video autoplay muted loop playsinline preload="auto" onloadedmetadata="this.muted = true" id="backgroundVideo" class="fullscreen-video">
+        <source [src]="video" type="video/mp4" />
+      </video>
+    </div>
+  </div>
 </div>

@@ -1,11 +1,16 @@
 
 .container-fluid {
   width: 100%;
-  height: auto;
   background-color: var(--black);
   padding: 20px;
   position: relative;
   
+}
+.row1{
+  margin-top:80px;
+}
+.row2{
+  margin-bottom: 50px;
 }
 .section-title{
   text-align: center;
@@ -106,7 +111,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  
+
   transition: transform 0.3s ease;
  /* Prevents overflow of zoomed images */
 }
@@ -161,6 +166,10 @@
     }
     }
     @media (max-width: 575.98px) {
+      .col-md-4 {
+        flex: 0 0 100%; /* One column per row */
+        max-width: 100%; /* One column per row */
+      }
       .product-card h4,
       .our-team-section p{
         display: none;

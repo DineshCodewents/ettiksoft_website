@@ -123,3 +123,13 @@
     width: 100%;
   }
 }
+
+@media (max-width: 575.98px) { 
+
+  .card-container{
+      padding: 30px;
+}
+.card{
+  height:500px;
+}
+}
