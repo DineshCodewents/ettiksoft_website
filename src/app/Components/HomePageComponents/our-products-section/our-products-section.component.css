@@ -174,5 +174,12 @@
       .our-team-section p{
         display: none;
       }
+      .our-team-section h2{
+        font-family: 'Poppins',sans-serif;
+        font-size: 1.5rem;
+        line-height: normal;
+        font-weight: 400;
+        color: var(--grey);
+      }
       }
     

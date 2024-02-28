@@ -80,7 +80,7 @@ circle {
     
    .car-animation-container svg {
    
-    max-width: 70%;
+    max-width: 100%;
   }
   .car-animation-container .service-content{
     padding: 0px 20px;
@@ -92,6 +92,19 @@ circle {
     margin-top: -10px;
     margin-bottom: -20px;
     padding: 0px 0px;
+}
+.car-animation-container h2{
+  font-size: 1.5rem;
+  font-family: 'Poppins',sans-serif;
+  font-weight:500 ;
+}
+.car-animation-container .service-content{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
+.service-image{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
 }
  }
 
