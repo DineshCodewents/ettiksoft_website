@@ -42,11 +42,14 @@
   font-weight: 400;
   display: flex;
   gap: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   border:1px solid var(--grey) ;
   padding: 5px 40px;
   align-items: baseline;
  
+}
+.contact-us-btn a{
+  text-decoration: none;
 }
 .explore-btn:hover{
   background-color: var(--lite-grey);
