@@ -11,6 +11,7 @@
 .card{
   border: none;
   background-color: var(--black);
+  margin-bottom:30px;
 }
 .with-border {
   position: relative;
@@ -29,8 +30,7 @@
   display: none;
 }
 .card img{
-  width:79px;
-  height:65px;
+  max-width:100px;
 }
 .skeleton-rect {
   content: '';
@@ -50,20 +50,22 @@
   }
 }
 h1 {
-  font-weight: 600;
-  font-family: 'Adamina', sans-serif;
-  color: var(--lite-gray);
+  font-weight:500;
+  font-family: 'Poppins', sans-serif;
+  color: var(--lite-grey);
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 p{
   font-weight: 400;
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
-  color: var(--dark-gray);
+  color: var(--grey);
 }
 .card-body a{
-  font-size: 18px;
-  color: #00A8A7;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--lite-blue);
   margin: 0;
   padding: 0;
 }
@@ -89,5 +91,10 @@ p{
 @media(max-width:767px){
   .with-border::after{
     display:none;
+  }
+  .card{
+    border: none;
+    background-color: var(--black);
+    margin-bottom:50px;
   }
 }

@@ -106,6 +106,15 @@ circle {
   padding-left: 0px!important;
   padding-right: 0px!important;
 }
+
+.service-content h2{
+  height: 70px;
+}
+
+.service-content p{
+  text-align: center;
+}
+
  }
 
 

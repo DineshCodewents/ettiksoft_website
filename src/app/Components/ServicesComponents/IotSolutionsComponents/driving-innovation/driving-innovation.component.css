@@ -10,20 +10,23 @@
     padding: 50px 80px;
 }
 #common-h1 {
+   font-size: 2rem;
     font-weight: 600;
-    font-family: 'Adamina', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
-    color: var(--dark-gray);
+    color: var(--lite-grey);
+    line-height: normal;
 }
 
-#common-h4{
+#common-p{
+  font-size: 1.2rem;
   font-weight: 400;
-  font-family: 'Assistent', sans-serif;
-  line-height: 1.5;
-  color: var(--dark-gray);
+  font-family: 'Poppins', sans-serif;
+  line-height:normal;
+  color: var(--grey);
 }
 #common-h4 span{
-  color: var(--lite-gray);
+  color: var(--grey);
 }
 .slide-left {
 animation: slideleft 1s linear forwards;

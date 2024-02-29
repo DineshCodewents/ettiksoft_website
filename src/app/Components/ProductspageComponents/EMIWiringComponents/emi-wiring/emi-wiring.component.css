@@ -40,13 +40,13 @@
 
 #common-h1 {
   font-weight: 600;
-  font-family: 'Adamina', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--dark-gray);
 }
 
 #common-h4 {
   font-weight: 400;
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color:var(--dark-gray);
 }
 
@@ -68,7 +68,7 @@ button {
   overflow: hidden;
   padding: 12px 35px;
   background-color: var(--black);
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--lite-gray);
   font-size: 18px;
   border: 1px solid var(--lite-gray);

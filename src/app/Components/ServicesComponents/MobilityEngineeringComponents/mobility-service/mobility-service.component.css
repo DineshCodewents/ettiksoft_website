@@ -49,38 +49,51 @@
   justify-content: center;
 }
 
-#common-h1 {
+.heading-column #common-h2 {
   font-weight: 600;
-  font-family: 'Adamina', sans-serif;
-  margin-bottom: 5px;
-  color:var(--dark-gray);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  line-height: normal;
+  color:var(--lite-blue);
+  text-align: left;
+  margin-top: 20px
+}
+.heading-column #common-h1 {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  font-size: 2rem;
+  line-height: normal;
+  color:var(--lite-grey);
   text-align: left;
 }
-
+#common-h1 span{
+  border-bottom: 4px solid var(--red);
+}
 .our-txt {
   margin-top: 40px;
   text-align: center;
 }
 
-#common-h1 span {
-  color: var(--lite-gray);
-}
 
 #common-h4 {
   font-weight: 400;
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.7;
-  color: var(--dark-gray);
+  color: var(--grey);
   margin-bottom: 30px;
   text-align: left;
 }
-
+.common-button button{
+  
+}
 button {
   position: relative;
   overflow: hidden;
   padding: 12px 35px;
   background-color: var(--black);
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--white);
   font-size: 18px;
   border: 1px solid var(--white);
@@ -90,9 +103,9 @@ button {
 }
 
 button:hover {
-background-color: var(--white);
+background-color: var(--lite-blue);
 color: var(--black);
-border: 1px solid var(--black);
+border: 1px solid var(--lite-blue);
 }
 
 button i {
@@ -138,7 +151,9 @@ button:hover i {
 
 
 @media(max-width:991px) {
-
+  #main-container{
+    padding: 20x ;
+  }
   .col-md-6{
     width: 100%;
   }
@@ -150,7 +165,24 @@ button:hover i {
 
 @media (max-width: 767px) {
 
+  #main-container{
+    padding: 0px;
+  }
+  .container {
+    background-color:var(--medium-black);
+    margin-top: 0px;
+  }
+  
+.heading-column #common-h2 {
+ 
+  font-size: 2rem;
+ 
+}
+.heading-column #common-h1 {
 
+  font-size: 1.5rem;
+ 
+}
   .iot-text {
     background-size: 200% 100%;
   }
@@ -181,16 +213,25 @@ button:hover i {
 @media(max-width:575px) {
 
 
+  .heading-column #common-h2 {
+    margin-top: 5px;
+    font-size:1.75rem;
+   
+  }
+  .heading-column #common-h1 {
+  
+    font-size: 1.2rem;
+  }
   #common-h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .iot-text {
-    font-size: 35px;
+   
     background-size: 200% 100%;
   }
   #common-h1 {
-    font-size: 35px;
+    font-size: 1.5rem;
   }
 
 }

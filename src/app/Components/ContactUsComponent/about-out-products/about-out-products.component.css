@@ -1,9 +1,11 @@
 .main-container {
   background-color: var(--black);
 }
-
+#main-container{
+  padding: 40px 0px;
+}
 .row {
-  padding: 100px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: space-evenly;
 }
@@ -12,17 +14,22 @@
   width: 100%;
 }
 
-#common-h1 {
+.first-column #common-h1 {
   font-weight: 600;
-  font-family: 'Adamina', sans-serif;
-  color: var(--dark-gray);
+  font-family: 'Poppins', sans-serif;
+  color: var(--lite-grey);
+  font-size: 2rem;
   margin-bottom: 10px;
+  
 }
-
-p {
+.first-column #common-h1 span {
+  border-bottom: 4px solid var(--lite-blue);
+}
+#common-p {
   font-weight: 400;
-  font-family: 'Assistent', sans-serif;
-  color: var(--dark-gray);
+  font-family: 'Poppins', sans-serif;
+  color: var(--grey);
+  font-size: 1rem;
   margin-bottom: 30px;
 }
 
@@ -93,30 +100,32 @@ img {
   color: var(--dark-gray);
 }
 label {
-  color: var(--dark-gray);
+  color: var(--grey);
   padding-bottom: 10px;
   font-size: 16px;
-  font-family: 'Adamina', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
 .form-control,
 .form-select {
-  border: 1px solid #505766;
+  background-color: var(--medium-black);
+  border: 1px solid var(--grey);
 }
 
 .form-control:focus {
-  border-color: white;
+  border-color: var(--grey);
+  background-color: var(--medium-black);
   box-shadow: 0 0 0 0.1rem #6B6E80;
 }
 
 .submit-btn {
-  background-color:var(--black);
-  color: var(--lite-gray);
+  background-color:var(--lite-blue);
+  color: var(--lite-grey);
   height: 40px;
   border: none;
   width: 100%;
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   border-radius: 8px;
   text-align: center;
   margin-bottom: 20px;
@@ -129,10 +138,15 @@ label {
 }
 
 .privacy-text p {
-  color: var(--lite-gray);
+  color: var(--lite-grey);
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+.privacy-text a{
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: var(--lite-blue);
 }
 
 .slide-left {

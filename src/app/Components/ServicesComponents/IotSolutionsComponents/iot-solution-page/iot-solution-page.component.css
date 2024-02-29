@@ -1,4 +1,5 @@
 .main-container{
+  background-color: var(--black);
   position: relative;
   z-index: 100;
 }

@@ -7,18 +7,39 @@
 .etticksoft-heading{
   background-color:var(--black);
 }
+.etticksoft-heading #common-h1{
+  color:var(--lite-grey);
+  line-height: normal;
+  font-size: 2.5rem;
+}
+.heading {
+  justify-content: center;
+  margin: 30px 100px;
+}
+.heading #common-h1{
+  color:var(--grey);
+  line-height: normal;
+  font-size: 2.5rem;
+}
+.heading #common-h4{
+  text-align: center;
+  color: var(--grey);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: normal;
+  margin:30px 70px;
+}
+
 #common-h1 {
   text-align: center;
-  color: var(--dark-gray);
-  font-family: 'Adamina', sans-serif;
+  color: var(--grey);
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
-h1 span {
-  color: var(--lite-gray);
-  /* background-image: var(--linear); */
-  -webkit-background-clip: text;
-}
+
 
 img {
   width: 100%;
@@ -46,10 +67,7 @@ img {
   background-color: var(--black);
 }
 
-.heading {
-  justify-content: center;
-  max-width: 65%;
-}
+
 .slide-left {
   animation: slideleft 1s linear forwards;
   opacity: 0;
@@ -78,15 +96,20 @@ img {
 
 #common-h4 {
   text-align: center;
-  color: var(--lite-gray);
-  font-family: 'Assistent', sans-serif;
+  color: var(--lite-grey);
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  font-size: 1rem;
   margin: 10px 30px;
 }
 
 @media screen and (max-width: 767px) {
   .heading {
-    max-width: 80%;
+    justify-content: center;
+    margin: 15px 30px;
+  }
+  .heading #common-h4{
+    margin:20px 30px;
   }
 }
 
@@ -97,6 +120,16 @@ img {
 
   .skeleton-rect{
     height: 160px;
+  }
+  #common-h1{
+    font-size: 1.5rem;
+  }
+  .heading #common-h1{
+    font-size: 1.5rem;
+  }
+  .heading #common-h4{
+    font-size: 1rem;
+    margin:20px 30px;
   }
 }
 

@@ -29,11 +29,29 @@
  .nav-item a h4{
     margin-bottom: 0px;
  }
+ .col-12 a{
+    text-decoration: none;
+ }
 .nav-item  a i{
 
    margin-top: 10px;
    font-size: 1.2rem;
 }
+#common-h4{
+    font-family: 'Poppins',sans-serif;
+}
+.nav-item .nav-link i{
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+.mat-h4, .mat-body-1, .mat-typography .mat-h4, .mat-typography .mat-body-1, .mat-typography h4{
+    font-family: 'Poppins',sans-serif;
+}
+.nav-item a h4 {
+    font-family: 'Poppins',sans-serif;
+
+}
+
 .nav-item a .language{
     display: none;
    
@@ -54,6 +72,7 @@
  .nav-item .nav-link:active{
     color: var(--lite-blue);
  }
+
 .dropdown-item:hover{
         background-color: black;
 }
@@ -108,6 +127,22 @@
     width:16px;
     margin-right: 10px;
 }
+
+@media(max-width:767px){
+    .nav-item  a i{
+        display: none;
+    
+    }
+    .nav-item a  .language{
+        display: block;
+      
+        
+    }
+
+    .nav-link i{
+        display: none;
+    }
+}
 @media (max-width:576px) { 
     .navbar a img{
         max-width: 130px;
@@ -126,15 +161,7 @@
         align-items: center;
         text-align: center;
     }
-    .nav-item  a i{
-        display: none;
-    
-    }
-    .nav-item a  .language{
-        display: block;
-      
-        
-    }
+
     .dropdown-toggle::after {
     display: none;
     }

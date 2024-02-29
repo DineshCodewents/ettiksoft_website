@@ -3,6 +3,9 @@
   padding: 0;
   background-color: var(--medium-black);
 }
+#main-container{
+  padding:40px 0px;
+}
 .heading-section{
   display: flex;
   flex-direction: column;
@@ -10,20 +13,25 @@
 }
 .heading{
   justify-content: center;
-  max-width: 65%;
+  max-width: 100%;
 }
 #common-h1{
   text-align: center;
   font-weight: 600;
-  color: var(--dark-gray);
-  font-family: 'Adamina', sans-serif;
+  color: var(--lite-grey);
+  font-size: 2rem;
+  line-height: normal;
+  font-family: 'Poppins', sans-serif;
 }
 #common-h4{
   text-align: center;
   font-weight: 400;
-  color: var(--lite-gray);
-  font-family: 'Assistent', sans-serif;
+  font-size: 1.2rem;
+  color: var(--grey);
+  line-height: normal;
+  font-family: 'Poppins', sans-serif;
   margin: 20px;
+  margin: 30px 100px;
 }
 .animate-on-scroll {
   opacity: 0;
@@ -44,7 +52,16 @@
 .animate-on-scroll.visible {
   animation: fadeInUp 1s ease forwards;
 }
+.img-section video {
+   max-width: 100%;
+}
+.embed-responsive-item {
 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 img {
   width: 100%;
   object-fit: cover;
@@ -63,11 +80,29 @@ img {
 }
 @media screen and (max-width:767px){
   .heading{
-    max-width: 70%;
+    max-width: 100%;
+  }
+  #common-h1{
+   
+    margin: 30px 60px;
+  }
+
+  #common-h4{
+   
+    margin: 30px 60px;
   }
 }
 @media screen and (max-width:575px){
   .heading{
     max-width: 100%;
+  }
+  #common-h1{
+    font-size: 1.5rem;
+    margin: 15px 30px;
+  }
+
+  #common-h4{
+    font-size: 1rem;
+    margin: 15px 30px;
   }
 }

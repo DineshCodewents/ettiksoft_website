@@ -24,6 +24,7 @@
   background-position-y: bottom;
   background-blend-mode: luminosity;
   background-color: #0E0E0E;
+  padding: 10px;
 }
 
 .card-inner {
@@ -105,6 +106,7 @@
   font-size: 1rem;
   line-height: normal;
   color: var(--grey);
+  
 }
 .front .logo{
   max-width: 200px;

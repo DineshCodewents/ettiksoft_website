@@ -42,7 +42,7 @@
 
 #common-h2{
   font-weight: 600;
-  font-family: 'Adamina', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 15px;
   color: var(--lite-gray);
 }
@@ -52,7 +52,7 @@
   height: 41px;
   border-radius: 8px;
   background-color: var(--black);
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--lite-gray);
   font-size: 18px;
   border: 1px solid var(--lite-gray);
@@ -84,20 +84,20 @@ button:hover i {
 
 #common-p {
   font-weight: 400;
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 10px;
   color: var(--dark-gray);
 }
 h3,h2{
   font-size: 18px;
   font-weight: 400;
-  font-family: 'Adamina', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 10px;
   color: var(--lite-gray);
 }
 #common-h4 {
   font-weight: 400;
-  font-family: 'Adamina', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--dark-gray);
   margin-bottom: 20px;
 }

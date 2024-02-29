@@ -1,6 +1,7 @@
-.main-container {
+.main-container1 {
   max-width: 100%;
   background-color: var(--black);
+  padding-top: 30px;
 }
 
 .background-img {
@@ -9,7 +10,16 @@
   background-position: center;
   display: flex;
   align-items: center;
-  color: #fff;
+  color:var(--grey);
+}
+.background-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
 }
 .skeleton-rect {
   content: '';
@@ -27,10 +37,7 @@
     background-position: 100% 0;
   }
 }
-.row{
-  width: 50%;
-  height: 100%;
-}
+
 .container {
   max-width: 100%;
   margin: 0;
@@ -41,29 +48,34 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  color: #FFFFFF;
+  color: var(--lite-grey);
   font-family: 'Poppins', sans-serif;
   gap: 10px;
+  margin: 100px 100px 100px 50px;
+
 }
 
 #common-h1 {
-  font-family: 'Adamina', sans-serif;
-  color: var(--dark-gray);
+  font-family: 'Poppins', sans-serif;
+  color: var(--lite-grey);
   font-weight: 600;
+  font-size: 2rem;
+  line-height: normal;
   margin: 0;
 }
 
 #common-p {
   font-weight: 400;
-  font-family: 'Assistent', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: left;
-  color: var(--lite-gray);
+  font-size: 1.2rem;
+  color: var(--lite-grey);
 }
 
 .stright-line {
   height: 3px;
   width: 60%;
-  background-color: var(--dark-gray);
+  background-color: var(--dark-grey);
 }
 
 .slide-left {
@@ -87,13 +99,14 @@
     padding-top: 13%;
   }
   .text-container {
+    width:40%;
     margin: 100px 100px 100px 50px;
-    gap: 20px;
+   
   }
 }
 @media screen and (min-width:1300px) {
   .heading-txt h1 {
-    font-size: 45px;
+    font-size: 2rem;
   }
 
   .paragraph-txt p {
@@ -101,16 +114,20 @@
     font-weight: 200;
   }
   .text-container {
-    max-width: 50%;
-    margin: 100px 100px 100px 50px;
-    gap: 30px;
+    width:40%;
+    margin:100px 100px;
   }
   
 }
 @media screen and (max-width:991px) {
+
+
   .text-container {
-    gap: 10px;
+    width:40%;
+    
+    margin:100px 100px;
   }
+  
   .main-container {
     padding-top: 12%;
   }
@@ -120,13 +137,20 @@
 }
 
 @media screen and (max-width:767px) {
+  .heading-txt h1 {
+    font-size:2rem;
+  }
+
+  .paragraph-txt p {
+    font-size: 1rem;
+    font-weight: 200;
+  }
   .main-container {
     padding-top: 18%;
   }
   .text-container {
-    
-    margin: 150px 0px 100px 30px;
-    gap: 10px;
+    width:80%;
+    margin:100px 60px;
   }
 
 }
@@ -140,10 +164,15 @@
     font-size: 14px;
   }
   .row{
-    width: 70%;
+    width: 90%;
   }
   .main-container {
     padding-top: 22%;
+  }
+  .text-container {
+    width:90%;
+    margin:50px 20px;
+   
   }
 }
 

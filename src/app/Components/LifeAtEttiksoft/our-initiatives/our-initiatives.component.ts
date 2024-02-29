@@ -10,17 +10,17 @@ export class OurInitiativesComponent {
     { 
       imageUrl: '../../../../assets/images/life-at-ettiksoft/SECTION5 -LAE/1.jpg', 
       heading: 'Social Impact Club', 
-      content: 'The Social Impact Club engages employees in activities such as blood donation and tree planting.',
+      content: 'The Social Impact Club engages employees in activities such as blood donation and tree planting, fostering community involvement.',
     },
     { 
       imageUrl: '../../../../assets/images/life-at-ettiksoft/SECTION5 -LAE/2.jpg', 
       heading: 'Wellness Warriors Club', 
-      content: 'Promoting a healthy lifestyle, the Wellness Warriors Club designs walking and running plans for employees, organizing events like marathons to encourage physical well-being.',
+      content: 'Promoting a healthy lifestyle, the Wellness Warriors Club designs walking and running plans, organizing events like marathons for physical well-being.',
     },
     { 
       imageUrl: '../../../../assets/images/life-at-ettiksoft/SECTION5 -LAE/3.jpg',
       heading: 'Speechcraft Hub', 
-      content: 'The Speechcraft Hub provides a platform for employees to enhance their speech and presentation skills',
+      content: 'The Speechcraft Hub provides a platform for employees to enhance speech and presentation skills, facilitating professional development.',
     },
   ];
   isLoading = true;

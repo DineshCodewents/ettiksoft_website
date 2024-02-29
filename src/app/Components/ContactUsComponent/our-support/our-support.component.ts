@@ -8,19 +8,19 @@ import { Component } from '@angular/core';
 export class OurSupportComponent {
   supportItems = [
     {
-      imageSrc: '../../../../assets/images/contact-us/icons.svg',
+      imageSrc: '../../../../assets/images/icons.png',
       title: 'Product Support',
       text: 'Looking for a demo, or have questions about our products and pricing?',
       email: 'sales@ettiksoft.com'
     },
     {
-      imageSrc: '../../../../assets/images/contact-us/icons (1).svg',
+      imageSrc: '../../../../assets/images/icons (1).png',
       title: 'Vendor Support',
       text: 'Looking for Billing or resource availability support?',
       email: 'vendorsupport@ettiksoft.com'
     },
     {
-      imageSrc: '../../../../assets/images/contact-us/Group 28.svg',
+      imageSrc: '../../../../assets/images/Group 28.png',
       title: 'Partnerships or Collaboration',
       text: 'New Vendor or Integrations and Collaborations - we’re excited to partner with businesses of all kinds.',
       email: 'sales@ettiksoft.com'

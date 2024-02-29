@@ -4,8 +4,9 @@
 #common-h1{
   display: none;
   font-weight: 600;
-  font-family: 'Adamina', sans-serif;
-  color: var(--dark-gray);
+  font-family: 'Poppins', sans-serif;
+  font-size:2rem ;
+  color: var(--grey);
   margin-bottom: 10%;
   text-align: center;
 }
@@ -14,10 +15,9 @@
 }
 #common-h3{
   /* display: none; */
-  font-weight: 600;
   text-align: center;
   margin-bottom: 10%;
-  color: var(--dark-gray);
+  color: var(--grey);
 }
 .card {
   border: 1px solid var(--black);

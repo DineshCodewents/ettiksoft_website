@@ -4,9 +4,10 @@
 }
 #common-h1{
   font-weight: 600;
-  font-family: 'Adamina', sans-serif;
-  color: var(--dark-gray);
-  margin-bottom: 20px;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--grey);
+  margin-bottom: 50px;
   text-align: center;
 }
 .row{
@@ -30,14 +31,14 @@
 }
 #common-h3{
   font-weight: 500;
-  font-family: 'Adamina', sans-serif;
-  color: var(--lite-gray);
+  font-family: 'Poppins', sans-serif;
+  color: var(--lite-grey);
   margin-bottom: 10px;
   text-align: start;
 }
 #common-p{
-  font-family: 'Assistent', sans-serif;
-  color: var(--dark-gray);
+  font-family: 'Poppins', sans-serif;
+  color: var(--grey);
   margin-bottom: 10px;
   font-weight:400;
 }
@@ -48,7 +49,7 @@ iframe{
 .card.selected-country {
   background-color: var(--black);
   border-radius: 15px;
-  border: 1px solid var(--lite-gray);
+  border: 1px solid var(--lite-blue);
 }
 
 .card.selected-country h1 {
@@ -57,7 +58,7 @@ iframe{
 }
 .card.selected-country #common-p {
   margin-left: 5;
-  color: var(--dark-gray);
+  color: var(--lite-grey);
 }
 @media (max-width:767px) {
   .col-md-4{

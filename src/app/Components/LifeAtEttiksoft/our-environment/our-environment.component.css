@@ -15,9 +15,11 @@
 }
 
 h1 {
-  font-family: 'Adamina', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  color: var(--dark-gray);
+  line-height: normal;
+  font-size: 2rem;
+  color: var(--grey);
 }
 .img-section{
   max-width: 100%;
@@ -45,7 +47,7 @@ h1 {
 .image-container {
   display: flex;
   flex-direction: column;
-  margin: 50px 250px;
+  margin: 20px 50px;
   gap: 20px;
   align-items: center;
 }
@@ -153,7 +155,7 @@ h1 {
 }
 @media (max-width:575px){
   .container{
-    padding: 30px 0 15px 0;
+    padding: 10px 0 15px 0;
   }
   .image-container {
     margin: 30px 30px;
