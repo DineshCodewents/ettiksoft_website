@@ -205,5 +205,9 @@
         margin-bottom: 15px;
         color: var(--lite-grey);
     }
+    .dropdown-menu a h5 {
+        font-size: 1rem;
+        font-weight: 400;
+    }
 
 }

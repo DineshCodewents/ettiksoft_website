@@ -40,20 +40,23 @@
 
 #common-h1 {
   font-weight: 600;
+  font-size: 2rem;
   font-family: 'Poppins', sans-serif;
-  color: var(--dark-gray);
+  color: var(--lite-grey);
 }
 
 #common-h4 {
   font-weight: 400;
+  font-size: 1.2rem;
+
   font-family: 'Poppins', sans-serif;
-  color:var(--dark-gray);
+  color:var(--lite-grey);
 }
 
 .stright-line {
   height: 5px;
   width: 300px;
-  background-color: var(--dark-gray);
+  background-color: var(--grey);
   margin: 0px auto;
   text-align: center;
 }
@@ -71,16 +74,16 @@ button {
   font-family: 'Poppins', sans-serif;
   color: var(--lite-gray);
   font-size: 18px;
-  border: 1px solid var(--lite-gray);
+  border: 1px solid var(--grey);
   border-radius: 10px;
   cursor: pointer;
   outline: none;
 }
 
 button:hover {
-  background-color: var(--lite-gray);
-  color: var(--black);
-  border: 1px solid var(--black);
+
+  color: var(--lite-blue);
+  border: 1px solid var(--lite-blue);
 }
 
 button i {
