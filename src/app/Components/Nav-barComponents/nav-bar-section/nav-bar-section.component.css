@@ -176,8 +176,8 @@
     }
     .card-body .card-title{
         font-family: 'Poppins',sans-serif;
-       
-        margin-bottom: 15px;
+        margin-top: 25px;
+        margin-bottom: 25px;
         font-size:1rem;
         color: var(--grey);
         font-weight:300;
