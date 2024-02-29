@@ -37,13 +37,22 @@
   }
 }
 @media (max-width: 767px) {
-  .img-column {
+  .image-section {
+    display: none;
+    flex: 0 0 50%;
+  }
+  .row{
     flex: 0 0 50%;
   }
 }
 
 @media (max-width: 575px) {
-  .img-column {
+  .image-section {
+  
     flex: 0 0 100%; 
+  }
+  .section-row{
+    
+    flex: 0 0 100%;
   }
 }

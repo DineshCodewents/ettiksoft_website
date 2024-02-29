@@ -43,6 +43,9 @@ footer{
   color: var(--blue-grey);
   transition: all 0.3s ease;
 }
+ul a{
+  text-decoration: none;
+}
 .sections li{
   font-family: 'Poppins',sans-serif;
   font-size: 1rem;

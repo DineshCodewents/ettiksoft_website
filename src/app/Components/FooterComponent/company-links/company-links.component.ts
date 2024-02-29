@@ -9,14 +9,14 @@ import { filter } from 'rxjs/operators';
 })
 export class CompanyLinksComponent {
   menuItems: { label: string, path: string }[] = [
-    { label: "About Us", path: "about-page" },
-    { label: "Life at Ettiksoft", path: "life-at-ettiksoft" },
+    { label: "About Us", path: "/about-page" },
+    { label: "Life at Ettiksoft", path: "/life-at-ettiksoft" },
     // { label: "Our Customers", path: "#" },
     // { label: "Our Team", path: "#" },
     // { label: "Gallery", path: "#" },
     // { label: "Collaboration", path: "#" },
-    { label: "Careers", path: "careers-page" },
-    { label: "Contact us", path: "contact-us-page" },
+    { label: "Careers", path: "/careers-page" },
+    { label: "Contact us", path: "/contact-us-page" },
   ];
   private previousUrl : string |undefined;
   constructor(private router: Router) {

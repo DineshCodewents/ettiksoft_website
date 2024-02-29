@@ -19,10 +19,10 @@
         <div class="section2 sections">
           <h5 class="mb-3"  (click)="toggleAccordion('Company')">Company</h5>
           <ul class="list-unstyled" [class.visible]="isOpenCompany">
-            <li>About Us</li>
-            <li>Life at Ettiksoft</li>
-            <li>Careers</li>
-            <li>Contact us</li>
+            <a href="/about-page"><li>About Us</li></a>
+            <a href="/life-at-ettiksoft"><li>Life at Ettiksoft</li></a>
+            <a href="/careers-page"><li>Careers</li></a>
+            <a href="/contact-us"><li>Contact us</li></a>
           </ul>
        
       </div>
@@ -30,11 +30,11 @@
         <div class="section3 sections">
           <h5 class="mb-3" (click)="toggleAccordion('Products')">Products</h5>
           <ul class="list-unstyled" [class.visible]="isOpenProducts">
-            <li>Load Box</li>
-            <li>Break Out Box</li>
-            <li>EMI Wiring</li>
-            <li>EV Components</li>
-            <li>Variant Switch</li>
+            <a href="/load-box"> <li>Load Box</li></a>
+            <a href="/break-out-box"> <li>Break Out Box</li></a>
+            <a href="/emi-wiring"><li>EMI Wiring</li></a>
+            <a href="/ev-page"> <li>EV Components</li></a>
+            <a href="/variant-switch"><li>Variant Switch</li></a>
           </ul>
         </div>
        
@@ -43,8 +43,8 @@
         <div class=" section4 sections">
           <h5 class="mb-3" (click)="toggleAccordion('Services')">Services</h5>
           <ul class="list-unstyled" [class.visible]="isOpenServices">
-            <li>IOT Solutions</li>
-            <li>Mobility Engineering</li>
+            <a href="/iot-solution-page"><li>IOT Solutions</li></a>
+            <a href="/mobility-engineering-page"><li>Mobility Engineering</li></a>
           </ul>
       
       </div>
